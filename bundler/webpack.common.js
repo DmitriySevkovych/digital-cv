@@ -28,8 +28,9 @@ module.exports = {
                             runtime: path.join(__dirname, 'handlebars.config.js'),
                             precompileOptions: {
                                 knownHelpersOnly: false,
-                            }
-                        },
+                            },
+                            inlineRequires: '/assets/img/'
+                        }
                     }
                 ]
             },
@@ -47,7 +48,7 @@ module.exports = {
             },
             // Images
             {
-                test: /\.(png|jpg|jpeg|gif)$/i,
+                test: /\.(png|jpg|jpeg|gif|webp|avif)$/i,
                 type: 'asset/resource', // Webpack 5.x: loads file into output folder (file-loader)
             },
             {
