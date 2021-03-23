@@ -3,16 +3,28 @@ import '../sass/index.sass';
 import html2canvas from 'html2canvas';
 import { jsPDF } from 'jspdf';
 
-// Default export is a4 paper, portrait, using millimeters for units
-const doc = new jsPDF();
-
-// TEST plain jspdf
-// const printableContent = document.querySelector('.body__printable');
-// doc.html(printableContent);
-
 // TEST jspdf + html2canvas
-html2canvas(document.querySelector('.body__printable'))
-    .then(printableContent => doc.html(printableContent));
+const printCV = () => html2canvas(document.querySelector('body')).then(canvas => {
+    //TODO: unclear if necessary
+    canvas.getContext('2d');
+    const imgData = canvas.toDataURL('image/jpeg', 1.0);
+
+    // Default export is a4 paper, portrait, using millimeters for units
+    const doc = new jsPDF();
+
+    // Properties
+    doc.setProperties({
+        title: 'CV - Dmitriy Sevkovych',
+        subject: 'This is the subject',
+        author: 'Dmitriy Sevkovych',
+        keywords: 'freelancer, software, mathematics',
+        creator: 'Dmitriy Sevkovych'
+    });
+
+    doc.addImage(imgData, 'JPG', 0, 0, 297, 210);
+
+    doc.save('CV.pdf');
+});
 
 const printButton = document.querySelector('.footer__print');
-printButton.addEventListener('click', () => doc.save('a4.pdf'));
+printButton.addEventListener('click', printCV);

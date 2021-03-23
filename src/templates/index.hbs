@@ -5,19 +5,13 @@
 
     {{/content}}
 
-    {{#content "body"}}
-        <!-- BEGIN body__printable -->
-        <div class="body__printable">
-
-            {{> components/header }}
-
-        </div>
-        <!-- END body__printable -->
+    {{#content "content"}}
+        {{> components/header }}
     {{/content}}
 
     {{!-- Note the prepend mode: can be handy to add stuff at the BEGINNING of the layout-foot block --}}
     {{#content "foot" mode="prepend"}}
-        <footer>
+        <footer data-html2canvas-ignore>
             <!-- BEGIN footer__links -->
             <div class="footer__links">
                 <a href="#" class="footer__links__github">GitHub</a>
