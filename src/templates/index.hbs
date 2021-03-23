@@ -6,12 +6,33 @@
     {{/content}}
 
     {{#content "body"}}
-        {{> components/header }}
+        <!-- BEGIN body__printable -->
+        <div class="body__printable">
+
+            {{> components/header }}
+
+        </div>
+        <!-- END body__printable -->
     {{/content}}
 
     {{!-- Note the prepend mode: can be handy to add stuff at the BEGINNING of the layout-foot block --}}
     {{#content "foot" mode="prepend"}}
-        {{!-- <script src="js/extlib/analytics.js"></script> --}}
+        <footer>
+            <!-- BEGIN footer__links -->
+            <div class="footer__links">
+                <a href="#" class="footer__links__github">GitHub</a>
+                <a href="#" class="footer__links__linkedin">LinkedIn</a>
+            </div>
+            <!-- END footer__links -->
+
+            <!-- BEGIN footer__developedBy -->
+            <div class="footer__developedBy">
+                developed by VarsAndNumbers.
+            </div>
+            <!-- END footer__developedBy -->
+
+            <button class="footer__print">Print PDF</button>
+        </footer>
     {{/content}}
 
 {{/extend}}
