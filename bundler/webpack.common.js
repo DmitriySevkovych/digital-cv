@@ -53,7 +53,7 @@ module.exports = {
             },
             {
                 test: /\.(svg)$/i,
-                type: 'asset/source', // Webpack 5.x: loads file content into bundled JS file (raw-loader)
+                type: 'asset/inline',
             },
             // Fonts
             {

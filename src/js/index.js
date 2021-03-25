@@ -32,6 +32,10 @@ const printCV = () => {
 
         doc.addImage(imgData, 'JPG', 0, 0, A4_WIDTH_MM, A4_HEIGHT_MM);
 
+        // for (let i = 1; i <= totalPDFPages; i++) {
+        //     doc.addPage(PDF_Width, PDF_Height);
+        //     doc.addImage(imgData, 'JPG', top_left_margin, -(PDF_Height*i)+(top_left_margin*4),canvas_image_width,canvas_image_height);
+        // }
         doc.save('CV.pdf');
     });
 }
