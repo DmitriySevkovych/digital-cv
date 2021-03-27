@@ -1,0 +1,65 @@
+<!-- BEGIN career__item -->
+<div class="career__item">
+
+    <!-- BEGIN career__item__head -->
+    <div class="career__item__head">
+
+        <!-- BEGIN career__item__head__date -->
+        <div class="career__item__head__date">
+            {{date}}
+        </div>
+        <!-- END career__item__head__date -->
+
+        <!-- BEGIN career__item__head__title -->
+        <div class="career__item__head__title">
+            {{title}}<br/>{{subtitle}}
+        </div>
+        <!-- END career__item__head__title -->
+
+    </div>
+    <!-- END career__item__head -->
+
+    <!-- BEGIN career__item__body -->
+    <div class="career__item__body">
+
+        {{#if description}}
+            <p class="career__item__body__description">{{description}}</p>
+        {{/if}}
+
+        <!-- BEGIN career__item__body__blocks -->
+        <div class="career__item__body__blocks">
+
+            {{#each blocks}}
+
+                <!-- BEGIN career__item__body__left -->
+                <div class="career__item__body__left">
+                    {{#if this.image}}
+                        <figure>
+                            <img src="{{this.image}}" alt="{{this.caption}}"/>
+                            <figcaption>{{this.caption}}</figcaption>
+                        </figure>
+                    {{else}}
+                        <p>{{this.caption}}</p>
+                    {{/if}}
+                </div>
+                <!-- END career__item__body__left -->
+
+                <!-- BEGIN career__item__body__right -->
+                <div class="career__item__body__right">
+                    <ul>
+                        {{#each this.points}}
+                            <li>{{this}}</li>
+                        {{/each}}
+                    </ul>
+                </div>
+                <!-- END career__item__body__right -->
+
+            {{/each}}
+        </div>
+        <!-- END career__item__body__blocks -->
+
+    </div>
+    <!-- END career__item__body -->
+
+</div>
+<!-- END career__item -->

@@ -1,0 +1,18 @@
+{
+    "blocks": [
+        {
+            "caption": "letters",
+            "points": [
+                "a",
+                "b"
+            ]
+        },
+        {
+            "caption": "numbers",
+            "points": [
+                "1",
+                "2"
+            ]
+        }
+    ]
+}
