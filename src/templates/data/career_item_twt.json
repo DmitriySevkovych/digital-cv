@@ -1,0 +1,17 @@
+{
+    "date": "07.2017 –05.2019",
+    "title": "Systems Engineer",
+    "subtitle": "TWT GmbH (full-time employee)",
+    "blocks": [
+        {
+            "image": "../../assets/icons/icon_python.svg",
+            "caption": "Python",
+            "points": [
+                "Extension of an in-house-software solution, used for evaluation of engine control units data.",
+                "Evaluation and POC implementation of outlier detection mechanisms.",
+                "Research in outlier detection.",
+                "Lead developer of a desktop application, intended to automate the mass-production flashing process of engine control units . Full project management."
+            ]
+        }
+    ]
+}

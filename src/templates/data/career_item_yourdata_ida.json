@@ -4,17 +4,15 @@
     "subtitle": "Currently 40h/Week, fully remote",
     "blocks": [
         {
-            "caption": "letters",
+            "image": "../../assets/icons/icon_kafka.svg",
+            "caption": "Kafka",
             "points": [
-                "a",
-                "b"
-            ]
-        },
-        {
-            "caption": "numbers",
-            "points": [
-                "1",
-                "2"
+                "Building real-time ETL pipelines for heterogenous data with Kafka and Kafka Streams.",
+                "Improving memory and I/O footprint of the software.",
+                "Fine-tuning Kafka cluster.",
+                "Task automation through shell scripting.",
+                "Introducing testing best-practices.",
+                "Code refactoring."
             ]
         }
     ]

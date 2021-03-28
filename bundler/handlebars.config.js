@@ -5,7 +5,7 @@ const layouts = require('handlebars-layouts');
 
 // Register helpers
 handlebars.registerHelper(layouts(handlebars));
-// TODO: adjust helper to load context from a .json (or .yaml) file
+
 handlebars.registerHelper('getJsonContext', (filepath, options) => {
     const data = fs.readFileSync(filepath, 'utf8');
     return options.fn(JSON.parse(data));
