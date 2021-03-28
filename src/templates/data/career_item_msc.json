@@ -1,0 +1,34 @@
+{
+    "date": "10.2014 – 04.2017",
+    "title": "M.Sc. Mathematics",
+    "subtitle": "University of Stuttgart",
+    "blocks": [
+        {
+            "caption": "Focus",
+            "points": [
+                "Learning theory",
+                "Differential equations",
+                "Dynamic systems",
+                "Numerical methods for PDEs"
+            ]
+        },
+        {
+            "caption": "Minor",
+            "points": [
+                "Physics"
+            ]
+        },
+        {
+            "caption": "Thesis",
+            "points": [
+                "\"Travelling Waves for a Two-Phase Problem in Compressible Hydrodynamics\" - very good"
+            ]
+        },
+        {
+            "caption": "Overall grade",
+            "points": [
+                "good"
+            ]
+        }
+    ]
+}

@@ -1,10 +1,27 @@
-{{#getJsonContext 'src/templates/components/letters.json'}}
+<!-- BEGIN career -->
+<div class="career">
 
-{{> career_item
-        date='12.2020 – 06.2021'
-        title='Backend- & DevOps-Engineer'
-        subtitle='Currently 40h/Week, fully remote'
-        blocks=this.blocks
-}}
+    <!-- BEGIN career__education -->
+    <div class="career__education">
+        {{#getJsonContext 'src/templates/data/career_item_msc.json'}}
+        {{> career_item this }}
+        {{/getJsonContext}}
+        {{#getJsonContext 'src/templates/data/career_item_bsc.json'}}
+        {{> career_item this }}
+        {{/getJsonContext}}
+        {{#getJsonContext 'src/templates/data/career_item_selfstudy.json'}}
+        {{> career_item this }}
+        {{/getJsonContext}}
+    </div>
+    <!-- END career__education -->
 
-{{/getJsonContext}}
+    <!-- BEGIN career__experience -->
+    <div class="career__experience">
+        {{#getJsonContext 'src/templates/data/career_item_yourdata_ida.json'}}
+        {{> career_item this }}
+        {{/getJsonContext}}
+    </div>
+    <!-- END career__experience -->
+
+</div>
+<!-- END career -->

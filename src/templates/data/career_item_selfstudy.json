@@ -1,0 +1,23 @@
+{
+    "date": "ongoing",
+    "title": "Other educational activities",
+    "blocks": [
+        {
+            "caption": "Done",
+            "points": [
+                "Stanford CS229 Machine Learning by Andrew Ng",
+                "Stanford CS230 Deep Learning by Andrew Ng",
+                "Udemy Kafka Series by Stephane Maarek",
+                "Udemy Database Engineering by Hussein Nasser"
+            ]
+        },
+        {
+            "caption": "In Process",
+            "points": [
+                "Designing Data-Intensive Applications by Martin Kleppman",
+                "Machine Learning with Scikit-Learn, TensorFlow and Keras",
+                "Machine Learning, a probabilistic perspective"
+            ]
+        }
+    ]
+}
