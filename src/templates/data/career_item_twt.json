@@ -4,7 +4,7 @@
     "subtitle": "TWT GmbH (full-time employee)",
     "blocks": [
         {
-            "image": "../../assets/icons/icon_python.svg",
+            "image": "icon_python",
             "caption": "Python",
             "points": [
                 "Extension of an in-house-software solution, used for evaluation of engine control units data.",

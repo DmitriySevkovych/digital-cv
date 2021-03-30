@@ -5,7 +5,7 @@
     "blocks": [
         {
             "description": "Development of a new release for an enterprise-scale Java EE web application. Responsible for the following tasks:",
-            "image": "../../assets/icons/icon_java.svg",
+            "image": "icon_java",
             "caption": "Java EE",
             "points": [
                 "Software architecture.",

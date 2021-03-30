@@ -4,7 +4,7 @@
     "subtitle": "<16h/Week, remote",
     "blocks": [
         {
-            "image": "../../assets/icons/icon_react.svg",
+            "image": "icon_react",
             "caption": "React-Native",
             "points": [
                 "Frontend design and development of a mobile app for a healthy nutrition startup.",

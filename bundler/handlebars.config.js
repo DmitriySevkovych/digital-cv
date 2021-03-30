@@ -11,6 +11,11 @@ handlebars.registerHelper('getJsonContext', (filepath, options) => {
     return options.fn(JSON.parse(data));
 });
 
+handlebars.registerHelper('resolveSvg', (iconpath, block) => {
+    const icon = require(`../src/assets/icons/${iconpath}.svg`);
+    return block.fn({icon});
+});
+
 // Register partials
 handlebars.registerPartial('layout', fs.readFileSync('src/templates/layouts/layout.hbs', 'utf8'));
 

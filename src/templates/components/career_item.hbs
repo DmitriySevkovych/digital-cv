@@ -35,7 +35,9 @@
                 <div class="career__item__body__left">
                     {{#if this.image}}
                         <figure>
-                            <img src="{{this.image}}" alt="{{this.caption}}"/>
+                            {{#resolveSvg this.image}}
+                                <img src="{{icon}}" alt="{{this.caption}}"/>
+                            {{/resolveSvg}}
                             <figcaption>{{this.caption}}</figcaption>
                         </figure>
                     {{else}}
