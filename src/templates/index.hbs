@@ -6,9 +6,13 @@
     {{/content}}
 
     {{#content "content"}}
-        {{> components/header }}
-        {{> components/timeline }}
-        {{> components/career }}
+        <!-- BEGIN A4 -->
+        <page class="A4">
+            {{> components/header }}
+            {{> components/timeline }}
+            {{> components/career }}
+        </page>
+        <!-- END A4 -->
     {{/content}}
 
     {{!-- Note the prepend mode: can be handy to add stuff at the BEGINNING of the layout-foot block --}}
