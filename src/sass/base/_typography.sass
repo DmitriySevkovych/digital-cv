@@ -1,18 +1,28 @@
 :root
 	font-family: 'Inconsolata'
 	color: $color-font-description
+	font-size: 16px
 
 	h1, h2, h3, h4, h5
 		font-family: 'Courier Prime'
 		font-weight: 700
 
 	h1
-		font-size: 4.5rem
-		letter-spacing: 0.5rem
+		font-size: dpi-corrected(72px)
+		letter-spacing: 0.5em
+		line-height: dpi-corrected(81px)
 		color: $color-font-headline
 
 	h2
-		font-size: 3rem
+		font-size: dpi-corrected(48px)
+		line-height: dpi-corrected(54px)
 		color: $color-font-subtitle
 
+	h3
+		font-size: dpi-corrected(36px)
+		line-height: dpi-corrected(40px)
+		color: $color-font-subtitle
 
+	li, p
+		font-size: dpi-corrected(22px)
+		line-height: dpi-corrected(28px)

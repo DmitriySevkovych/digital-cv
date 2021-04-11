@@ -1,3 +1,12 @@
+@function dpi-corrected($size, $to: 1.6*72, $from: 300)
+  @return $size * $to / $from
+
+@function inv-dpi-corrected($size, $to: 72, $from: 300)
+  @return $size *  $from / $to
+
+// @function figma-corrected($size, $width: 210, $width-figma: 2480)
+//   @return $size * $width /  $width-figma
+
 @function em($size, $context: 16)
   @return ($size/$context) * 1em
 

@@ -1,8 +1,28 @@
-header
+.header
 
-	.header__content
+	&__intro
 		display: flex
+		flex-direction: column
 		justify-content: center
+		align-items: center
+
+		&__headline, &__subtitle, &__caption
+			color: $color-font-headline !important
+
+		&__headline
+			padding-top: dpi-corrected(111px)
+			padding-bottom: dpi-corrected(32px)
+
+		&__subtitle
+			letter-spacing: 0.5em
+			padding-bottom: dpi-corrected(32px)
+
+		&__caption
+			letter-spacing: 0.2em
+
+	&__content
+		display: flex
+		justify-content: space-evenly
 		align-items: center
 
 		&__attention
@@ -11,5 +31,20 @@ header
 			align-items: center
 
 		&__picture
+			margin-top: dpi-corrected(-40px)
+			position: relative // for the inset shadow on the picture
+
 			img
-				max-width: 15rem
+				max-width: dpi-corrected(356px)
+				border-radius: 50%
+
+			// for the inset shadow on the picture
+			&:before
+				content: ""
+				position: absolute
+				top: 0
+				bottom: 0
+				left: 0
+				right: 0
+				border-radius: 50%
+				box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(170, 170, 204, 0.25), inset 5px 5px 10px rgba(170, 170, 204, 0.5)

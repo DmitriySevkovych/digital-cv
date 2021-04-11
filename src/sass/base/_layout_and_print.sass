@@ -3,7 +3,8 @@ body
 
 .A4
 	display: block
-	width: 210mm
+	width: dpi-corrected(2480px)
+	// width: 210mm
 	// height: 297mm
 	margin: 2rem auto
 	background-color: $color-bg-a4
@@ -12,6 +13,7 @@ body
 @page
 	size: A4
 	margin: 0
+	padding: 0
 
 @media print
 	html, body
