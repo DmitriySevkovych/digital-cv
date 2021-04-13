@@ -22,7 +22,7 @@
 
 	&__content
 		display: flex
-		justify-content: space-evenly
+		justify-content: start
 		align-items: center
 
 		&__attention
@@ -33,18 +33,36 @@
 		&__picture
 			margin-top: dpi-corrected(-40px)
 			position: relative // for the inset shadow on the picture
+			margin-left: 150px
+			margin-right: 20px
+
+			// see _helpers.sass for helper definition!
+			+inset-shadow(true)
 
 			img
 				max-width: dpi-corrected(356px)
 				border-radius: 50%
 
-			// for the inset shadow on the picture
-			&:before
-				content: ""
-				position: absolute
-				top: 0
-				bottom: 0
-				left: 0
-				right: 0
-				border-radius: 50%
-				box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(170, 170, 204, 0.25), inset 5px 5px 10px rgba(170, 170, 204, 0.5)
+
+	&__content
+
+		&__data
+
+			&__languages
+				display: flex
+
+				.lang__C2
+					color: $color-grey-dark
+					font-family: $font-headlines
+					font-size: 10px
+
+				.lang__C1
+					color: $color-grey
+					font-family: $font-headlines
+					font-size: 10px
+
+				.lang__B2
+					color: $color-grey-light
+					font-family: $font-headlines
+					font-size: 10px
+

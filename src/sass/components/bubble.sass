@@ -1,0 +1,35 @@
+.bubble
+	display: flex
+	flex-direction: column
+	align-items: center
+
+	&__main
+		position: relative // for the inset shadow
+
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+
+		// see _helpers.sass for helper definition!
+		+inset-shadow
+
+	&_regular
+		padding-right: 0.5rem
+
+		.bubble
+			&__main
+				width: 1.5rem
+				height: 1.5rem
+
+			&__caption
+				margin-top: 0.1rem
+
+	&_big
+		.bubble
+			&__main
+				width: 2.5rem
+				height: 2.5rem
+
+			&__caption
+				margin-top: 0.2rem

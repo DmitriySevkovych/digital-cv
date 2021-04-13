@@ -1,8 +1,19 @@
-@function dpi-corrected($size, $to: 1.6*72, $from: 300)
+@function dpi-corrected($size, $to: 72, $from: 300)
   @return $size * $to / $from
 
-@function inv-dpi-corrected($size, $to: 72, $from: 300)
-  @return $size *  $from / $to
+=inset-shadow($big: false)
+  &:before
+    content: ""
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    border-radius: 50%
+    @if $big
+      box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(170, 170, 204, 0.25), inset 5px 5px 10px rgba(170, 170, 204, 0.5)
+    @else
+      box-shadow: inset -0.479839px -0.479839px 0.959677px rgba(255, 255, 255, 0.5), inset 0.479839px 0.479839px 0.959677px rgba(170, 170, 204, 0.25), inset 1.1996px 1.1996px 2.39919px rgba(170, 170, 204, 0.5), inset -1.1996px -1.1996px 2.39919px #FFFFFF
 
 // @function figma-corrected($size, $width: 210, $width-figma: 2480)
 //   @return $size * $width /  $width-figma

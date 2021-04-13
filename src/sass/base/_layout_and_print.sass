@@ -3,11 +3,12 @@ body
 
 .A4
 	display: block
-	width: dpi-corrected(2480px)
-	// width: 210mm
+	// width: dpi-corrected(2480px)
+	width: 210mm
 	// height: 297mm
 	margin: 2rem auto
 	background-color: $color-bg-a4
+	box-shadow: 0 0 0.5cm rgba(0,0,0,0.5)
 
 
 @page
@@ -17,9 +18,13 @@ body
 
 @media print
 	html, body
-		background-color: $color-bg-a4
 		width: 210mm
 		height: 297mm
+
+	.A4
+		border: solid 1px red
+		box-shadow: none
+		margin: 0
 
 	.print_not
 		display: none

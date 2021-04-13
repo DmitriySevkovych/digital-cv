@@ -33,7 +33,7 @@
         <div class="header__content__data">
 
             <ul class="header__content__data__contact">
-                <li>Address: D-70374 Stuttgart, Beskidenstraße 10</li>
+                {{!-- <li>Address: D-70374 Stuttgart, Beskidenstraße 10</li> --}}
                 <li>Email: dmitriy@sevkovych.com</li>
                 <li>Web: dmitriy.sevkovych.com</li>
             </ul>
@@ -41,16 +41,11 @@
             <!-- BEGIN header__content__data__languages -->
             <div class="header__content__data__languages">
 
-                <div>
-                    <div>
-                        <p>C2</p>
-                    </div>
-                    <p>English</p>
-                </div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+                {{> bubble text="C2" textStyles="lang__C2" caption="English" size="bubble_regular"}}
+                {{> bubble text="C2" textStyles="lang__C2" caption="German" size="bubble_regular"}}
+                {{> bubble text="C2" textStyles="lang__C2" caption="Russian" size="bubble_regular"}}
+                {{> bubble text="C1" textStyles="lang__C1" caption="Ukrainian" size="bubble_regular"}}
+                {{> bubble text="B2" textStyles="lang__B2" caption="French" size="bubble_regular"}}
 
             </div>
             <!-- END header__content__data__languages -->

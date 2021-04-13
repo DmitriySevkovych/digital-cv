@@ -1,0 +1,16 @@
+<div class="bubble {{size}}">
+    <div class="bubble__main">
+        {{#if image }}
+            {{#resolveSvg image}}
+                <img src="{{icon}}" alt="{{caption}}"/>
+            {{/resolveSvg}}
+        {{else}}
+            {{#if textStyles }}
+                <p class="{{textStyles}}">{{text}}</p>
+            {{else}}
+                <p>{{text}}</p>
+            {{/if}}
+        {{/if}}
+    </div>
+    <p class="bubble__caption">{{caption}}</p>
+</div>
