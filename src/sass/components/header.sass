@@ -71,8 +71,27 @@
 		display: flex
 		flex: 1
 		justify-content: space-between
+		align-items: center
 		margin: auto 2rem
+		padding: dpi-corrected(25px) dpi-corrected(54px)
+		background-color: $color-bg-searchbar
+		border-radius: 50px
 
-		&__button img
-			width: 1rem
-			height: 1rem
+		&__text
+			color: $color-font-description !important
+
+		&__button
+			position: absolute
+			width: dpi-corrected(72px)
+			height: dpi-corrected(72px)
+			right:  dpi-corrected(29px)
+			top: calc(50% - dpi-corrected(72px)/2)
+			border-radius: 50%
+			box-shadow: 5px 5px 10px rgba(170, 170, 204, 0.5), -5px -5px 10px #FFFFFF
+
+			img
+				position: absolute
+				top: dpi-corrected(12px)
+				left: dpi-corrected(12px)
+				width: dpi-corrected(48px)
+				height: dpi-corrected(48px)
