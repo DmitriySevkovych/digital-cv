@@ -53,7 +53,8 @@ module.exports = {
             },
             {
                 test: /\.(svg)$/i,
-                type: 'asset/inline',
+                // type: 'asset/source', // currently not necessary
+                type: 'asset/inline', // currently better for this project
             },
             // Fonts
             {
