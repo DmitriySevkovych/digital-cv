@@ -4,13 +4,15 @@
 	align-items: center
 
 	&__main
-		position: relative // for the inset shadow
-
 		display: flex
 		flex-direction: column
 		align-items: center
 		justify-content: center
 
+		background-color: $color-bg-highlight
+		border-radius: 50%
+
+		position: relative // for the inset shadow
 		// see _helpers.sass for helper definition!
 		+inset-shadow
 
