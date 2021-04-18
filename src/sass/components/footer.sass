@@ -1,0 +1,43 @@
+// Color transition for SVGs in anchor tags
+footer
+	a
+		&:hover
+			svg path
+				fill: orange
+
+	svg
+
+		path
+			transition: fill 300ms ease-in-out
+
+// Footer looks
+.footer
+	display: flex
+	justify-content: space-evenly
+	align-items: center
+
+	&__links
+		a
+			padding: 0.5rem
+
+			&:hover
+				svg path
+					fill: orange
+
+		svg
+			max-width: 30px
+
+			path
+				transition: fill 300ms ease-in-out
+
+	&__print
+		button
+			color: $color-grey-darkest
+			font-family: $font-headlines
+			background-color: inherit
+
+	&__developedBy
+		max-width: 50px
+		svg
+			width: 100%
+			height: auto
