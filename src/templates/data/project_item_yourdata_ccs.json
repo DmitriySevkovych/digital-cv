@@ -1,0 +1,45 @@
+{
+    "date_from": "07.2019",
+    "date_to": "08.2020",
+    "title": "Full-Stack Java EE Developer",
+    "subtitle": "40h/Week, on-site in Stuttgart",
+    "blocks": [
+        {
+            "description": "Development of a new release for an enterprise-scale Java EE web application. Responsible for the following tasks:",
+            "image": "icon_java",
+            "caption": "Java EE",
+            "points": [
+                "Software architecture.",
+                "REST services and clients.",
+                "Databases.",
+                "Implementation of test suites."
+            ]
+        }
+    ],
+    "techs": [
+        {
+            "image": "icon_kafka",
+            "caption": "REST/Swagger"
+        },
+        {
+            "image": "icon_kafka",
+            "caption": "PostgreSQL"
+        },
+        {
+            "image": "icon_kafka",
+            "caption": "Gradle"
+        },
+        {
+            "image": "icon_kafka",
+            "caption": "Jenkins"
+        },
+        {
+            "image": "icon_kafka",
+            "caption": "Linux"
+        },
+        {
+            "image": "icon_kafka",
+            "caption": "TDD"
+        }
+    ]
+}

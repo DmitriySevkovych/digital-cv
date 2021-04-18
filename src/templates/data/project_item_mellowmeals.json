@@ -1,0 +1,42 @@
+{
+    "date_from": "09.2019",
+    "date_to": "05.2020",
+    "title": "Frontend Developer",
+    "subtitle": "<16h/Week, remote",
+    "blocks": [
+        {
+            "image": "icon_react",
+            "caption": "React-Native",
+            "points": [
+                "Frontend design and development of a mobile app for a healthy nutrition startup.",
+                "Consulting and active participation in backend development."
+            ]
+        }
+    ],
+    "techs": [
+        {
+            "image": "icon_kafka",
+            "caption": "TypeScript"
+        },
+        {
+            "image": "icon_kafka",
+            "caption": "CSS3"
+        },
+        {
+            "image": "icon_kafka",
+            "caption": "MongoDB"
+        },
+        {
+            "image": "icon_kafka",
+            "caption": "REST"
+        },
+        {
+            "image": "icon_kafka",
+            "caption": "Firebase"
+        },
+        {
+            "image": "icon_kafka",
+            "caption": "Git"
+        }
+    ]
+}

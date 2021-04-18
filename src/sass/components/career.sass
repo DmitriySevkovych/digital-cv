@@ -1,0 +1,40 @@
+.career
+
+	&__projects
+		display: grid
+		grid-template-columns: 1fr 1fr
+		column-gap: 1rem
+		row-gap: 1rem
+		padding: 1rem
+
+	.project__item, .education__item
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		box-shadow: -3.09524px -3.09524px 6.19048px #FAFBFF, 3.09524px 3.09524px 6.19048px #A6ABBD
+		border-radius: 9.59678px
+
+		&__head
+			display: flex
+			justify-content: space-between
+			padding: 5px 10px
+
+			&__date
+				display: flex
+				flex-direction: column
+
+			svg
+				max-width: 1rem
+				fill: $color-grey-light
+
+		&__body
+			display: flex
+			flex-direction: column
+
+			&__blocks
+				display: flex
+
+			&__techs
+				display: grid
+				grid-template-columns: repeat( 6, 1fr )
+

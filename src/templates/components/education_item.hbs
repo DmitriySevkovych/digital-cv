@@ -1,0 +1,55 @@
+<!-- BEGIN education__item -->
+<div class="education__item">
+
+    <!-- BEGIN education__item__head -->
+    <div class="education__item__head">
+
+        <!-- BEGIN education__item__head__date -->
+        <h4 class="education__item__head__date">
+            {{date}}
+        </h4>
+        <!-- END education__item__head__date -->
+
+        <!-- BEGIN education__item__head__title -->
+        <h4 class="education__item__head__title">
+            {{title}}<br/>{{subtitle}}
+        </h4>
+        <!-- END education__item__head__title -->
+
+        {{> svg/chevron }}
+    </div>
+    <!-- END education__item__head -->
+
+    <!-- BEGIN education__item__body -->
+    <div class="education__item__body">
+
+        <!-- BEGIN education__item__body__blocks -->
+        <div class="education__item__body__blocks">
+
+            {{#each blocks}}
+
+                <!-- BEGIN education__item__body__left -->
+                <div class="education__item__body__left">
+                    <p>{{this.caption}}</p>
+                </div>
+                <!-- END education__item__body__left -->
+
+                <!-- BEGIN education__item__body__right -->
+                <div class="education__item__body__right">
+                    <ul>
+                        {{#each this.points}}
+                            <li>{{this}}</li>
+                        {{/each}}
+                    </ul>
+                </div>
+                <!-- END education__item__body__right -->
+
+            {{/each}}
+        </div>
+        <!-- END education__item__body__blocks -->
+
+    </div>
+    <!-- END education__item__body -->
+
+</div>
+<!-- END education__item -->

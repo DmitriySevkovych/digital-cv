@@ -1,36 +1,36 @@
 <!-- BEGIN career -->
 <div class="career">
 
+    <!-- BEGIN career__projects -->
+    <div class="career__projects">
+        {{#getJsonContext 'src/templates/data/project_item_yourdata_ida.json'}}
+        {{> project_item this }}
+        {{/getJsonContext}}
+        {{#getJsonContext 'src/templates/data/project_item_yourdata_ccs.json'}}
+        {{> project_item this }}
+        {{/getJsonContext}}
+        {{#getJsonContext 'src/templates/data/project_item_mellowmeals.json'}}
+        {{> project_item this }}
+        {{/getJsonContext}}
+        {{#getJsonContext 'src/templates/data/project_item_twt.json'}}
+        {{> project_item this }}
+        {{/getJsonContext}}
+    </div>
+    <!-- END career__projects -->
+
     <!-- BEGIN career__education -->
     <div class="career__education">
-        {{#getJsonContext 'src/templates/data/career_item_msc.json'}}
-        {{> career_item this }}
+        {{#getJsonContext 'src/templates/data/education_item_msc.json'}}
+        {{> education_item this }}
         {{/getJsonContext}}
-        {{#getJsonContext 'src/templates/data/career_item_bsc.json'}}
-        {{> career_item this }}
+        {{#getJsonContext 'src/templates/data/education_item_bsc.json'}}
+        {{> education_item this }}
         {{/getJsonContext}}
-        {{#getJsonContext 'src/templates/data/career_item_selfstudy.json'}}
-        {{> career_item this }}
+        {{#getJsonContext 'src/templates/data/education_item_selfstudy.json'}}
+        {{> education_item this }}
         {{/getJsonContext}}
     </div>
     <!-- END career__education -->
-
-    <!-- BEGIN career__experience -->
-    <div class="career__experience">
-        {{#getJsonContext 'src/templates/data/career_item_yourdata_ida.json'}}
-        {{> career_item this }}
-        {{/getJsonContext}}
-        {{#getJsonContext 'src/templates/data/career_item_yourdata_ccs.json'}}
-        {{> career_item this }}
-        {{/getJsonContext}}
-        {{#getJsonContext 'src/templates/data/career_item_mellowmeals.json'}}
-        {{> career_item this }}
-        {{/getJsonContext}}
-        {{#getJsonContext 'src/templates/data/career_item_twt.json'}}
-        {{> career_item this }}
-        {{/getJsonContext}}
-    </div>
-    <!-- END career__experience -->
 
 </div>
 <!-- END career -->

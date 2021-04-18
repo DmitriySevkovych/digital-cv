@@ -1,5 +1,6 @@
 {
-    "date": "07.2017 –05.2019",
+    "date_from": "07.2017",
+    "date_to": "05.2019",
     "title": "Systems Engineer",
     "subtitle": "TWT GmbH (full-time employee)",
     "blocks": [
@@ -12,6 +13,32 @@
                 "Research in outlier detection.",
                 "Lead developer of a desktop application, intended to automate the mass-production flashing process of engine control units . Full project management."
             ]
+        }
+    ],
+    "techs": [
+        {
+            "image": "icon_java",
+            "caption": "Java 8"
+        },
+        {
+            "image": "icon_cs",
+            "caption": "C#"
+        },
+        {
+            "image": "icon_kafka",
+            "caption": "R"
+        },
+        {
+            "image": "icon_kafka",
+            "caption": "Jenkins"
+        },
+        {
+            "image": "icon_kafka",
+            "caption": "SQLite"
+        },
+        {
+            "image": "icon_kafka",
+            "caption": "Git"
         }
     ]
 }

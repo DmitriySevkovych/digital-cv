@@ -1,0 +1,74 @@
+<!-- BEGIN project__item -->
+<div class="project__item">
+
+    <!-- BEGIN project__item__head -->
+    <div class="project__item__head">
+
+        <!-- BEGIN project__item__head__date -->
+        <div class="project__item__head__date">
+            <h4>{{date_from}}</h4>
+            <h4>{{date_to}}</h4>
+        </div>
+        <!-- END project__item__head__date -->
+
+        <!-- BEGIN project__item__head__title -->
+        <h4 class="project__item__head__title">
+            {{title}}<br/>{{subtitle}}
+        </h4>
+        <!-- END project__item__head__title -->
+
+        <!-- BEGIN project__item__head__icon print_not -->
+        <div class="project__item__head__icon print_not">
+            {{> svg/chevron }}
+        </div>
+        <!-- END project__item__head__icon print_not -->
+
+    </div>
+    <!-- END project__item__head -->
+
+    <!-- BEGIN project__item__body -->
+    <div class="project__item__body">
+
+        {{#if description}}
+            <p class="project__item__body__description">{{description}}</p>
+        {{/if}}
+
+        <!-- BEGIN project__item__body__blocks -->
+        <div class="project__item__body__blocks">
+
+            {{#each blocks}}
+
+                <!-- BEGIN project__item__body__left -->
+                <div class="project__item__body__left">
+                    {{> bubble image=this.image caption=this.caption size="bubble_big"}}
+                </div>
+                <!-- END project__item__body__left -->
+
+                <!-- BEGIN project__item__body__right -->
+                <div class="project__item__body__right">
+                    <ul>
+                        {{#each this.points}}
+                            <li>{{this}}</li>
+                        {{/each}}
+                    </ul>
+                </div>
+                <!-- END project__item__body__right -->
+
+            {{/each}}
+        </div>
+        <!-- END project__item__body__blocks -->
+
+        <!-- BEGIN project__item__body__techs -->
+        <div class="project__item__body__techs">
+
+            {{#each techs}}
+                {{> bubble image=this.image caption=this.caption size="bubble_regular"}}
+            {{/each}}
+
+        </div>
+        <!-- END project__item__body__techs -->
+    </div>
+    <!-- END project__item__body -->
+
+</div>
+<!-- END project__item -->
