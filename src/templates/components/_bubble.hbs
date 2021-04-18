@@ -1,4 +1,7 @@
+<!-- BEGIN bubble -->
 <div class="bubble {{size}}">
+
+    <!-- BEGIN bubble__main -->
     <div class="bubble__main">
         {{#if image }}
             {{#resolveSvg image}}
@@ -12,5 +15,8 @@
             {{/if}}
         {{/if}}
     </div>
+    <!-- END bubble__main -->
+
     <p class="bubble__caption">{{caption}}</p>
 </div>
+<!-- END bubble -->

@@ -1,34 +1,44 @@
 <!-- BEGIN career -->
 <div class="career">
 
+    <h3 class="career__subtitle">Recent projects</h3>
+
     <!-- BEGIN career__projects -->
     <div class="career__projects">
         {{#getJsonContext 'src/templates/data/project_item_yourdata_ida.json'}}
-        {{> project_item this }}
+        {{> career_project_item this }}
         {{/getJsonContext}}
         {{#getJsonContext 'src/templates/data/project_item_yourdata_ccs.json'}}
-        {{> project_item this }}
+        {{> career_project_item this }}
         {{/getJsonContext}}
         {{#getJsonContext 'src/templates/data/project_item_mellowmeals.json'}}
-        {{> project_item this }}
+        {{> career_project_item this }}
         {{/getJsonContext}}
         {{#getJsonContext 'src/templates/data/project_item_twt.json'}}
-        {{> project_item this }}
+        {{> career_project_item this }}
         {{/getJsonContext}}
     </div>
     <!-- END career__projects -->
 
+    <h3 class="career__subtitle">Education</h3>
+
     <!-- BEGIN career__education -->
     <div class="career__education">
         {{#getJsonContext 'src/templates/data/education_item_msc.json'}}
-        {{> education_item this }}
+        {{> career_education_item this }}
         {{/getJsonContext}}
         {{#getJsonContext 'src/templates/data/education_item_bsc.json'}}
-        {{> education_item this }}
+        {{> career_education_item this }}
         {{/getJsonContext}}
         {{#getJsonContext 'src/templates/data/education_item_selfstudy.json'}}
-        {{> education_item this }}
+        {{> career_education_item this }}
         {{/getJsonContext}}
+
+        <!-- BEGIN career__visit -->
+        <div class="career__visit print">
+            <h5>visit <span>dmitriy.sevkovych.com</span><br/> for more information</h5>
+        </div>
+        <!-- END career__visit -->
     </div>
     <!-- END career__education -->
 

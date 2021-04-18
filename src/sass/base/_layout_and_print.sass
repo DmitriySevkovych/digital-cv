@@ -2,7 +2,10 @@ body
 	background-color: $color-bg-dark
 
 .A4
-	display: block
+	display: flex
+	flex-direction: column
+	flex: 1
+	justify-content: space-between
 	width: dpi-corrected(2480px)
 	// width: 210mm
 	// height: 297mm
@@ -23,12 +26,13 @@ body
 
 	.A4
 		width: 210mm
+		height: 297mm
 		box-shadow: none
 		margin: 0
 
 	.print_not
-		display: none
+		display: none !important
 
 	.print
-		display: block
+		display: block !important
 

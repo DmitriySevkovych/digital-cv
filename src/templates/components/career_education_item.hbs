@@ -1,5 +1,5 @@
 <!-- BEGIN education__item -->
-<div class="education__item">
+<div class="education__item {{classes}}">
 
     <!-- BEGIN education__item__head -->
     <div class="education__item__head">
@@ -15,18 +15,16 @@
             {{title}}<br/>{{subtitle}}
         </h4>
         <!-- END education__item__head__title -->
-
-        {{> svg/chevron }}
     </div>
     <!-- END education__item__head -->
 
     <!-- BEGIN education__item__body -->
     <div class="education__item__body">
 
-        <!-- BEGIN education__item__body__blocks -->
-        <div class="education__item__body__blocks">
+        {{#each blocks}}
 
-            {{#each blocks}}
+            <!-- BEGIN education__item__body__block -->
+            <div class="education__item__body__block">
 
                 <!-- BEGIN education__item__body__left -->
                 <div class="education__item__body__left">
@@ -44,9 +42,10 @@
                 </div>
                 <!-- END education__item__body__right -->
 
-            {{/each}}
-        </div>
-        <!-- END education__item__body__blocks -->
+            </div>
+            <!-- END education__item__body__block -->
+
+        {{/each}}
 
     </div>
     <!-- END education__item__body -->

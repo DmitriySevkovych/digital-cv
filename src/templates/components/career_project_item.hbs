@@ -1,5 +1,5 @@
 <!-- BEGIN project__item -->
-<div class="project__item">
+<div class="project__item {{classes}}">
 
     <!-- BEGIN project__item__head -->
     <div class="project__item__head">
@@ -40,7 +40,7 @@
 
                 <!-- BEGIN project__item__body__left -->
                 <div class="project__item__body__left">
-                    {{> bubble image=this.image caption=this.caption size="bubble_big"}}
+                    {{> _bubble image=this.image caption=this.caption size="bubble_big"}}
                 </div>
                 <!-- END project__item__body__left -->
 
@@ -62,7 +62,7 @@
         <div class="project__item__body__techs">
 
             {{#each techs}}
-                {{> bubble image=this.image caption=this.caption size="bubble_regular"}}
+                {{> _bubble image=this.image caption=this.caption size="bubble_regular"}}
             {{/each}}
 
         </div>
