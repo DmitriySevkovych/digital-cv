@@ -3,6 +3,7 @@
     "date_to": "08.2020",
     "title": "Full-Stack Java EE Developer",
     "subtitle": "40h/Week, on-site in Stuttgart",
+    "classes": "is_open",
     "blocks": [
         {
             "description": "Development of a new release for an enterprise-scale Java EE web application. Responsible for the following tasks:",

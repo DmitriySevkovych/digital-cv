@@ -4,6 +4,7 @@
     "title": "Backend- & DevOps-Engineer",
     "subtitle": "Currently 40h/Week, fully remote",
     "description": "Building real-time ETL pipelines for heterogenous data with Kafka and Kafka Streams.",
+    "classes": "is_open",
     "blocks": [
         {
             "image": "icon_kafka",
