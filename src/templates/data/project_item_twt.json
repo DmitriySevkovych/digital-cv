@@ -3,16 +3,17 @@
     "date_to": "05.2019",
     "title": "Systems Engineer",
     "subtitle": "TWT GmbH (full-time employee)",
-    "classes": "print_not",
+    "classes": "is_open",
     "blocks": [
         {
             "image": "icon_python",
             "caption": "Python",
+            "description": "Participation in multiple industrial and research projects. Responsibilities:",
             "points": [
-                "Extension of an in-house-software solution, used for evaluation of engine control units data.",
+                "Software development for evaluation of engine control units data.",
+                "Software development lead for automation of mass-production engine control units flashing processes.",
                 "Evaluation and POC implementation of outlier detection mechanisms.",
-                "Research in outlier detection.",
-                "Lead developer of a desktop application, intended to automate the mass-production flashing process of engine control units . Full project management."
+                "Customer consultation in applied statistics."
             ]
         }
     ],

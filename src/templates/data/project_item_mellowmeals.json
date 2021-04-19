@@ -3,14 +3,16 @@
     "date_to": "05.2020",
     "title": "Frontend Developer",
     "subtitle": "<16h/Week, remote",
-    "classes": "print_not",
+    "classes": "is_open",
     "blocks": [
         {
             "image": "icon_react",
             "caption": "React-Native",
+            "description": "Creation of a mobile app for a healthy nutrition startup. Responsibilities:",
             "points": [
-                "Frontend design and development of a mobile app for a healthy nutrition startup.",
-                "Consulting and active participation in backend development."
+                "Frontend development",
+                "Participation in user interface design",
+                "Participation in backend development"
             ]
         }
     ],

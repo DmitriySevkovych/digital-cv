@@ -1,0 +1,43 @@
+{
+    "date_from": "06.2020",
+    "title": "Website ivanna.sevkovych.com",
+    "subtitle": "14 days, at home",
+    "classes": "print_not",
+    "blocks": [
+        {
+            "image": "icon_kafka",
+            "caption": "Three.js",
+            "description": "Helped my wife build and deploy her first 3D web-based portfolio.",
+            "points": [
+                "Website development",
+                "Website deployment"
+            ]
+        }
+    ],
+    "techs": [
+        {
+            "image": "icon_javascript",
+            "caption": "JavaScript"
+        },
+        {
+            "image": "icon_kafka",
+            "caption": "SASS"
+        },
+        {
+            "image": "icon_kafka",
+            "caption": "Handlebars"
+        },
+        {
+            "image": "icon_kafka",
+            "caption": "Webpack"
+        },
+        {
+            "image": "icon_kafka",
+            "caption": "Git"
+        },
+        {
+            "image": "icon_kafka",
+            "caption": "Apache httpd"
+        }
+    ]
+}

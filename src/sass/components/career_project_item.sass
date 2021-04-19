@@ -1,57 +1,98 @@
 .project__item
+	// own layout
 	width: 44% // TODO looks not correct
 	margin: 2.5% // TODO not correct
+	padding: dpi-corrected(50px)
+
+	// own display
 	display: flex
 	flex-direction: column
 	justify-content: space-between
-	box-shadow: -3.09524px -3.09524px 6.19048px #FAFBFF, 3.09524px 3.09524px 6.19048px #A6ABBD // TODO temporary
-	border-radius: 9.59678px // TODO temporary
+
+	// shadows
+	box-shadow: -3.09524px -3.09524px 6.19048px #FAFBFF, 3.09524px 3.09524px 6.19048px #A6ABBD // TODO values are probably temporary
+	border-radius: 9.59678px // TODO value is probably temporary
 
 	&__head
+		// own display
 		display: flex
 		justify-content: start
 		align-items: center
-		padding: dpi-corrected(50px) dpi-corrected(50px) dpi-corrected(25px) dpi-corrected(50px)
+
+		// own layout
+		padding-bottom: dpi-corrected(33px)
 
 		&__date
+			// own display
 			display: flex
 			flex-direction: column
-			padding-right: dpi-corrected(25px)
+
+			// own layout
+			padding-right: dpi-corrected(33px)
 
 		&__title
-			flex-grow: 1
+			// parent display flex
+			flex-grow: 1 // take unused space to push the icon to the right
 
 		&__icon
+			// sizing
+			width: 1rem
+			height: 1rem // hard-code to avoid issues with aspect ratio (and ugly rotation because of that)
+
 			cursor: pointer
 			transition: transform 300ms ease-in-out
-			width: 1rem
-			height: 1rem
 
 			svg
+				// size constraint
 				width: 1rem
+				// for hover effect
 				fill: $color-grey-light
 				transition: fill 300ms ease-in-out
 
+			// icon hover effect
 			&:hover
 				svg
 					fill: $color-accent
 
 	&__body
-		min-height: dpi-corrected(740px)
-		display: none
+		display: none // is overwritten to 'flex' by .is-open class (which is toggled on click)
 		flex-direction: column
 
+		// to avoid masonry style, esp. important for printing
+		min-height: dpi-corrected(740px)
+
 		&__blocks
+			// for parent display flex
+			flex: 1
+
+			// for own display
 			display: flex
+			align-items: center
+
+		// ATTENTION: this is the left part of __blocks
+		&__left
+			padding-right: dpi-corrected(36px)
+
+		// ATTENTION: this is the right part of __blocks
+		&__right
+
+		&__description
+			padding-bottom: dpi-corrected(36px)
 
 		&__techs
+			// for parent diplay flex
+			justify-self: end
+
+			// for own display
 			display: grid
 			grid-template-columns: repeat( 6, 1fr )
 
 
 // Styles for item open state
 .is_open.project__item
+	// Flip the icon when item is opened
 	.project__item__head__icon
 		transform: rotate(180deg)
+	// Show the body when item is opened
 	.project__item__body
 		display: flex

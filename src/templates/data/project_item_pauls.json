@@ -1,0 +1,43 @@
+{
+    "date_from": "03.2020",
+    "title": "Website paulscafebar.com",
+    "subtitle": "1 day, remote",
+    "classes": "print_not",
+    "blocks": [
+        {
+            "image": "icon_kafka",
+            "caption": "SASS",
+            "description": "Creation of a static website for a café. Responsibilities:",
+            "points": [
+                "Website development",
+                "Website deployment"
+            ]
+        }
+    ],
+    "techs": [
+        {
+            "image": "icon_kafka",
+            "caption": "CSS3"
+        },
+        {
+            "image": "icon_javascript",
+            "caption": "JavaScript"
+        },
+        {
+            "image": "icon_kafka",
+            "caption": "GSAP"
+        },
+        {
+            "image": "icon_kafka",
+            "caption": "Webpack"
+        },
+        {
+            "image": "icon_kafka",
+            "caption": "Git"
+        },
+        {
+            "image": "icon_kafka",
+            "caption": "Apache httpd"
+        }
+    ]
+}

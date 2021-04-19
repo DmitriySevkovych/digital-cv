@@ -29,10 +29,6 @@
     <!-- BEGIN project__item__body -->
     <div class="project__item__body">
 
-        {{#if description}}
-            <p class="project__item__body__description">{{description}}</p>
-        {{/if}}
-
         <!-- BEGIN project__item__body__blocks -->
         <div class="project__item__body__blocks">
 
@@ -46,6 +42,13 @@
 
                 <!-- BEGIN project__item__body__right -->
                 <div class="project__item__body__right">
+
+                    <!-- BEGIN project__item__body__description -->
+                    {{#if this.description}}
+                        <p class="project__item__body__description">{{this.description}}</p>
+                    {{/if}}
+                    <!-- END project__item__body__description -->
+
                     <ul>
                         {{#each this.points}}
                             <li>{{this}}</li>
