@@ -6,13 +6,13 @@
     "classes": "is_open",
     "blocks": [
         {
-            "description": "Development of a new release for an enterprise-scale Java EE web application. Responsible for the following tasks:",
+            "description": "Development of a new release for an enterprise-scale Java EE web application. Responsibilities:",
             "image": "icon_java",
             "caption": "Java EE",
             "points": [
                 "Software architecture.",
-                "REST services and clients.",
-                "Databases.",
+                "Implementation of REST services and clients.",
+                "Database functions and ad-hoc analysis.",
                 "Implementation of test suites."
             ]
         }
