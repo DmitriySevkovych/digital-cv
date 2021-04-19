@@ -1,7 +1,7 @@
 .project__item
 	// own layout
-	width: 44% // TODO looks not correct
-	margin: 2.5% // TODO not correct
+	width: 48% // TODO looks not correct
+	margin: 1% // TODO not correct
 	padding: dpi-corrected(50px)
 
 	// own display
@@ -28,6 +28,7 @@
 			flex-direction: column
 
 			// own layout
+			width: dpi-corrected(200px)
 			padding-right: dpi-corrected(33px)
 
 		&__title
@@ -59,7 +60,7 @@
 		flex-direction: column
 
 		// to avoid masonry style, esp. important for printing
-		min-height: dpi-corrected(740px)
+		min-height: dpi-corrected(640px)
 
 		&__blocks
 			// for parent display flex
@@ -71,10 +72,11 @@
 
 		// ATTENTION: this is the left part of __blocks
 		&__left
-			padding-right: dpi-corrected(36px)
+			width: dpi-corrected(200px)
+			padding-right: dpi-corrected(33px)
 
 		// ATTENTION: this is the right part of __blocks
-		&__right
+		// &__right
 
 		&__description
 			padding-bottom: dpi-corrected(36px)

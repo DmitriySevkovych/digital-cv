@@ -10,9 +10,9 @@
             "caption": "Python",
             "description": "Participation in multiple industrial and research projects. Responsibilities:",
             "points": [
-                "Software development for evaluation of engine control units data.",
-                "Software development lead for automation of mass-production engine control units flashing processes.",
-                "Evaluation and POC implementation of outlier detection mechanisms.",
+                "Evaluation of engine control units data.",
+                "Software development, partly as lead.",
+                "Implementation of outlier detection mechanisms.",
                 "Customer consultation in applied statistics."
             ]
         }
