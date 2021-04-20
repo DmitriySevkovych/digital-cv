@@ -35,28 +35,38 @@
     <h3 class="career__subtitle">Education</h3>
 
     <!-- BEGIN career__education -->
-    <div class="career__education">
-        {{#getJsonContext 'src/templates/data/education_item_msc.json'}}
-        {{> career_education_item this }}
-        {{/getJsonContext}}
-        {{#getJsonContext 'src/templates/data/education_item_bsc.json'}}
-        {{> career_education_item this }}
-        {{/getJsonContext}}
-        {{#getJsonContext 'src/templates/data/education_item_ml.json'}}
-        {{> career_education_item this }}
-        {{/getJsonContext}}
-        {{#getJsonContext 'src/templates/data/education_item_frontend.json'}}
-        {{> career_education_item this }}
-        {{/getJsonContext}}
-        {{#getJsonContext 'src/templates/data/education_item_data_engineering.json'}}
-        {{> career_education_item this }}
-        {{/getJsonContext}}
-        {{#getJsonContext 'src/templates/data/education_item_hacking.json'}}
-        {{> career_education_item this }}
-        {{/getJsonContext}}
-        {{#getJsonContext 'src/templates/data/education_item_devops.json'}}
-        {{> career_education_item this }}
-        {{/getJsonContext}}
+    <div class="career__education swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            {{#getJsonContext 'src/templates/data/education_item_msc.json'}}
+            {{> career_education_item this }}
+            {{/getJsonContext}}
+            {{#getJsonContext 'src/templates/data/education_item_bsc.json'}}
+            {{> career_education_item this }}
+            {{/getJsonContext}}
+            {{#getJsonContext 'src/templates/data/education_item_ml.json'}}
+            {{> career_education_item this }}
+            {{/getJsonContext}}
+            {{#getJsonContext 'src/templates/data/education_item_frontend.json'}}
+            {{> career_education_item this }}
+            {{/getJsonContext}}
+            {{#getJsonContext 'src/templates/data/education_item_data_engineering.json'}}
+            {{> career_education_item this }}
+            {{/getJsonContext}}
+            {{#getJsonContext 'src/templates/data/education_item_hacking.json'}}
+            {{> career_education_item this }}
+            {{/getJsonContext}}
+            {{#getJsonContext 'src/templates/data/education_item_devops.json'}}
+            {{> career_education_item this }}
+            {{/getJsonContext}}
+        </div>
+
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
 
         <!-- BEGIN career__visit -->
         <div class="career__visit print">
