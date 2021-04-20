@@ -7,13 +7,15 @@
             "caption": "Done",
             "points": [
                 "The DevOps Handbook",
+                "Test-Driven Development by Kent Beck",
                 "..."
             ]
         },
         {
             "caption": "In Process",
             "points": [
-                "..."
+                "Release It! by Michael Nygard",
+                "Refactoring by Martin Fowler"
             ]
         }
     ]

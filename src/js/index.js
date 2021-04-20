@@ -33,10 +33,12 @@ SwiperCore.use([Navigation, Pagination]);
 
 // init Swiper:
 new Swiper('.swiper-container', {
+
     speed: 400,
-    spaceBetween: 100,
-    loop: true,
-    centeredSlides: true,
+    spaceBetween: 10,
+    // loop: true,
+    // centeredSlides: true,
+    slidesPerView: 3,
 
 
     // If we need pagination

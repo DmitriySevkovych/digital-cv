@@ -1,6 +1,9 @@
 .education__item
 	display: flex
 	flex-direction: column
+
+	padding: dpi-corrected(40px)
+
 	box-shadow: -3.09524px -3.09524px 6.19048px #FAFBFF, 3.09524px 3.09524px 6.19048px #A6ABBD
 	border-radius: 9.59678px
 	margin: 1rem // TODO temporary
@@ -13,10 +16,15 @@
 		display: flex
 		flex-direction: column
 
+		min-height: dpi-corrected(650px)
+
 		&__block
 			display: flex
-			justify-content: space-between
+			align-items: baseline
 
 		&__left
 			font-family: $font-headlines !important
+			color: $color-font-caption !important
+			width: dpi-corrected(120px)
+			padding: dpi-corrected(36px) dpi-corrected(36px) 0 0
 
