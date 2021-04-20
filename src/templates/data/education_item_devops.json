@@ -1,0 +1,20 @@
+{
+    "date": "ongoing",
+    "title": "Self-Education: DevOps",
+    "classes": "print_not",
+    "blocks": [
+        {
+            "caption": "Done",
+            "points": [
+                "The DevOps Handbook",
+                "..."
+            ]
+        },
+        {
+            "caption": "In Process",
+            "points": [
+                "..."
+            ]
+        }
+    ]
+}

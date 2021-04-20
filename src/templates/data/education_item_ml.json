@@ -1,6 +1,6 @@
 {
     "date": "ongoing",
-    "title": "Other educational activities",
+    "title": "Self-Education: Machine Learning",
     "classes": "print_not",
     "blocks": [
         {
@@ -8,18 +8,17 @@
             "points": [
                 "Stanford CS229 Machine Learning by Andrew Ng",
                 "Stanford CS230 Deep Learning by Andrew Ng",
-                "Udemy Kafka Series by Stephane Maarek",
-                "Udemy Database Engineering by Hussein Nasser",
-                "Three.js Journey by Bruno Simon"
+                "Coursera Deep Learning Specialization by Andrew Ng",
+                "..."
             ]
         },
         {
             "caption": "In Process",
             "points": [
-                "Designing Data-Intensive Applications by Martin Kleppman",
                 "Machine Learning with Scikit-Learn, TensorFlow and Keras",
                 "Machine Learning, a probabilistic perspective",
-                "Udemy Ethical Hacking by Zaid Sabih"
+                "Machine Leaning Yearning",
+                "..."
             ]
         }
     ]
