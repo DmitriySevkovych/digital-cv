@@ -13,7 +13,7 @@ handlebars.registerHelper('getJsonContext', (filepath, options) => {
 
 handlebars.registerHelper('resolveSvg', (iconpath, block) => {
     const icon = require(`../src/assets/icons/${iconpath}.svg`);
-    return block.fn({icon});
+    return block.fn({ icon });
 });
 
 // Register partials
