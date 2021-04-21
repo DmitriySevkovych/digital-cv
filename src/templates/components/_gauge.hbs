@@ -2,10 +2,15 @@
 <div class="gauge">
 
     <!-- BEGIN gauge__main -->
-    <div class="gauge__main">
-        {{#resolveSvg image}}
-            <img src="{{icon}}" alt="{{caption}}" />
-        {{/resolveSvg}}
+    <div class="gauge__main gauge__outer">
+
+        <!-- BEGIN gauge__inner -->
+        <div class="gauge__inner">
+            {{#resolveSvg image}}
+                <img src="{{icon}}" alt="{{caption}}" />
+            {{/resolveSvg}}
+        </div>
+        <!-- END gauge__inner -->
     </div>
     <!-- END gauge__main -->
 
