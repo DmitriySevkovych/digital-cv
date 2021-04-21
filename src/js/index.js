@@ -35,9 +35,9 @@ SwiperCore.use([Navigation, Pagination]);
 new Swiper('.swiper-container', {
 
     speed: 400,
-    spaceBetween: 10,
+    spaceBetween: 24,
     // loop: true,
-    // centeredSlides: true,
+    centeredSlides: true,
     slidesPerView: 3,
 
 
