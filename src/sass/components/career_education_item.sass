@@ -2,15 +2,10 @@
 	display: flex
 	flex-direction: column
 
-	padding: dpi-corrected(40px)
+	padding: dpi-corrected(40px) dpi-corrected(30px)
 
 	box-shadow: -3.09524px -3.09524px 6.19048px #FAFBFF, 3.09524px 3.09524px 6.19048px #A6ABBD
 	border-radius: 9.59678px
-
-	// TODO maybe restrict the size not only for print
-	@media print
-		max-width: 37%
-
 
 	&__body
 		display: flex
@@ -27,4 +22,3 @@
 			color: $color-font-caption !important
 			width: dpi-corrected(120px)
 			padding: dpi-corrected(36px) dpi-corrected(36px) 0 0
-
