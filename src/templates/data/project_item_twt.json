@@ -27,19 +27,19 @@
             "caption": "C#"
         },
         {
-            "image": "icon_kafka",
+            "image": "icon_r",
             "caption": "R"
         },
         {
-            "image": "icon_kafka",
+            "image": "icon_jenkins",
             "caption": "Jenkins"
         },
         {
-            "image": "icon_kafka",
+            "image": "icon_sqlite-square",
             "caption": "SQLite"
         },
         {
-            "image": "icon_kafka",
+            "image": "icon_git",
             "caption": "Git"
         }
     ]

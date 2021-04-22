@@ -6,7 +6,7 @@
 		justify-content: center
 		align-items: center
 
-		&__headline, &__subtitle, &__caption
+		&__headline, &__subtitle
 			color: $color-font-headline !important
 
 		&__headline
@@ -15,9 +15,6 @@
 		&__subtitle
 			letter-spacing: 0.5em
 			padding-bottom: dpi-corrected(22px)
-
-		&__caption
-			letter-spacing: 0.2em
 
 	&__content
 		display: flex
@@ -44,9 +41,23 @@
 				border-radius: 50%
 
 		&__data
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+
+			padding-left: dpi-corrected(50px)
+
+			&__caption
+				color: $color-font-headline !important
+				letter-spacing: 0.2em
+				text-transform: capitalize !important
 
 			&__contact
-				margin-bottom: dpi-corrected(47px)
+				display: grid
+				grid-template-columns: 20% 80%
+
+				margin-top: dpi-corrected(16px)
+				margin-bottom: dpi-corrected(32px)
 
 			&__languages
 				display: flex
@@ -54,17 +65,21 @@
 				.lang__C2
 					color: $color-grey-dark
 					font-family: $font-headlines
-					font-size: 10px
+					font-size: 11px
 
 				.lang__C1
 					color: $color-grey
 					font-family: $font-headlines
-					font-size: 10px
+					font-size: 11px
 
 				.lang__B2
 					color: $color-grey-light
 					font-family: $font-headlines
-					font-size: 10px
+					font-size: 11px
+
+				.bubble__caption
+					font-family: $font-headlines
+					color: $color-grey
 
 	&__searchbar
 		position: relative

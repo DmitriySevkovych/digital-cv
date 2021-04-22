@@ -24,23 +24,23 @@
             "caption": "Java 8"
         },
         {
-            "image": "icon_kafka",
-            "caption": "Spring"
-        },
-        {
-            "image": "icon_kafka",
+            "image": "icon_docker",
             "caption": "Docker"
         },
         {
-            "image": "icon_kafka",
+            "image": "icon_postgresql",
             "caption": "PostgreSQL"
         },
         {
-            "image": "icon_kafka",
+            "image": "icon_linux-tux",
             "caption": "Linux"
         },
         {
-            "image": "icon_kafka",
+            "image": "icon_bash",
+            "caption": "bash"
+        },
+        {
+            "image": "icon_gradle",
             "caption": "Gradle"
         }
     ]

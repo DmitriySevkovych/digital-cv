@@ -5,7 +5,7 @@
     "classes": "print_not",
     "blocks": [
         {
-            "image": "icon_kafka",
+            "image": "icon_sass",
             "caption": "SASS",
             "description": "Creation of a static website for a café. Responsibilities:",
             "points": [
@@ -16,27 +16,27 @@
     ],
     "techs": [
         {
-            "image": "icon_kafka",
+            "image": "icon_css3",
             "caption": "CSS3"
         },
         {
-            "image": "icon_javascript",
+            "image": "icon_javascript_bg",
             "caption": "JavaScript"
         },
         {
-            "image": "icon_kafka",
+            "image": "icon_gsap",
             "caption": "GSAP"
         },
         {
-            "image": "icon_kafka",
+            "image": "icon_webpack",
             "caption": "Webpack"
         },
         {
-            "image": "icon_kafka",
+            "image": "icon_git",
             "caption": "Git"
         },
         {
-            "image": "icon_kafka",
+            "image": "icon_apache",
             "caption": "Apache httpd"
         }
     ]

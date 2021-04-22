@@ -19,28 +19,28 @@
     ],
     "techs": [
         {
-            "image": "icon_kafka",
+            "image": "icon_openapi",
             "caption": "REST/Swagger"
         },
         {
-            "image": "icon_kafka",
+            "image": "icon_postgresql",
             "caption": "PostgreSQL"
         },
         {
-            "image": "icon_kafka",
+            "image": "icon_gradle",
             "caption": "Gradle"
         },
         {
-            "image": "icon_kafka",
+            "image": "icon_jenkins",
             "caption": "Jenkins"
         },
         {
-            "image": "icon_kafka",
+            "image": "icon_linux-tux",
             "caption": "Linux"
         },
         {
-            "image": "icon_kafka",
-            "caption": "TDD"
+            "image": "icon_cucumber",
+            "caption": "BDD/TDD"
         }
     ]
 }

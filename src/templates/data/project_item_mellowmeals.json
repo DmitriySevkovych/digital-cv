@@ -18,27 +18,27 @@
     ],
     "techs": [
         {
-            "image": "icon_kafka",
+            "image": "icon_typescript_bg",
             "caption": "TypeScript"
         },
         {
-            "image": "icon_kafka",
+            "image": "icon_css3",
             "caption": "CSS3"
         },
         {
-            "image": "icon_kafka",
+            "image": "icon_mongodb",
             "caption": "MongoDB"
         },
         {
-            "image": "icon_kafka",
+            "image": "icon_openapi",
             "caption": "REST"
         },
         {
-            "image": "icon_kafka",
+            "image": "icon_firebase",
             "caption": "Firebase"
         },
         {
-            "image": "icon_kafka",
+            "image": "icon_git",
             "caption": "Git"
         }
     ]
