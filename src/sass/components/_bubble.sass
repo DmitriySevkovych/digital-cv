@@ -15,10 +15,13 @@
 		position: relative // for the inset shadow
 		// see _helpers.sass for helper definition!
 		+inset-shadow
+		padding: 7px
 
 		// Icon size
 		img
-			width: 55%
+			object-fit: contain
+			width: 100%
+			height: 100%
 
 	&_regular
 		padding-right: dpi-corrected(2rem)

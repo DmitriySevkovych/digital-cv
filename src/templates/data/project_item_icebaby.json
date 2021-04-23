@@ -17,10 +17,6 @@
     ],
     "techs": [
         {
-            "image": "icon_html5",
-            "caption": "HTML5"
-        },
-        {
             "image": "icon_css3",
             "caption": "CSS3"
         },
@@ -38,7 +34,7 @@
         },
         {
             "image": "icon_apache",
-            "caption": "Apache httpd"
+            "caption": "httpd"
         }
     ]
 }

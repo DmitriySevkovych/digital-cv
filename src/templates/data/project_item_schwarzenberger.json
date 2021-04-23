@@ -37,7 +37,7 @@
         },
         {
             "image": "icon_apache",
-            "caption": "Apache httpd"
+            "caption": "httpd"
         }
     ]
 }
