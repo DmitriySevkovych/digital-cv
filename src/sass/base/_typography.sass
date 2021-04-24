@@ -9,7 +9,7 @@ h1, h2, h3, h4, h5
 
 h1
 	font-size: dpi-corrected(72px)
-	letter-spacing: 0.5em
+	letter-spacing: dpi-corrected(36px) // 50% of font size
 	line-height: dpi-corrected(81px)
 	color: $color-font-headline
 
@@ -32,20 +32,30 @@ li
 	font-size: dpi-corrected(32px)
 	line-height: dpi-corrected(50px)
 
-p
+p, a
 	font-size: dpi-corrected(32px)
 	line-height: dpi-corrected(46px)
+
+a
+	text-decoration: inherit
+	color: inherit
+	transition: color 300ms ease-in-out
+
+	&:hover
+		color: $color-accent
+
 
 // Text transforms
 h3, h4
 	text-transform: uppercase
 
 // Mobile
-@media screen and ( max-width: 210mm  )
+@media screen and ( max-width: $bp-mobile-to-a4 )
 
 	h1
 		font-size: 20px
 		line-height: 22px
+		letter-spacing: 9px // hack because of Figma inaccuracy
 
 	h2
 		font-size: 16px
@@ -63,7 +73,7 @@ h3, h4
 		font-size: 14px
 		line-height: 22px
 
-	p
+	p, a
 		font-size: 14px
 		line-height: 16px
 
