@@ -1,0 +1,24 @@
+.swiper
+
+    &-container
+        margin-left: -$education__item-shadow-left
+        margin-right: -$education__item-shadow-right
+
+    &-wrapper
+        padding-bottom: dpi-corrected(32px)
+        padding-left: $education__item-shadow-left
+        padding-right: $education__item-shadow-right
+
+    &-button-prev, &-button-next
+        cursor: pointer
+        color: $color-grey-light
+        transition: color 300ms ease-in-out
+
+        &:hover
+            color: $color-accent
+
+    &-slide
+        max-width: 30%
+
+        @media print
+            max-width: 37%
