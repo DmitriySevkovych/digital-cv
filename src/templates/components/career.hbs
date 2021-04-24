@@ -32,45 +32,51 @@
     </div>
     <!-- END career__projects -->
 
-    <h3 class="career__subtitle">Education</h3>
+    <div class="career__education-wrapper">
+        <h3 class="career__subtitle">Education</h3>
+        <div class="swiper-button print_not">
+            <!-- If we need pagination -->
+            {{!-- <div class="swiper-pagination"></div> --}}
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
 
     <!-- BEGIN career__education -->
-    <div class="career__education swiper-container">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-            {{#getJsonContext 'src/templates/data/education_item_msc.json'}}
-            {{> career_education_item this }}
-            {{/getJsonContext}}
-            {{#getJsonContext 'src/templates/data/education_item_bsc.json'}}
-            {{> career_education_item this }}
-            {{/getJsonContext}}
-            {{#getJsonContext 'src/templates/data/education_item_ml.json'}}
-            {{> career_education_item this }}
-            {{/getJsonContext}}
-            {{#getJsonContext 'src/templates/data/education_item_frontend.json'}}
-            {{> career_education_item this }}
-            {{/getJsonContext}}
-            {{#getJsonContext 'src/templates/data/education_item_data_engineering.json'}}
-            {{> career_education_item this }}
-            {{/getJsonContext}}
-            {{#getJsonContext 'src/templates/data/education_item_hacking.json'}}
-            {{> career_education_item this }}
-            {{/getJsonContext}}
-            {{#getJsonContext 'src/templates/data/education_item_devops.json'}}
-            {{> career_education_item this }}
-            {{/getJsonContext}}
+    <!-- Custom swiper wrapper for navigation -->
+    <div class="career__education swiper">
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                {{#getJsonContext 'src/templates/data/education_item_msc.json'}}
+                {{> career_education_item this }}
+                {{/getJsonContext}}
+                {{#getJsonContext 'src/templates/data/education_item_bsc.json'}}
+                {{> career_education_item this }}
+                {{/getJsonContext}}
+                {{#getJsonContext 'src/templates/data/education_item_ml.json'}}
+                {{> career_education_item this }}
+                {{/getJsonContext}}
+                {{#getJsonContext 'src/templates/data/education_item_frontend.json'}}
+                {{> career_education_item this }}
+                {{/getJsonContext}}
+                {{#getJsonContext 'src/templates/data/education_item_data_engineering.json'}}
+                {{> career_education_item this }}
+                {{/getJsonContext}}
+                {{#getJsonContext 'src/templates/data/education_item_hacking.json'}}
+                {{> career_education_item this }}
+                {{/getJsonContext}}
+                {{#getJsonContext 'src/templates/data/education_item_devops.json'}}
+                {{> career_education_item this }}
+                {{/getJsonContext}}
+            </div>
+
         </div>
-
-        <!-- If we need pagination -->
-        {{!-- <div class="swiper-pagination"></div> --}}
-
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev print_not"></div>
-        <div class="swiper-button-next print_not"></div>
 
         <!-- BEGIN career__visit -->
         <div class="career__visit print">
-            <h5>visit <span>dmitriy.sevkovych.com</span><br/> for more information</h5>
+            <h5>visit <span>dmitriy.sevkovych.com</span><br /> for more information</h5>
         </div>
         <!-- END career__visit -->
     </div>
