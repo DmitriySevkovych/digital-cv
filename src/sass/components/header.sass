@@ -16,14 +16,19 @@
 			letter-spacing: 0.5em
 			padding-bottom: dpi-corrected(22px)
 
+			// Mobile header__intro__subtitle
+			@media screen and ( max-width: $bp-mobile-to-a4  )
+				font-size: 14px
+				line-height: 16px
+
 	&__content
 		display: flex
 		align-items: flex-end
 		padding-top: dpi-corrected(20px)
 		padding-bottom: dpi-corrected(32px)
 
-		&__attention
-			display: flex
+		// Mobile header__content
+		@media screen and ( max-width: $bp-mobile-to-a4 )
 			flex-direction: column
 			align-items: center
 
@@ -40,6 +45,13 @@
 				max-width: dpi-corrected(356px)
 				border-radius: 50%
 
+			// Mobile header__content__picture
+			@media screen and ( max-width: $bp-mobile-to-a4 )
+				margin: 0
+
+				img
+					max-width: 180px
+
 		&__data
 			display: flex
 			flex-direction: column
@@ -47,10 +59,20 @@
 
 			padding-left: dpi-corrected(50px)
 
+			// Mobile header__content__data
+			@media screen and ( max-width: $bp-mobile-to-a4 )
+				padding: 0
+				align-items: center
+
 			&__caption
 				color: $color-font-headline !important
 				letter-spacing: 0.2em
 				text-transform: capitalize !important
+
+				// Mobile header__content__data__caption
+				@media screen and ( max-width: $bp-mobile-to-a4 )
+					font-size: 14px
+					padding: 8px 0
 
 			&__contact
 				display: grid
@@ -59,8 +81,27 @@
 				margin-top: dpi-corrected(16px)
 				margin-bottom: dpi-corrected(32px)
 
+				p
+					line-height: dpi-corrected(50px)
+
+				// Mobile header__content__data__contact
+				@media screen and ( max-width: $bp-mobile-to-a4 )
+					grid-template-columns: 40% 60%
+
+					p
+						font-family: $font-caption
+
+					p, a
+						line-height: 28px
+
 			&__languages
 				display: flex
+				margin-left: dpi-corrected(-28px) // hack to align to the contact data above
+
+				// Mobile header__content__data__languages
+				@media screen and ( max-width: $bp-mobile-to-a4 )
+					display: grid
+					grid-template-columns: repeat( 5, 1fr)
 
 				.lang__C2
 					color: $color-grey-dark
@@ -77,9 +118,19 @@
 					font-family: $font-headlines
 					font-size: 11px
 
-				.bubble__caption
-					font-family: $font-headlines
-					color: $color-grey
+				.bubble
+					min-width: dpi-corrected(210px)
+
+					&__caption
+						font-family: $font-headlines
+						color: $color-grey
+
+					// Mobile .header__content__data__languages .bubble
+					@media screen and ( max-width: $bp-mobile-to-a4 )
+						min-width: 70px
+
+						&__caption
+							font-family: $font-text
 
 // Header searchbar
 @import header_searchbar
