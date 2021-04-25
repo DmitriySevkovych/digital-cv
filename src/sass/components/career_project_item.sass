@@ -101,3 +101,20 @@
 	// Show the body when item is opened
 	.project__item__body
 		display: flex
+
+
+// Mobile
+@media screen and ( max-width: $bp-mobile-to-a4 )
+	.project__item
+		width: 100%
+		margin: 8px 0
+		padding: 16px
+
+		&__body
+			padding: 16px 0
+
+			&__techs
+				padding-top: 16px
+				grid-template-columns: repeat( 3, 1fr )
+				row-gap: 16px
+
