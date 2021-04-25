@@ -1,5 +1,16 @@
 import '../sass/index.sass';
 
+// import Swiper JS
+import Swiper from 'swiper';
+// import Swiper styles
+import 'swiper/swiper-bundle.min.css';
+// core version + navigation, pagination modules:
+import SwiperCore, { Navigation, Pagination } from 'swiper/core';
+
+import { gsap } from 'gsap';
+import Splitter from 'split-html-to-chars';
+
+
 // POC open and close cards aka items
 document.querySelectorAll('.project__item').forEach(item => {
 
@@ -21,12 +32,6 @@ document.querySelectorAll('.project__item').forEach(item => {
 
 });
 
-// import Swiper JS
-import Swiper from 'swiper';
-// import Swiper styles
-import 'swiper/swiper-bundle.min.css';
-// core version + navigation, pagination modules:
-import SwiperCore, { Navigation, Pagination } from 'swiper/core';
 
 // configure Swiper to use modules
 SwiperCore.use([Navigation, Pagination]);
@@ -53,4 +58,26 @@ new Swiper('.swiper-container', {
         prevEl: '.swiper-button-prev',
     },
 
+});
+
+// Animations
+
+//create a timeline instance
+const tl = gsap.timeline();
+
+tl.from('.A4', { duration: 1.5, y: -100, opacity: 0 });
+// tl.from('.header__intro__headline', {duration: 1.5, y: -100, opacity: 0});
+
+// TODO add wrapper function to get rid of blank space (format issue)
+const headerIntroHeadline = document.querySelector('.header__intro__headline');
+console.log(headerIntroHeadline.outerHTML);
+headerIntroHeadline.outerHTML = Splitter(headerIntroHeadline.outerHTML, '<span class="letter">$</span>');
+
+tl.from('.letter', {
+    y: -5,
+    opacity: 0,
+    stagger: {
+        each: 0.1, // 0.1 seconds between when each '.box' element starts animating
+        ease: 'none'
+    }
 });

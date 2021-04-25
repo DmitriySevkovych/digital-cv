@@ -49,6 +49,7 @@
     },
     "dependencies": {
         "gsap": "^3.6.1",
+        "split-html-to-chars": "^1.0.5",
         "swiper": "^6.5.7"
     }
 }
