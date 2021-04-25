@@ -62,22 +62,36 @@ new Swiper('.swiper-container', {
 
 // Animations
 
-//create a timeline instance
-const tl = gsap.timeline();
-
-tl.from('.A4', { duration: 1.5, y: -100, opacity: 0 });
-// tl.from('.header__intro__headline', {duration: 1.5, y: -100, opacity: 0});
-
 // TODO add wrapper function to get rid of blank space (format issue)
 const headerIntroHeadline = document.querySelector('.header__intro__headline');
-console.log(headerIntroHeadline.outerHTML);
 headerIntroHeadline.outerHTML = Splitter(headerIntroHeadline.outerHTML, '<span class="letter">$</span>');
 
+//create a timeline instance
+const tl = gsap.timeline({defaults: {ease: 'power2.inOut'} });
+
+tl.set('.header__intro', {y: '30vh'});
+tl.from('.header__intro__subtitle', {duration: 2, y: -40, opacity: 0});
+// tl.from('.header__intro__headline', {duration: 2, y: -40, opacity: 0},'+=0.5');
 tl.from('.letter', {
-    y: -5,
-    opacity: 0,
     stagger: {
-        each: 0.1, // 0.1 seconds between when each '.box' element starts animating
-        ease: 'none'
-    }
+        each: 0.15, // 0.1 seconds between when each '.box' element starts animating
+        ease: 'steps(16)'
+    },
+    opacity: 0,
 });
+// tl.from('.header__intro__headline', {duration: 1, letterSpacing: 0});
+tl.to('.header__intro', {duration: 2, y: 0 });
+tl.from('.header__content', {duration: 1.5, y: -100, opacity: 0});
+tl.from('.header__searchbar', {duration: 1.5, y: -100, opacity: 0});
+tl.from('.career', {duration: 1.5, y: -100, opacity: 0});
+tl.from('.A4', { duration: 2, boxShadow: 'none' }, '-=2');
+
+
+// tl.from('.letter', {
+//     y: -5,
+//     opacity: 0,
+//     stagger: {
+//         each: 0.1, // 0.1 seconds between when each '.box' element starts animating
+//         ease: 'none'
+//     }
+// });
