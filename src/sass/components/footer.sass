@@ -1,6 +1,6 @@
 // Color transition for SVGs in anchor tags
 footer
-	padding: 16px 0 32px 0
+	padding: 16px 0 0 0
 
 	a
 		&:hover
@@ -40,6 +40,7 @@ footer
 			padding: 0.5rem
 		svg
 			max-width: 30px
+			height: auto
 
 			path
 				fill: $color-fill-interactive-icons
@@ -60,3 +61,30 @@ footer
 				fill: $color-fill-interactive-icons
 
 // Legal section - TODO extract to separate file
+.legal
+	width: 100%
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	padding: 16px
+
+	&__subtitle
+		width: 100%
+		text-align: center
+		padding: 32px 0 16px 0
+
+		@media screen and ( max-width: $bp-mobile-to-a4 )
+			padding: 16px 0 0 0
+			font-size: 14px
+
+	&__section
+		width: 25%
+
+		@media screen and ( max-width: $bp-mobile-to-a4 )
+			width: 50%
+			padding-top: 8px
+			// text-align: center
+			p, a
+				font-size: 9px
+
+

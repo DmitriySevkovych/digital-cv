@@ -80,6 +80,11 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/templates/index.hbs',
             favicon: './src/assets/icons/favicon.ico'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/templates/legal.hbs',
+            filename: 'legal.html',
+            favicon: './src/assets/icons/favicon.ico'
         })
     ]
 }
