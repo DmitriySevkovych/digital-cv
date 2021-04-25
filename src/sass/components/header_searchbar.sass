@@ -31,3 +31,15 @@
 			left: dpi-corrected(12px)
 			width: dpi-corrected(48px)
 			height: dpi-corrected(48px)
+
+// Mobile
+@media screen and ( max-width: $bp-mobile-to-a4 )
+	.header__searchbar
+		overflow-y: hidden
+		max-height: 43px
+		display: inline-block
+
+		&__button
+			right: 9px
+			top: 9px
+
