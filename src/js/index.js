@@ -1,11 +1,12 @@
 import '../sass/index.sass';
 
 // import Swiper JS
-import Swiper from 'swiper';
+import Swiper, { Navigation, Autoplay } from 'swiper';
+// configure Swiper to use modules
+Swiper.use([Navigation, Autoplay]);
+
 // import Swiper styles
 import 'swiper/swiper-bundle.min.css';
-// core version + navigation, pagination modules:
-import SwiperCore, { Navigation, Pagination } from 'swiper/core';
 
 import { gsap } from 'gsap';
 import Splitter from 'split-html-to-chars';
@@ -33,24 +34,17 @@ document.querySelectorAll('.project__item').forEach(item => {
 });
 
 
-// configure Swiper to use modules
-SwiperCore.use([Navigation, Pagination]);
-
 // init Swiper:
 new Swiper('.swiper-container', {
 
-    speed: 400,
+    speed: 3000,
     spaceBetween: 24,
     // loop: true,
     // centeredSlides: true,
     slidesPerView: 'auto',
-
-
-
-    // If we need pagination
-    // pagination: {
-    //   el: '.swiper-pagination',
-    // },
+    autoplay: {
+        delay: 10000,
+    },
 
     // Navigation arrows
     navigation: {
@@ -63,35 +57,115 @@ new Swiper('.swiper-container', {
 // Animations
 
 // TODO add wrapper function to get rid of blank space (format issue)
-const headerIntroHeadline = document.querySelector('.header__intro__headline');
-headerIntroHeadline.outerHTML = Splitter(headerIntroHeadline.outerHTML, '<span class="letter">$</span>');
+const lettersElements = document.querySelectorAll('.to_letters');
+lettersElements.forEach(element => {
+    element.outerHTML = Splitter(element.outerHTML, '<span class="letter">$</span>');
+});
 
 //create a timeline instance
-const tl = gsap.timeline({defaults: {ease: 'power2.inOut'} });
+const tl = gsap.timeline({ defaults: { ease: 'power.inOut' } });
 
-tl.set('.header__intro', {y: '30vh'});
-tl.from('.header__intro__subtitle', {duration: 2, y: -40, opacity: 0});
-// tl.from('.header__intro__headline', {duration: 2, y: -40, opacity: 0},'+=0.5');
-tl.from('.letter', {
-    stagger: {
-        each: 0.15, // 0.1 seconds between when each '.box' element starts animating
-        ease: 'steps(16)'
-    },
+
+// Searchbar
+tl.from('.header__searchbar', {
+    duration: 0.5,
     opacity: 0,
+    y: -10
 });
-// tl.from('.header__intro__headline', {duration: 1, letterSpacing: 0});
-tl.to('.header__intro', {duration: 2, y: 0 });
-tl.from('.header__content', {duration: 1.5, y: -100, opacity: 0});
-tl.from('.header__searchbar', {duration: 1.5, y: -100, opacity: 0});
-tl.from('.career', {duration: 1.5, y: -100, opacity: 0});
+tl.from('.header__searchbar', {
+    width: 0,
+    duration: 1.5
+}, '+=0.3');
+
+tl.from('.header__searchbar__text .letter',
+    {
+        opacity: 0,
+        stagger: {
+            amount: 3,
+        }
+    }
+);
+
+// Intro
+tl.from('.header__intro__subtitle',
+    {
+        opacity: 0,
+        duration: 2,
+    }
+);
+
+tl.from('.header__intro__headline', {
+    opacity: 0,
+    duration: 1.5,
+});
+
+
+tl.from('.header__content__picture',
+    {
+        opacity: 0,
+        duration: 1.5,
+        x: 20,
+        ease: 'power.in'
+    },
+    '-=1'
+);
+
+tl.from('.header__content__data', { duration: 1.5, opacity: 0, x: -20, ease: 'power.in' }, '-=1.5');
+
+// Projects
+tl.from('.career__subtitle.projects__subtitle', { opacity: 0, duration: 0.5 });
+
+tl.from('.project__item',
+    {
+        opacity: 0,
+        y: 10,
+        ease: 'power.inOut',
+        stagger: {
+            each: 0.1
+        }
+    }
+);
+
+// Education
+tl.from('.career__subtitle.education__subtitle', { opacity: 0, duration: 0.5 });
+
+tl.from('.education__item',
+    {
+        opacity: 0,
+        y: 10,
+        ease: 'power.in',
+        stagger: {
+            each: 0.25
+        }
+    }
+);
+
+tl.from('.swiper-button > div',
+    {
+        opacity: 0,
+        y: 10,
+        ease: 'power.in',
+        stagger: {
+            each: 0.25
+        }
+    }
+);
+
+// Coding
+tl.from('.coding__subtitle', { opacity: 0, y: 10, duration: 0.5 });
+
+tl.from('.coding__overview .gauge',
+    {
+        opacity: 0,
+        y: 10,
+        ease: 'power.in',
+        stagger: {
+            each: 0.1
+        }
+    }
+);
+
+tl.from('.coding__message', { opacity: 0, y: 10, duration: 0.5 });
+
+// tl.from('.career', {duration: 1.5, y: -100, opacity: 0});
 tl.from('.A4', { duration: 2, boxShadow: 'none' }, '-=2');
-
-
-// tl.from('.letter', {
-//     y: -5,
-//     opacity: 0,
-//     stagger: {
-//         each: 0.1, // 0.1 seconds between when each '.box' element starts animating
-//         ease: 'none'
-//     }
-// });
