@@ -67,6 +67,11 @@ module.exports = {
                 type: 'asset/source', // Webpack 5.x: loads file content into bundled JS file (raw-loader)
                 exclude: /node_modules/,
                 loader: 'glslify-loader'
+            },
+            // PDF
+            {
+                test: /\.(pdf)$/i,
+                type: 'asset/resource'
             }
         ]
     },

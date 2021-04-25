@@ -1,43 +1,62 @@
 // Color transition for SVGs in anchor tags
 footer
+	padding: 16px 0 32px 0
+
 	a
 		&:hover
 			svg path
-				fill: orange
+				fill: $color-accent
 
 	svg
 
 		path
 			transition: fill 300ms ease-in-out
 
-// Footer looks
-.footer
-	display: flex
-	justify-content: space-evenly
-	align-items: center
+// About me section - TODO extract to separate file
+.aboutme
+	display: grid
+	grid-template-columns: 1fr 1fr 1fr
+
+	&__section
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+
+		a, p
+			color: $color-fill-interactive-icons
+			font-family: $font-headlines
+			background-color: inherit
+			margin: 4px auto
+
+		a
+			font-size: dpi-corrected(48px)
+
+		p
+			font-size: dpi-corrected(36px)
 
 	&__links
 		a
 			padding: 0.5rem
-
-			&:hover
-				svg path
-					fill: orange
-
 		svg
 			max-width: 30px
 
 			path
-				transition: fill 300ms ease-in-out
+				fill: $color-fill-interactive-icons
 
 	&__print
-		button
-			color: $color-grey-darkest
-			font-family: $font-headlines
-			background-color: inherit
+		a
+			svg
+				max-width: 50px
+				height: auto
 
 	&__developedBy
-		max-width: 50px
+		a
+			display: inline-block
 		svg
-			width: 100%
+			max-width: 50px
 			height: auto
+			path
+				fill: $color-fill-interactive-icons
+
+// Legal section - TODO extract to separate file

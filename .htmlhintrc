@@ -3,7 +3,7 @@
  * https://htmlhint.com/docs/user-guide/list-rules
  */
 {
-    "attr-lowercase": ["viewBox", "stdDeviation"],
+    "attr-lowercase": ["viewBox", "stdDeviation", "gradientUnits", "gradientTransform"],
     "tagname-lowercase": false,
     "attr-value-double-quotes": true,
     "attr-no-duplication": true,
