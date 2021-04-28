@@ -12,7 +12,7 @@ body
 	// own sizing and layout
 	width: $page-width
 	margin: 2rem auto
-	padding: dpi-corrected(61px) dpi-corrected(100px) dpi-corrected(41px) dpi-corrected(145px)
+	@include print-corrected(padding, $top:61px, $right:100px, $bottom:41px, $left:145px )
 
 	// colours, shadows, etc.
 	background-color: $color-bg-a4

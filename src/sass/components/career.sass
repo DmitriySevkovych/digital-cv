@@ -5,14 +5,13 @@
 		display: flex
 		flex-wrap: wrap
 		align-items: flex-start
-		margin-bottom: dpi-corrected(50px)
+		@include print-corrected(margin, $bottom:50px)
 
 	// career__education block
 	&__education
 		display: flex
 		align-items: center
-		// padding-bottom: dpi-corrected(50px)
-		margin-bottom: dpi-corrected(50px)
+		@include print-corrected(margin, $bottom:50px)
 
 		&__wrapper
 			display: flex
@@ -26,10 +25,7 @@
 		text-align: center
 
 		width: 20%
-		min-width: dpi-corrected(600px)
-
-		// span
-		// 	color: $color-grey-dark
+		@include print-corrected(min-width, $value:600px)
 
 	@import career_project_item
 	@import career_education_item

@@ -8,33 +8,33 @@ h1, h2, h3, h4, h5
 	font-weight: 700
 
 h1
-	font-size: dpi-corrected(72px, 132)
-	letter-spacing: dpi-corrected(36px, 132) // 50% of font size
-	line-height: dpi-corrected(81px, 132)
+	@include print-corrected(font-size, $value:72px )
+	@include print-corrected(letter-spacing, $value:36px ) // 50% of font size
+	@include print-corrected(line-height, $value:81px )
 	color: $color-font-headline
 
 h2
-	font-size: dpi-corrected(48px, 132)
-	line-height: dpi-corrected(54px, 132)
+	@include print-corrected(font-size, $value:48px )
+	@include print-corrected(line-height, $value:54px )
 	color: $color-font-subtitle
 
 h3
-	font-size: dpi-corrected(38px, 132)
-	line-height: dpi-corrected(50px, 132)
+	@include print-corrected(font-size, $value:38px )
+	@include print-corrected(line-height, $value:50px )
 	color: $color-font-subtitle
 
 h4, h5
-	font-size: dpi-corrected(36px, 132)
-	line-height: dpi-corrected(48px, 132)
+	@include print-corrected(font-size, $value:36px )
+	@include print-corrected(line-height, $value:48px )
 	color: $color-font-headline
 
 li
-	font-size: dpi-corrected(32px, 132)
-	line-height: dpi-corrected(50px, 132)
+	@include print-corrected(font-size, $value:32px )
+	@include print-corrected(line-height, $value:50px )
 
 p, a
-	font-size: dpi-corrected(32px, 132)
-	line-height: dpi-corrected(46px, 132)
+	@include print-corrected(font-size, $value:32px )
+	@include print-corrected(line-height, $value:46px )
 
 a
 	text-decoration: inherit
@@ -75,29 +75,3 @@ h3, h4
 	p, a
 		font-size: 14px
 		line-height: 16px
-
-@media print
-	h1
-		font-size: dpi-corrected(72px)
-		letter-spacing: dpi-corrected(36px) // 50% of font size
-		line-height: dpi-corrected(81px)
-
-	h2
-		font-size: dpi-corrected(48px)
-		line-height: dpi-corrected(54px)
-
-	h3
-		font-size: dpi-corrected(38px)
-		line-height: dpi-corrected(50px)
-
-	h4, h5
-		font-size: dpi-corrected(36px)
-		line-height: dpi-corrected(48px)
-
-	li
-		font-size: dpi-corrected(32px)
-		line-height: dpi-corrected(50px)
-
-	p, a
-		font-size: dpi-corrected(32px)
-		line-height: dpi-corrected(46px)

@@ -7,7 +7,7 @@
         // margin-right: -$education__item-shadow-right
 
     &-wrapper
-        padding-bottom: dpi-corrected(32px)
+        @include print-corrected(padding, $bottom:32px)
         padding-left: $education__item-shadow-left
         padding-top: $education__item-shadow-left
         // padding-right: $education__item-shadow-right
@@ -28,7 +28,7 @@
             color: $color-accent
 
         &:after
-            font-size: dpi-corrected(48px)
+            @include print-corrected(font-size, $value:48px)
 
     &-button-prev
         left: 0 !important

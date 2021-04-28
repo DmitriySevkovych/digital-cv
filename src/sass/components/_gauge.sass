@@ -10,9 +10,9 @@
 		align-items: center
 
 	&__outer
-		height: dpi-corrected(185px)
-		width: dpi-corrected(185px)
-		margin-bottom: dpi-corrected(16px)
+		@include print-corrected(height, $value:185px)
+		@include print-corrected(width, $value:185px)
+		@include print-corrected(margin, $bottom:16px)
 
 		position: relative
 
@@ -20,8 +20,8 @@
 		border-radius: 50%
 
 	&__inner
-		height: dpi-corrected(120px)
-		width: dpi-corrected(120px)
+		@include print-corrected(height, $value:120px)
+		@include print-corrected(width, $value:120px)
 
 		position: absolute
 		z-index: 2
@@ -32,7 +32,7 @@
 		box-shadow: -4.31855px 4.31855px 7.19758px rgba(209, 217, 230, 0.2), 4.31855px -4.31855px 7.19758px rgba(209, 217, 230, 0.2), -4.31855px -4.31855px 7.19758px rgba(255, 255, 255, 0.9), 4.31855px 4.31855px 7.19758px rgba(209, 217, 230, 0.9), inset 0.239919px 0.239919px 0.479839px rgba(255, 255, 255, 0.3), inset -0.239919px -0.239919px 0.479839px rgba(209, 217, 230, 0.5)
 
 		img
-			max-width: dpi-corrected(65px)
+			@include print-corrected(max-width, $value:60px)
 			filter: grayscale(100%)
 
 	&__piechart
