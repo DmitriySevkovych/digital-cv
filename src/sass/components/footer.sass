@@ -14,13 +14,16 @@ footer
 
 // About me section - TODO extract to separate file
 .aboutme
+	max-width: $page-width
+	margin: auto
+
 	display: grid
 	grid-template-columns: 1fr 1fr 1fr
 
 	&__section
 		display: flex
 		flex-direction: column
-		justify-content: center
+		justify-content: start
 		align-items: center
 
 		a, p
@@ -28,19 +31,14 @@ footer
 			font-family: $font-headlines
 			background-color: inherit
 			margin: 4px auto
-
-		a
-			font-size: dpi-corrected(48px)
-
-		p
 			font-size: dpi-corrected(36px)
 
 	&__links
 		a
 			padding: 0.5rem
 		svg
-			max-width: 30px
-			height: auto
+			width: 25px
+			height: 25px
 
 			path
 				fill: $color-fill-interactive-icons
@@ -51,12 +49,36 @@ footer
 				max-width: 50px
 				height: auto
 
+		&__icon
+			width: 50px
+			height: 50px
+			border-radius: 50%
+			background: #ECF0F3
+
+			display: flex
+			justify-content: center
+			align-items: center
+
+			box-shadow: -18px 18px 30px rgba(209, 217, 230, 0.2), 18px -18px 30px rgba(209, 217, 230, 0.2), -18px -18px 30px rgba(255, 255, 255, 0.9), 18px 18px 30px rgba(209, 217, 230, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(209, 217, 230, 0.5)
+
+			p
+				font-size: 18px
+				transition: transform 300ms ease-in-out, color 300ms
+
+			&:hover
+				box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3), -1px -1px 2px rgba(209, 217, 230, 0.5), inset -5px 5px 10px rgba(209, 217, 230, 0.2), inset 5px -5px 10px rgba(209, 217, 230, 0.2), inset -5px -5px 10px rgba(255, 255, 255, 0.9), inset 5px 5px 13px rgba(209, 217, 230, 0.9)
+
+				p
+					color: $color-accent
+					transform: translateY(3px)
+
+
 	&__developedBy
 		a
 			display: inline-block
 		svg
-			max-width: 50px
-			height: auto
+			width: 25px
+			height: 25px
 			path
 				fill: $color-fill-interactive-icons
 
