@@ -10,7 +10,7 @@ body
 	justify-content: space-between
 
 	// own sizing and layout
-	width: 210mm
+	width: $page-width
 	margin: 2rem auto
 	padding: dpi-corrected(61px) dpi-corrected(100px) dpi-corrected(41px) dpi-corrected(145px)
 
@@ -34,8 +34,8 @@ body
 
 @media print
 	.A4
-		width: 210mm
-		height: 297mm
+		width: $page-width-print
+		height: $page-height-print
 		box-shadow: none
 		margin: 0
 
@@ -44,4 +44,3 @@ body
 
 	.print
 		display: block !important
-
