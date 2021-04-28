@@ -22,8 +22,8 @@
 		@include print-corrected(width, $value:72px)
 		@include print-corrected(height, $value:72px)
 		@include print-corrected(right, $value:29px)
-		// @include print-corrected(height, $value:98px)
-		top: calc(50% - dpi-corrected(72px)/2)
+		top: 50%
+		transform: translateY(-50%)
 		border-radius: 50%
 		box-shadow: 1.1996px 1.1996px 2.39919px rgba(170, 170, 204, 0.5), -1.1996px -1.1996px 2.39919px #FFFFFF
 

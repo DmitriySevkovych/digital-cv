@@ -1,9 +1,5 @@
 @use "sass:meta"
 
-// TODO remove, obsolete
-@function dpi-corrected($size, $to: 88, $from: 300)
-  @return $size * $to / $from
-
 // Used to add a size correction of Figma sizes for screen and print versions
 @mixin print-corrected($property, $args...)
 
