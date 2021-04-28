@@ -6,32 +6,33 @@
 	justify-content: space-between
 	align-items: center
 
-	height: dpi-corrected(98px, 132) // vertical padding + h2 font-size
-	padding: dpi-corrected(25px, 132) dpi-corrected(54px, 132)
-	margin-bottom: dpi-corrected(33px)
+	@include print-corrected(height, $value:98px) // vertical padding + h2 font-size
+	@include print-corrected(padding, $top:25px, $bottom:25px, $left:54px, $right:54px)
+	@include print-corrected(margin, $bottom:33px)
 
 	background-color: $color-bg-highlight
 	box-shadow: inset -0.479839px -0.479839px 0.959677px rgba(255, 255, 255, 0.5), inset 0.479839px 0.479839px 0.959677px rgba(170, 170, 204, 0.25), inset 1.1996px 1.1996px 2.39919px rgba(170, 170, 204, 0.5), inset -1.1996px -1.1996px 2.39919px #FFFFFF
-	border-radius: 11.996px
+	@include print-corrected(border-radius, $value:42px)
 
 	&__text
 		color: $color-font-description !important
 
 	&__button
 		position: absolute
-		width: dpi-corrected(72px)
-		height: dpi-corrected(72px)
-		right: dpi-corrected(29px)
+		@include print-corrected(width, $value:72px)
+		@include print-corrected(height, $value:72px)
+		@include print-corrected(right, $value:29px)
+		// @include print-corrected(height, $value:98px)
 		top: calc(50% - dpi-corrected(72px)/2)
 		border-radius: 50%
 		box-shadow: 1.1996px 1.1996px 2.39919px rgba(170, 170, 204, 0.5), -1.1996px -1.1996px 2.39919px #FFFFFF
 
 		img
 			position: absolute
-			top: dpi-corrected(12px)
-			left: dpi-corrected(12px)
-			width: dpi-corrected(48px)
-			height: dpi-corrected(48px)
+			@include print-corrected(top, $value:12px)
+			@include print-corrected(left, $value:12px)
+			@include print-corrected(width, $value:48px)
+			@include print-corrected(height, $value:48px)
 
 // Mobile
 @media screen and ( max-width: $bp-mobile-to-a4 )
@@ -43,3 +44,10 @@
 		&__button
 			right: 9px
 			top: 9px
+
+// Print
+@media print
+	.header__searchbar
+		height: dpi-corrected(98px, 88) // vertical padding + h2 font-size
+		padding: dpi-corrected(25px, 132) dpi-corrected(54px, 88)
+		margin-bottom: dpi-corrected(33px, 88)

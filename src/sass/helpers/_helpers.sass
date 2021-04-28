@@ -1,5 +1,25 @@
+@use "sass:meta"
+
+// TODO remove, obsolete
 @function dpi-corrected($size, $to: 88, $from: 300)
   @return $size * $to / $from
+
+// Used to add a size correction of Figma sizes for screen and print versions
+@mixin print-corrected($property, $args...)
+
+  @each $name, $size in meta.keywords($args)
+    +correction(132/300, $property, $size, $name)
+
+  @media print
+    @each $name, $size in meta.keywords($args)
+      +correction(88/300, $property, $size, $name)
+
+// Correction logic to handle paddings, margins, etc more or less gracefully
+=correction($correction-factor, $property, $size, $name, $default-name: value)
+  @if $name == $default-name
+    #{$property}: $size * $correction-factor
+  @else
+    #{$property}-#{$name}: $size * $correction-factor
 
 =inset-shadow($big: false)
   &:before
@@ -15,8 +35,7 @@
     @else
       box-shadow: inset -0.479839px -0.479839px 0.959677px rgba(255, 255, 255, 0.5), inset 0.479839px 0.479839px 0.959677px rgba(170, 170, 204, 0.25), inset 1.1996px 1.1996px 2.39919px rgba(170, 170, 204, 0.5), inset -1.1996px -1.1996px 2.39919px #FFFFFF
 
-// @function figma-corrected($size, $width: 210, $width-figma: 2480)
-//   @return $size * $width /  $width-figma
+////////////////////////////////////////////////////////////////////////
 
 @function em($size, $context: 16)
   @return ($size/$context) * 1em

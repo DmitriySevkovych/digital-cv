@@ -10,11 +10,11 @@
 			color: $color-font-headline !important
 
 		&__headline
-			padding-bottom: dpi-corrected(29px)
+			@include print-corrected(padding, $bottom:16px)
 
 		&__subtitle
 			letter-spacing: 0.5em
-			padding-bottom: dpi-corrected(22px)
+			@include print-corrected(padding, $bottom:22px)
 
 			// Mobile header__intro__subtitle
 			@media screen and ( max-width: $bp-mobile-to-a4  )
@@ -25,8 +25,8 @@
 		display: flex
 		align-items: flex-end
 		justify-content: center
-		padding-top: dpi-corrected(20px)
-		padding-bottom: dpi-corrected(32px)
+
+		@include print-corrected(padding, $top:20px, $bottom:32px)
 
 		// Mobile header__content
 		@media screen and ( max-width: $bp-mobile-to-a4 )
@@ -34,16 +34,14 @@
 			align-items: center
 
 		&__picture
-			margin-top: dpi-corrected(-66px)
+			@include print-corrected(margin, $top:-40px, $right:68px)
 			position: relative // for the inset shadow on the picture
-			margin-left: 150px
-			margin-right: 20px
 
 			// see _helpers.sass for helper definition!
 			+inset-shadow(true)
 
 			img
-				max-width: dpi-corrected(356px)
+				@include print-corrected(max-width, $value:356px)
 				border-radius: 50%
 
 			// Mobile header__content__picture
@@ -58,7 +56,7 @@
 			flex-direction: column
 			justify-content: space-between
 
-			padding-left: dpi-corrected(50px)
+			@include print-corrected(padding, $left:50px)
 
 			// Mobile header__content__data
 			@media screen and ( max-width: $bp-mobile-to-a4 )
@@ -79,11 +77,10 @@
 				display: grid
 				grid-template-columns: 20% 80%
 
-				margin-top: dpi-corrected(16px)
-				margin-bottom: dpi-corrected(32px)
+				@include print-corrected(margin, $top:16px, $bottom:32px)
 
 				p
-					line-height: dpi-corrected(50px)
+					@include print-corrected(line-height, $value:50px)
 
 				// Mobile header__content__data__contact
 				@media screen and ( max-width: $bp-mobile-to-a4 )
@@ -97,7 +94,7 @@
 
 			&__languages
 				display: flex
-				margin-left: dpi-corrected(-28px) // hack to align to the contact data above
+				@include print-corrected(margin, $left:-28px) // hack to align to the contact data above
 
 				// Mobile header__content__data__languages
 				@media screen and ( max-width: $bp-mobile-to-a4 )
@@ -120,7 +117,7 @@
 					font-size: 11px
 
 				.bubble
-					min-width: dpi-corrected(210px)
+					@include print-corrected(min-width, $value:210px)
 
 					&__caption
 						font-family: $font-headlines
