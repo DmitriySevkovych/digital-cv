@@ -77,6 +77,8 @@
 				display: grid
 				grid-template-columns: 20% 80%
 
+				align-items: baseline
+
 				@include print-corrected(margin, $top:16px, $bottom:32px)
 
 				p
@@ -104,17 +106,17 @@
 				.lang__C2
 					color: $color-grey-dark
 					font-family: $font-headlines
-					font-size: 11px
+					@include print-corrected(font-size, $value:38px)
 
 				.lang__C1
 					color: $color-grey
 					font-family: $font-headlines
-					font-size: 11px
+					@include print-corrected(font-size, $value:38px)
 
 				.lang__B2
 					color: $color-grey-light
 					font-family: $font-headlines
-					font-size: 11px
+					@include print-corrected(font-size, $value:38px)
 
 				.bubble
 					@include print-corrected(min-width, $value:210px)

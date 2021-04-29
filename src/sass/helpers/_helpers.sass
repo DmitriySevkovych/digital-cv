@@ -12,7 +12,9 @@
 
 // Correction logic to handle paddings, margins, etc more or less gracefully
 =correction($correction-factor, $property, $size, $name, $default-name: value)
-  @if $name == $default-name
+  @if $name == keyword
+    #{$property}: $size
+  @else if $name == $default-name
     #{$property}: $size * $correction-factor
   @else
     #{$property}-#{$name}: $size * $correction-factor

@@ -15,7 +15,12 @@
 		position: relative // for the inset shadow
 		// see _helpers.sass for helper definition!
 		+inset-shadow
-		padding: 7px
+
+		p
+			line-height: normal
+			position: relative
+			top: 50%
+			transform: translateY(-50%)
 
 		// Icon size
 		img
@@ -26,17 +31,19 @@
 	&_regular
 		.bubble
 			&__main
-				width: 2rem
-				height: 2rem
+				@include print-corrected(width, $value:85px)
+				@include print-corrected(height, $value:85px)
+				@include print-corrected(padding, $value:18px)
 
 			&__caption
-				margin-top: 0.1rem
+				@include print-corrected(margin, $top:4px)
 
 	&_big
 		.bubble
 			&__main
-				width: 2.5rem
-				height: 2.5rem
+				@include print-corrected(width, $value:120px)
+				@include print-corrected(height, $value:120px)
+				@include print-corrected(padding, $value:30px)
 
 			&__caption
-				margin-top: 0.2rem
+				@include print-corrected(margin, $top:8px)
