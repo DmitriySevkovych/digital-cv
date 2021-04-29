@@ -1,18 +1,13 @@
+import 'swiper/swiper-bundle.min.css';
 import '../sass/index.sass';
 
-// import Swiper JS
 import Swiper, { Navigation, Autoplay } from 'swiper';
-// configure Swiper to use modules
-Swiper.use([Navigation, Autoplay]);
-
-// import Swiper styles
-import 'swiper/swiper-bundle.min.css';
 
 import { gsap } from 'gsap';
 import Splitter from 'split-html-to-chars';
 
-
 // POC open and close cards aka items
+
 document.querySelectorAll('.project__item').forEach(item => {
 
     const itemToggler = item.querySelector('.project__item__head__icon');
@@ -33,27 +28,32 @@ document.querySelectorAll('.project__item').forEach(item => {
 
 });
 
+// Swiper
+
+// configure Swiper to use modules
+Swiper.use([Navigation, Autoplay]);
 
 // init Swiper:
 new Swiper('.swiper-container', {
 
-    speed: 3000,
     spaceBetween: 24,
-    // loop: true,
-    // centeredSlides: true,
-    slidesPerView: 'auto',
+    slidesPerView: 1,
+
     autoplay: {
         delay: 10000,
     },
+    speed: 3000,
+    // loop: true,
 
     breakpoints: {
         792: {
-            slidesPerView: 2,
+            // centeredSlides: true,
+            slidesPerView: 3,
             spaceBetween: 20
         },
         480: {
-            slidesPerView: 1,
-            spaceBetween: 30
+            // centeredSlides: true,
+            slidesPerView: 2,
         },
 
     },
