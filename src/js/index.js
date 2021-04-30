@@ -36,14 +36,13 @@ Swiper.use([Navigation, Autoplay]);
 // init Swiper:
 new Swiper('.swiper-container', {
 
-    spaceBetween: 24,
+    spaceBetween: 62,
     slidesPerView: 1,
 
-    autoplay: {
-        delay: 10000,
-    },
-    speed: 3000,
-    // loop: true,
+    // autoplay: {
+    //     delay: 10000,
+    // },
+    speed: 1000,
 
     breakpoints: {
         792: {
