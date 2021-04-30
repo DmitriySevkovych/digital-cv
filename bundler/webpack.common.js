@@ -4,7 +4,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-    mode: 'development',
     entry: {
         index: './src/js/index.js'
     },
@@ -15,6 +14,9 @@ module.exports = {
         assetModuleFilename: 'static/[hash][ext][query]'
     },
     devtool: 'source-map',
+    stats: {
+        children: true
+    },
     module: {
         rules: [
             // Handlebars

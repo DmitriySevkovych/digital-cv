@@ -19,6 +19,35 @@
   @else
     #{$property}-#{$name}: $size * $correction-factor
 
+
+@mixin gauges-on-circle($item-count, $item-width, $item-height, $circle-size)
+  position: relative
+  width:  $circle-size
+  height: $circle-size
+  // max-height: 300px
+  // max-width: 300px
+  padding: 0
+  border-radius: 50%
+
+  > *
+    position: absolute
+    top:  50%
+    left: 50%
+    margin-top: -($item-height/ 2)
+    margin-bottom: -($item-height/ 2)
+    margin-left: -($item-width/ 2)
+    margin-right: -($item-width/ 2)
+
+    $angle: (270 / ($item-count - 1) )
+    $rot: -45
+
+    @for $i from 1 through $item-count
+      &:nth-of-type(#{$i})
+        transform: rotate($rot * -1deg) translate($circle-size / 2) rotate($rot * 1deg)
+
+      $rot: $rot + $angle
+
+
 =inset-shadow($big: false)
   &:before
     content: ""
@@ -39,7 +68,7 @@
   @return ($size/$context) * 1em
 
 @function img-url($image)
-  @return url('../img/#{$image}')
+  @return url('../img/#$image')
 
 =image($image)
   background-image: img-url($image)

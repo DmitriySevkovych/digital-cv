@@ -46,3 +46,20 @@
 			transform: rotate(-90deg)
 			circle
 				stroke: $color-fill-piechart
+
+@media screen and ( max-width: $bp-mobile-to-a4 )
+	.gauge
+		&__outer
+			height: 62px
+			width: 62px
+
+		&__inner
+			height: 40px
+			width: 40px
+
+			img
+				max-width: 18px
+
+		// text under the gauge
+		&__caption
+			color: $color-grey-light

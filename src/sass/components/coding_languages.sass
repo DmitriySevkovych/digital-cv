@@ -9,4 +9,32 @@
 		flex: 1
 
 	&__message
-		text-align: center
+		&__text
+			text-align: center
+
+@media screen and ( max-width: $bp-mobile-to-a4 )
+	.coding
+		flex-direction: column
+		min-height: 400px
+		position: relative
+
+		&__subtitle
+			// position the subtitle in the center of the icons circle
+			position: absolute
+			top: calc(50% - 24px)
+			left: calc(50% - 50px)
+
+			// force the subtitle text to wrap to a second line
+			&__text
+				max-width: 100px
+				text-align: center
+
+		&__overview
+			// min-height: 300px
+			@include gauges-on-circle($item-count: 7, $item-width: 62px, $item-height: 85px, $circle-size: 70vw)
+
+		&__message
+			position: relative
+			top: 200%
+
+
