@@ -21,20 +21,46 @@
 		&__subtitle
 			// position the subtitle in the center of the icons circle
 			position: absolute
-			top: calc(50% - 24px)
-			left: calc(50% - 50px)
+			top: calc(50% - 84px)
+			left: calc(50% - 84px)
+
+			width: 168px
+			height: 168px
+			border-radius: 50%
+
+			display: flex
+			align-items: center
+			justify-content: center
+
+			// it is actually a div for a h3 element, but on mobile it should be clickable
+			cursor: pointer
+
+			// values from Figma mobile
+			box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3), -1px -1px 2px rgba(209, 217, 230, 0.5), inset -5px 5px 10px rgba(209, 217, 230, 0.2), inset 5px -5px 10px rgba(209, 217, 230, 0.2), inset -5px -5px 10px rgba(255, 255, 255, 0.9), inset 5px 5px 13px rgba(209, 217, 230, 0.9)
+
+			&__inner
+
+				width: 116px
+				height: 116px
+				border-radius: 50%
+
+				display: flex
+				align-items: center
+				justify-content: center
+
+				box-shadow: 18px 18px 30px rgba(209, 217, 230, 0.2), 18px -18px 30px rgba(209, 217, 230, 0.2), -18px -18px 30px rgba(255, 255, 255, 0.9), 18px 18px 30px rgba(209, 217, 230, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(209, 217, 230, 0.5)
 
 			// force the subtitle text to wrap to a second line
 			&__text
 				max-width: 100px
 				text-align: center
+				line-height: normal
+				transition: color 300ms ease
+
+			&:hover
+				.coding__subtitle__text
+					color: $color-accent
 
 		&__overview
-			// min-height: 300px
-			@include gauges-on-circle($item-count: 7, $item-width: 62px, $item-height: 85px, $circle-size: 70vw)
-
-		&__message
-			position: relative
-			top: 200%
-
-
+			// see _helpers.sass
+			@include gauges-on-circle
