@@ -19,15 +19,16 @@
 	@else
 		#{$property}-#{$name}: $size * $correction-factor
 
-
 @mixin gauges-on-circle()
 	// Parameters
 	$item-count: 7
 	$item-width: 62px
-	$circle-size: 75vmin
+	$circle-size: 75vw
+	// Capital M to force use of css min()
+	$radius: Min($circle-size/2, 150px)
 
-	position: relative
-	width:  $circle-size
+	// position: relative
+	width: $circle-size
 	height: $circle-size
 	padding: 0
 	border-radius: 50%
@@ -37,21 +38,20 @@
 
 	> *
 		position: absolute
-		top:  50%
+		top: 50%
 		left: 50%
 		margin-top: -($item-width/ 2)
 		margin-left: -($item-width / 2)
-		margin-right: -($item-width / 2)
+		// margin-right: -($item-width / 2)
 
 		$angle: (270 / ($item-count - 1) )
 		$rot: -45
 
 		@for $i from 1 through $item-count
 			&:nth-of-type(#{$i})
-				transform: rotate($rot * -1deg) translate($circle-size / 2) rotate($rot * 1deg)
+				transform: rotate($rot * -1deg) translate($radius) rotate($rot * 1deg)
 
 			$rot: $rot + $angle
-
 
 =inset-shadow($big: false)
 	&:before
