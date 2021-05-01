@@ -183,3 +183,37 @@ const animate = () => {
 }
 
 // animate()
+
+
+// Mobile button animation
+
+
+if (window.innerWidth <= 792) {
+    const tlCodingButton = gsap.timeline({ paused: true });
+
+    tlCodingButton.from('.gauge', {
+        opacity: 0,
+        transform: 'none',
+        ease: 'power1.inOut',
+        stagger: 0.3
+    })
+
+    let isOpen = false;
+
+    const toggle = () => {
+        isOpen ? close() : open();
+    }
+
+    const open = () => {
+        tlCodingButton.play()
+        isOpen = true;
+    }
+
+    const close = () => {
+        tlCodingButton.reverse()
+        isOpen = false;
+    }
+
+    const codingLanguagesContainer = document.querySelector('.coding__overview');
+    codingLanguagesContainer.addEventListener('click', toggle);
+}
