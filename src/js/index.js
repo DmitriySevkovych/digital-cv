@@ -119,10 +119,13 @@ const animate = () => {
             y: -10
         }
     );
-    tl.from('.header__searchbar',
+    tl.fromTo('.header__searchbar',
         {
-            width: 0,
-            duration: 1.5
+            width: 0
+        },
+        {
+            width: '100%',
+            duration: 1
         },
         '+=0.3'
     );
@@ -241,7 +244,6 @@ const animate = () => {
     );
 
     // 'Outer' elements
-    // tl.from('.A4', { duration: 1, boxShadow: 'none' }, '-=2');
     tl.from('footer',
         {
             duration: 1,
