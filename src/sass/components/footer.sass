@@ -13,10 +13,19 @@ footer
 		path
 			transition: fill 300ms ease-in-out
 
+	h3
+		width: 100%
+		text-align: center
+		padding: 16px 0 8px 0
+
+		@media screen and ( max-width: $bp-mobile-to-a4 )
+			// padding: 16px 0 0 0
+			font-size: 14px
+
 // About me section - TODO extract to separate file
 .aboutme
 	max-width: $page-width
-	margin: auto
+	margin: 0 auto 16px auto
 
 	display: grid
 	grid-template-columns: 1fr 1fr 1fr
@@ -24,66 +33,65 @@ footer
 	&__section
 		display: flex
 		flex-direction: column
-		justify-content: flex-start
+		justify-content: flex-end
 		align-items: center
 
-		a, p
+		a
 			color: $color-fill-interactive-icons
 			font-family: $font-headlines
 			background-color: inherit
-			margin: 4px auto
 			@include print-corrected(font-size, $value:36px)
 
-	&__links
-		a
-			padding: 0.5rem
 		svg
 			@include print-corrected(width, $value:75px)
 			@include print-corrected(height, $value:75px)
-
 			path
 				fill: $color-fill-interactive-icons
 
-	&__print
-		// a
-		// 	svg
-		// 		max-width: 50px
-		// 		height: auto
+			@media screen and ( max-width: $bp-mobile-to-a4 )
+				width: 24px
+				height: 24px
 
-		&__icon
-			@include print-corrected(width, $value:200px)
-			@include print-corrected(height, $value:200px)
-			border-radius: 50%
-			background: #ECF0F3 // TODO extract to variable
+	&__links
+		a
+			padding: 4px
+
+	&__print
+
+		display: flex
+		justify-content: center
+		align-items: center
+
+		width: 100%
+		@include print-corrected(max-width, $value:500px)
+
+		height: 40px
+		border-radius: 20px
+		border: 3.48387px solid rgba(255, 255, 255, 0.16)
+		background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.4) 100%), #FFFFFF
+		background-blend-mode: soft-light, normal
+		box-shadow: -17.4194px -17.4194px 34.8387px #FAFBFF, 8px 8px 20px #CED2E0
+
+		a
+			width: 100%
+			height: 100%
+			border-radius: inherit
 
 			display: flex
 			justify-content: center
 			align-items: center
 
-			box-shadow: -18px 18px 30px rgba(209, 217, 230, 0.2), 18px -18px 30px rgba(209, 217, 230, 0.2), -18px -18px 30px rgba(255, 255, 255, 0.9), 18px 18px 30px rgba(209, 217, 230, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(209, 217, 230, 0.5)
+			text-transform: uppercase
+			color: $color-font-button
 
-			p
-				margin: 0
-				font-size: 32px
-				line-height: normal
-				transform: rotate(180deg)
-				transition: transform 300ms ease-in-out, color 300ms
+		@media screen and ( max-width: $bp-mobile-to-a4 )
 
-			&:hover
-				// box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3), -1px -1px 2px rgba(209, 217, 230, 0.5), inset -5px 5px 10px rgba(209, 217, 230, 0.2), inset 5px -5px 10px rgba(209, 217, 230, 0.2), inset -5px -5px 10px rgba(255, 255, 255, 0.9), inset 5px 5px 13px rgba(209, 217, 230, 0.9)
+			a
+				font-size: 14px
 
-				p
-					color: $color-accent
-					transform: rotate(180deg) translateY(5px)
-
-	&__developedBy
-		a
-			display: inline-block
-		svg
-			@include print-corrected(width, $value:100px)
-			@include print-corrected(height, $value:100px)
-			path
-				fill: $color-fill-interactive-icons
+	// &__developedBy
+	// 	a
+	// 		display: inline-block
 
 // Legal section - TODO extract to separate file
 .legal
@@ -92,15 +100,6 @@ footer
 	flex-wrap: wrap
 	justify-content: center
 	padding: 16px
-
-	&__subtitle
-		width: 100%
-		text-align: center
-		padding: 32px 0 16px 0
-
-		@media screen and ( max-width: $bp-mobile-to-a4 )
-			padding: 16px 0 0 0
-			font-size: 14px
 
 	&__section
 		width: 25%
