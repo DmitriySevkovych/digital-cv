@@ -19,13 +19,21 @@
 		position: relative
 
 		&__subtitle
+
+			$button-outer-size: 38vw
+			$button-inner-size: $button-outer-size * 116/168
 			// position the subtitle in the center of the icons circle
 			position: absolute
-			top: calc(50% - 84px)
-			left: calc(50% - 84px)
+			top: 50%
+			left: 50%
+			// 84px = 1/2 * max-width
+			margin-top: Max(-$button-outer-size / 2, -84px)
+			margin-left: Max(-$button-outer-size / 2, -84px)
 
-			width: 168px
-			height: 168px
+			width: $button-outer-size
+			height: $button-outer-size
+			max-width: 168px
+			max-height: 168px
 			border-radius: 50%
 
 			display: flex
@@ -40,8 +48,10 @@
 
 			&__inner
 
-				width: 116px
-				height: 116px
+				width: $button-inner-size
+				height: $button-inner-size
+				max-width: 116px
+				max-height: 116px
 				border-radius: 50%
 
 				display: flex
