@@ -67,128 +67,17 @@ new Swiper('.swiper-container', {
 
 // Animations
 
+const ANIMATION_OPTIONS = {
+    breakpointMobile: 782
+}
+
 // TODO add wrapper function to get rid of blank space (format issue)
 const lettersElements = document.querySelectorAll('.to_letters');
 lettersElements.forEach(element => {
     element.outerHTML = Splitter(element.outerHTML, '<span class="letter">$</span>');
 });
 
-const animate = () => {
-    //create a timeline instance
-    const tl = gsap.timeline({ defaults: { ease: 'power.inOut' } });
-
-    // Searchbar
-    tl.from('.header__searchbar', {
-        duration: 0.5,
-        opacity: 0,
-        y: -10
-    });
-    tl.from('.header__searchbar', {
-        width: 0,
-        duration: 1.5
-    }, '+=0.3');
-
-    tl.from('.header__searchbar__text .letter',
-        {
-            opacity: 0,
-            stagger: {
-                amount: 3
-            }
-        }
-    );
-
-    // Intro
-    tl.from('.header__intro__subtitle',
-        {
-            opacity: 0,
-            duration: 2,
-        }
-    );
-
-    tl.from('.header__intro__headline', {
-        opacity: 0,
-        duration: 1.5,
-    });
-
-    tl.from('.header__content__picture',
-        {
-            opacity: 0,
-            duration: 1.5,
-            x: 20,
-            ease: 'power.in'
-        },
-        '-=1'
-    );
-
-    tl.from('.header__content__data', { duration: 1.5, opacity: 0, x: -20, ease: 'power.in' }, '-=1.5');
-
-    // Projects
-    tl.from('.career__subtitle.projects__subtitle', { opacity: 0, duration: 0.5 });
-
-    tl.from('.project__item',
-        {
-            opacity: 0,
-            y: 10,
-            ease: 'power.inOut',
-            stagger: {
-                each: 0.1
-            }
-        }
-    );
-
-    // Education
-    tl.from('.career__subtitle.education__subtitle', { opacity: 0, duration: 0.5 });
-
-    tl.from('.education__item',
-        {
-            opacity: 0,
-            y: 10,
-            ease: 'power.in',
-            stagger: {
-                each: 0.25
-            }
-        }
-    );
-
-    tl.from('.swiper-button > div',
-        {
-            opacity: 0,
-            y: 10,
-            ease: 'power.in',
-            stagger: {
-                each: 0.25
-            }
-        }
-    );
-
-    // Coding
-    tl.from('.coding__subtitle', { opacity: 0, y: 10, duration: 0.5 });
-
-    tl.from('.coding__overview .gauge',
-        {
-            opacity: 0,
-            y: 10,
-            ease: 'power.in',
-            stagger: {
-                each: 0.1
-            }
-        }
-    );
-
-    tl.from('.coding__message', { opacity: 0, y: 10, duration: 0.5 });
-
-    // 'Outer' elements
-    tl.from('.A4', { duration: 1, boxShadow: 'none' }, '-=2');
-    tl.from('footer', { duration: 1, opacity: 0, y: 20 }, '-=0.5');
-}
-
-animate()
-
-
-// Mobile button animation
-
-
-if (window.innerWidth <= 792) {
+const setupCodingButtonAnimation = () => {
     const tlCodingButton = gsap.timeline({ paused: true });
 
     tlCodingButton.from('.gauge', {
@@ -201,7 +90,6 @@ if (window.innerWidth <= 792) {
     let isOpen = false;
 
     const toggle = () => {
-        console.log(isOpen);
         isOpen ? close() : open();
     }
 
@@ -218,3 +106,150 @@ if (window.innerWidth <= 792) {
     const codingLanguagesContainer = document.querySelector('.coding__subtitle');
     codingLanguagesContainer.addEventListener('click', toggle);
 }
+
+const animate = () => {
+    //create a timeline instance
+    const tl = gsap.timeline({ defaults: { ease: 'power.inOut' } });
+
+    // Searchbar
+    tl.from('.header__searchbar',
+        {
+            duration: 0.5,
+            opacity: 0,
+            y: -10
+        }
+    );
+    tl.from('.header__searchbar',
+        {
+            width: 0,
+            duration: 1.5
+        },
+        '+=0.3'
+    );
+    tl.from('.header__searchbar__text .letter',
+        {
+            opacity: 0,
+            stagger: {
+                amount: 3
+            }
+        }
+    );
+
+    // Intro
+    tl.from('.header__intro__subtitle',
+        {
+            opacity: 0,
+            duration: 2,
+        }
+    );
+    tl.from('.header__intro__headline',
+        {
+            opacity: 0,
+            duration: 1.5,
+        });
+    tl.from('.header__content__picture',
+        {
+            opacity: 0,
+            duration: 1.5,
+            x: 20,
+            ease: 'power.in'
+        },
+        '-=1'
+    );
+    tl.from('.header__content__data',
+        {
+            duration: 1.5,
+            opacity: 0,
+            x: -20,
+            ease: 'power.in'
+        },
+        '-=1.5'
+    );
+
+    // Projects
+    tl.from('.career__subtitle.projects__subtitle', { opacity: 0, duration: 0.5 });
+
+    tl.from('.project__item',
+        {
+            opacity: 0,
+            y: 10,
+            stagger: {
+                each: 0.1
+            }
+        }
+    );
+
+    // Education
+    tl.from('.career__subtitle.education__subtitle',
+        {
+            opacity: 0,
+            duration: 0.5
+        }
+    );
+
+    tl.from('.education__item',
+        {
+            opacity: 0,
+            y: 10,
+            ease: 'power.in',
+            stagger: {
+                each: 0.25
+            }
+        }
+    );
+    tl.from('.swiper-button > div',
+        {
+            opacity: 0,
+            y: 10,
+            ease: 'power.in',
+            stagger: {
+                each: 0.25
+            }
+        }
+    );
+
+    // Coding
+    tl.from('.coding__subtitle',
+        {
+            opacity: 0,
+            y: 10,
+            duration: 0.5
+        }
+    );
+
+    if (window.innerWidth <= ANIMATION_OPTIONS.breakpointMobile) {
+        setupCodingButtonAnimation();
+    } else {
+        tl.from('.coding__overview .gauge',
+            {
+                opacity: 0,
+                y: 10,
+                ease: 'power.in',
+                stagger: {
+                    each: 0.1
+                }
+            }
+        );
+
+    }
+    tl.from('.coding__message',
+        {
+            opacity: 0,
+            y: 10,
+            duration: 0.5
+        }
+    );
+
+    // 'Outer' elements
+    // tl.from('.A4', { duration: 1, boxShadow: 'none' }, '-=2');
+    tl.from('footer',
+        {
+            duration: 1,
+            opacity: 0,
+            y: 20
+        },
+        '-=0.5'
+    );
+}
+
+animate()
