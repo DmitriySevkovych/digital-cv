@@ -193,14 +193,15 @@ if (window.innerWidth <= 792) {
 
     tlCodingButton.from('.gauge', {
         opacity: 0,
-        transform: 'none',
-        ease: 'power1.inOut',
-        stagger: 0.3
+        transform: 'rotate(120deg) ',
+        ease: 'sine.inOut',
+        stagger: 0.03
     })
 
     let isOpen = false;
 
     const toggle = () => {
+        console.log(isOpen);
         isOpen ? close() : open();
     }
 
@@ -214,6 +215,6 @@ if (window.innerWidth <= 792) {
         isOpen = false;
     }
 
-    const codingLanguagesContainer = document.querySelector('.coding__overview');
+    const codingLanguagesContainer = document.querySelector('.coding__subtitle');
     codingLanguagesContainer.addEventListener('click', toggle);
 }

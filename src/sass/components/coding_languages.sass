@@ -20,15 +20,17 @@
 
 		&__subtitle
 
+			// parameters
 			$button-outer-size: 38vw
 			$button-inner-size: $button-outer-size * 116/168
+
 			// position the subtitle in the center of the icons circle
 			position: absolute
+			z-index: 20
 			top: 50%
 			left: 50%
-			// 84px = 1/2 * max-width
-			margin-top: Max(-$button-outer-size / 2, -84px)
-			margin-left: Max(-$button-outer-size / 2, -84px)
+			margin-top: Max(-$button-outer-size / 2, -84px) // 84px = 1/2 * max-width
+			margin-left: Max(-$button-outer-size / 2, -84px) // 84px = 1/2 * max-width
 
 			width: $button-outer-size
 			height: $button-outer-size
@@ -59,6 +61,7 @@
 				justify-content: center
 
 				box-shadow: 18px 18px 30px rgba(209, 217, 230, 0.2), 18px -18px 30px rgba(209, 217, 230, 0.2), -18px -18px 30px rgba(255, 255, 255, 0.9), 18px 18px 30px rgba(209, 217, 230, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(209, 217, 230, 0.5)
+				background-color: $color-bg-a4
 
 			// force the subtitle text to wrap to a second line
 			&__text

@@ -38,14 +38,15 @@
 
 	> *
 		position: absolute
+		z-index: 10
 		top: 50%
 		left: 50%
 		margin-top: -($item-width/ 2)
 		margin-left: -($item-width / 2)
 		// margin-right: -($item-width / 2)
 
-		$angle: (270 / ($item-count - 1) )
-		$rot: -45
+		$angle: -(270 / ($item-count - 1) )
+		$rot: -135
 
 		@for $i from 1 through $item-count
 			&:nth-of-type(#{$i})
