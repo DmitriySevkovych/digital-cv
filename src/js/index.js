@@ -182,7 +182,7 @@ const animate = () => {
     tl.from('footer', { duration: 1, opacity: 0, y: 20 }, '-=0.5');
 }
 
-// animate()
+animate()
 
 
 // Mobile button animation
