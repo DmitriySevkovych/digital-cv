@@ -1,21 +1,20 @@
 {
     "date": "ongoing",
     "title": "Self-Education: DevOps",
-    "classes": "print_not",
+    "classes": "print_not use_bullets",
     "blocks": [
         {
             "caption": "Done",
             "points": [
-                "The DevOps Handbook",
-                "Test-Driven Development by Kent Beck",
-                "..."
+                "'The DevOps Handbook' by Gene Kim et al.",
+                "'Test-Driven Development' by Kent Beck"
             ]
         },
         {
             "caption": "In Process",
             "points": [
-                "Release It! by Michael Nygard",
-                "Refactoring by Martin Fowler"
+                "'Release It!' by Michael Nygard",
+                "'Refactoring' by Martin Fowler"
             ]
         }
     ]

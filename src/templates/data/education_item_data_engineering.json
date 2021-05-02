@@ -1,21 +1,19 @@
 {
     "date": "ongoing",
     "title": "Self-Education: Data Engineering",
-    "classes": "print_not",
+    "classes": "print_not use_bullets",
     "blocks": [
         {
             "caption": "Done",
             "points": [
-                "Udemy Kafka Series by Stephane Maarek",
-                "Udemy Database Engineering by Hussein Nasser",
-                "..."
+                "Udemy 'Kafka Series' by Stéphane Maarek",
+                "Udemy 'Database Engineering' by Hussein Nasser"
             ]
         },
         {
             "caption": "In Process",
             "points": [
-                "Designing Data-Intensive Applications by Martin Kleppman",
-                "..."
+                "'Designing Data-Intensive Applications' by Martin Kleppman"
             ]
         }
     ]

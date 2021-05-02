@@ -1,20 +1,20 @@
 {
     "date": "ongoing",
     "title": "Self-Education: 3D, Graphics, UX",
-    "classes": "print_not",
+    "classes": "print_not use_bullets",
     "blocks": [
         {
             "caption": "Done",
             "points": [
-                "Three.js Journey by Bruno Simon",
-                "UX For Beginners by Joel Marsh",
-                "..."
+                "'Three.js Journey' by Bruno Simon",
+                "'Frontend Dev Course' by Yuri Artyukh",
+                "'UX For Beginners' by Joel Marsh"
             ]
         },
         {
             "caption": "In Process",
             "points": [
-                "..."
+                "'Laws of UX' by Jon Yablonski"
             ]
         }
     ]

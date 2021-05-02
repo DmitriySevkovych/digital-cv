@@ -254,4 +254,4 @@ const animate = () => {
     );
 }
 
-animate()
+// animate()

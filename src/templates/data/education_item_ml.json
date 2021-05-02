@@ -1,24 +1,22 @@
 {
     "date": "ongoing",
     "title": "Self-Education: Machine Learning",
-    "classes": "print_not",
+    "classes": "print_not use_bullets",
     "blocks": [
         {
             "caption": "Done",
             "points": [
-                "Stanford CS229 Machine Learning by Andrew Ng",
-                "Stanford CS230 Deep Learning by Andrew Ng",
-                "Coursera Deep Learning Specialization by Andrew Ng",
-                "..."
+                "Stanford 'CS229 Machine Learning' by Andrew Ng",
+                "Stanford 'CS230 Deep Learning' by Andrew Ng",
+                "Coursera 'Deep Learning Specialization' by Andrew Ng"
             ]
         },
         {
             "caption": "In Process",
             "points": [
-                "Machine Learning with Scikit-Learn, TensorFlow and Keras",
-                "Machine Learning, a probabilistic perspective",
-                "Machine Leaning Yearning",
-                "..."
+                "'Machine Learning with Scikit-Learn, TensorFlow and Keras' by Aurélien Geron",
+                "'Machine Learning, a Probabilistic Perspective' by Kevin Murphy",
+                "'Machine Leaning Yearning' by Andrew Ng"
             ]
         }
     ]

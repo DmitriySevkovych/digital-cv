@@ -1,21 +1,21 @@
 {
     "date": "ongoing",
-    "title": "Self-Education: Software Architecture",
-    "classes": "print_not",
+    "title": "Self-Education: IT Architecture",
+    "classes": "print_not use_bullets",
     "blocks": [
         {
             "caption": "Done",
             "points": [
-                "Clean Architecture by Robert Martin",
-                "Clean Code by Robert Martin",
-                "Building Microservices Architecture by Sam Newman",
-                "Java Design Patterns"
+                "'Clean Architecture' by Robert Martin",
+                "'Clean Code' by Robert Martin",
+                "'Building Microservices Architecture' by Sam Newman",
+                "'Java Design Patterns' by Elisabeth and Eric Freeman"
             ]
         },
         {
             "caption": "In Process",
             "points": [
-                "Patterns of Enterprise Application Architecure by Martin Fowler"
+                "'Patterns of Enterprise Application Architecure' by Martin Fowler"
             ]
         }
     ]
