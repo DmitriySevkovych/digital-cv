@@ -5,7 +5,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: {
-        index: './src/js/index.js'
+        index: './src/js/index.js',
+        legal: './src/js/legal.js'
     },
     output: {
         path: path.resolve(__dirname, '../dist'),
@@ -81,12 +82,14 @@ module.exports = {
         new MiniCssExtractPlugin(),
         new HtmlWebpackPlugin({
             template: './src/templates/index.hbs',
-            favicon: './src/assets/icons/favicon.ico'
+            favicon: './src/assets/icons/favicon.ico',
+            chunks: ['index']
         }),
         new HtmlWebpackPlugin({
             template: './src/templates/legal.hbs',
             filename: 'legal.html',
-            favicon: './src/assets/icons/favicon.ico'
+            favicon: './src/assets/icons/favicon.ico',
+            chunks:['legal']
         })
     ]
 }
