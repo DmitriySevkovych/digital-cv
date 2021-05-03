@@ -49,30 +49,46 @@
         <div class="swiper-container">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
-                {{#getJsonContext 'src/templates/data/education_item_msc.json'}}
-                {{> career_education_item this }}
-                {{/getJsonContext}}
-                {{#getJsonContext 'src/templates/data/education_item_bsc.json'}}
-                {{> career_education_item this }}
-                {{/getJsonContext}}
-                {{#getJsonContext 'src/templates/data/education_item_ml.json'}}
-                {{> career_education_item this }}
-                {{/getJsonContext}}
-                {{#getJsonContext 'src/templates/data/education_item_architecture.json'}}
-                {{> career_education_item this }}
-                {{/getJsonContext}}
-                {{#getJsonContext 'src/templates/data/education_item_frontend.json'}}
-                {{> career_education_item this }}
-                {{/getJsonContext}}
-                {{#getJsonContext 'src/templates/data/education_item_data_engineering.json'}}
-                {{> career_education_item this }}
-                {{/getJsonContext}}
-                {{#getJsonContext 'src/templates/data/education_item_devops.json'}}
-                {{> career_education_item this }}
-                {{/getJsonContext}}
-                {{#getJsonContext 'src/templates/data/education_item_hacking.json'}}
-                {{> career_education_item this }}
-                {{/getJsonContext}}
+                <div class="swiper-slide">
+                    {{#getJsonContext 'src/templates/data/education_item_msc.json'}}
+                    {{> career_education_item this }}
+                    {{/getJsonContext}}
+                </div>
+                <div class="swiper-slide">
+                    {{#getJsonContext 'src/templates/data/education_item_bsc.json'}}
+                    {{> career_education_item this }}
+                    {{/getJsonContext}}
+                </div>
+                <div class="swiper-slide">
+                    {{#getJsonContext 'src/templates/data/education_item_ml.json'}}
+                    {{> career_education_item this }}
+                    {{/getJsonContext}}
+                </div>
+                <div class="swiper-slide">
+                    {{#getJsonContext 'src/templates/data/education_item_architecture.json'}}
+                    {{> career_education_item this }}
+                    {{/getJsonContext}}
+                </div>
+                <div class="swiper-slide">
+                    {{#getJsonContext 'src/templates/data/education_item_frontend.json'}}
+                    {{> career_education_item this }}
+                    {{/getJsonContext}}
+                </div>
+                <div class="swiper-slide">
+                    {{#getJsonContext 'src/templates/data/education_item_data_engineering.json'}}
+                    {{> career_education_item this }}
+                    {{/getJsonContext}}
+                </div>
+                <div class="swiper-slide">
+                    {{#getJsonContext 'src/templates/data/education_item_devops.json'}}
+                    {{> career_education_item this }}
+                    {{/getJsonContext}}
+                </div>
+                <div class="swiper-slide">
+                    {{#getJsonContext 'src/templates/data/education_item_hacking.json'}}
+                    {{> career_education_item this }}
+                    {{/getJsonContext}}
+                </div>
             </div>
 
         </div>

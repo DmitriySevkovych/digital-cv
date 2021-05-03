@@ -1,45 +1,45 @@
 .swiper
-	position: relative
+    position: relative
 
-	&-container
-		margin-left: -$education__item-shadow-left
-		margin-top: -$education__item-shadow-left
-		// margin-right: -$education__item-shadow-right
+    &-container
+        margin-left: -$education__item-shadow-left
+        margin-top: -$education__item-shadow-left
 
-	&-wrapper
-		@include print-corrected(padding, $bottom:32px)
-		padding-left: $education__item-shadow-left
-		padding-top: $education__item-shadow-left
-		// padding-right: $education__item-shadow-right
+    &-wrapper
+        @include print-corrected(padding, $bottom:32px)
 
-	&-button
-		display: flex
+    &-button
+        display: flex
 
-	&-button-prev, &-button-next
-		cursor: pointer
-		color: $color-grey-light
-		transition: color 300ms ease-in-out
-		position: relative !important
-		margin-top: 0 !important
-		width: auto
-		height: auto
+    &-button-prev, &-button-next
+        cursor: pointer
+        color: $color-grey-light
+        transition: color 300ms ease-in-out
+        position: relative !important
+        margin-top: 0 !important
+        width: auto
+        height: auto
 
-		&:hover
-			color: $color-accent
+        &:hover
+            color: $color-accent
 
-		&:after
-			@include print-corrected(font-size, $value:48px)
+        &:after
+            @include print-corrected(font-size, $value:48px)
 
-	&-button-prev
-		left: 0 !important
-		margin-right: 15px
+    &-button-prev
+        left: 0 !important
+        margin-right: 15px
 
-	&-button-next
-		right: 0 !important
+    &-button-next
+        right: 0 !important
 
-	&-slide
-		// max-width: 30%
-		height: auto
+    &-slide
+        height: auto
+        box-sizing: border-box
 
-		@media print
-			max-width: 37%
+        padding-left: $education__item-shadow-left
+        padding-right: $education__item-shadow-right
+        padding-top: $education__item-shadow-left
+
+        @media print
+            max-width: 40%
