@@ -1,137 +1,177 @@
 .header
 
-	&__intro
-		display: flex
-		flex-direction: column
-		justify-content: center
-		align-items: center
+    &__intro
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
 
-		&__headline, &__subtitle
-			color: $color-font-headline !important
+        &__headline, &__subtitle
+            color: $color-font-headline !important
 
-		&__headline
-			@include print-corrected(padding, $bottom:16px)
-			text-align: center
+        &__headline
+            @include print-corrected(padding, $bottom:16px)
+            text-align: center
 
-		&__subtitle
-			letter-spacing: 0.5em
-			@include print-corrected(padding, $bottom:22px)
+        &__subtitle
+            letter-spacing: 0.5em
+            @include print-corrected(padding, $bottom:22px)
 
-			// Mobile header__intro__subtitle
-			@media screen and ( max-width: $bp-mobile-to-a4  )
-				font-size: 14px
-				line-height: 16px
+            // Mobile header__intro__subtitle
+            @media screen and ( max-width: $bp-mobile-to-a4  )
+                font-size: 14px
+                line-height: 16px
 
-	&__content
-		display: flex
-		align-items: flex-end
-		justify-content: center
+    &__content
+        display: flex
+        align-items: flex-end
+        justify-content: center
 
-		@include print-corrected(padding, $top:20px, $bottom:32px)
+        @include print-corrected(padding, $top:20px, $bottom:32px)
 
-		// Mobile header__content
-		@media screen and ( max-width: $bp-mobile-to-a4 )
-			flex-direction: column
-			align-items: center
+        // Mobile header__content
+        @media screen and ( max-width: $bp-mobile-to-a4 )
+            flex-direction: column
+            align-items: center
 
-		&__picture
-			@include print-corrected(margin, $top:-40px, $right:68px)
-			position: relative // for the inset shadow on the picture
+        &__picture
+            @include print-corrected(margin, $top:-40px, $right:68px)
+            position: relative // for the inset shadow on the picture
 
-			// see _helpers.sass for helper definition!
-			+inset-shadow(true)
+            // see _helpers.sass for helper definition!
+            +inset-shadow(true)
 
-			img
-				@include print-corrected(max-width, $value:356px)
-				border-radius: 50%
+            img
+                @include print-corrected(max-width, $value:356px)
+                border-radius: 50%
 
-			// Mobile header__content__picture
-			@media screen and ( max-width: $bp-mobile-to-a4 )
-				margin: 0
+            // Mobile header__content__picture
+            @media screen and ( max-width: $bp-mobile-to-a4 )
+                margin: 0
 
-				img
-					max-width: 180px
+                img
+                    max-width: 180px
 
-		&__data
-			display: flex
-			flex-direction: column
-			justify-content: space-between
+        &__data
+            display: flex
+            flex-direction: column
+            justify-content: space-between
 
-			@include print-corrected(padding, $left:50px)
+            @include print-corrected(padding, $left:50px)
 
-			// Mobile header__content__data
-			@media screen and ( max-width: $bp-mobile-to-a4 )
-				padding: 0
-				align-items: center
+            // Mobile header__content__data
+            @media screen and ( max-width: $bp-mobile-to-a4 )
+                padding: 0
+                align-items: center
 
-			&__caption
-				color: $color-font-headline !important
-				letter-spacing: 0.2em
-				text-transform: capitalize !important
+            &__caption
+                color: $color-font-headline !important
+                letter-spacing: 0.2em
+                text-transform: capitalize !important
 
-				// Mobile header__content__data__caption
-				@media screen and ( max-width: $bp-mobile-to-a4 )
-					font-size: 14px
-					padding: 8px 0
+                // Mobile header__content__data__caption
+                @media screen and ( max-width: $bp-mobile-to-a4 )
+                    font-size: 14px
+                    padding: 8px 0
 
-			&__contact
-				display: grid
-				grid-template-columns: 20% 80%
+            &__contact
+                display: grid
+                grid-template-columns: 20% 80%
 
-				align-items: baseline
+                align-items: baseline
 
-				@include print-corrected(margin, $top:16px, $bottom:32px)
+                @include print-corrected(margin, $top:16px, $bottom:32px)
 
-				p
-					@include print-corrected(line-height, $value:50px)
+                p
+                    @include print-corrected(line-height, $value:50px)
 
-				// Mobile header__content__data__contact
-				@media screen and ( max-width: $bp-mobile-to-a4 )
-					grid-template-columns: 40% 60%
+                a
+                    margin-right: auto
+                    position: relative
 
-					p
-						font-family: $font-caption
+                a.clickme
+                    &:after
+                        content: ''
+                        width: 100%
+                        height: 100%
+                        position: absolute
+                        left: 0
+                        top: 0
+                        border-bottom: 1px solid
+                        color: inherit
+                        transform: scaleX(0)
+                        transform-origin: bottom left
+                        animation: header_contact_clickme 3s ease-in-out infinite
+                        transition: transform 300ms ease-in-out
 
-					p, a
-						line-height: 28px
+                    &:hover
+                        &:after
+                            animation-play-state: initial
+                            animation-iteration-count: 1
+                            transform: scaleX(0)
 
-			&__languages
-				display: flex
-				@include print-corrected(margin, $left:-28px) // hack to align to the contact data above
+                // Mobile header__content__data__contact
+                @media screen and ( max-width: $bp-mobile-to-a4 )
+                    grid-template-columns: 40% 60%
 
-				// Mobile header__content__data__languages
-				@media screen and ( max-width: $bp-mobile-to-a4 )
-					display: grid
-					grid-template-columns: repeat( 5, 1fr)
+                    p
+                        font-family: $font-caption
 
-				.lang__C2
-					color: $color-grey-dark
-					font-family: $font-headlines
-					@include print-corrected(font-size, $value:38px)
+                    p, a
+                        line-height: 28px
 
-				.lang__C1
-					color: $color-grey
-					font-family: $font-headlines
-					@include print-corrected(font-size, $value:38px)
+            &__languages
+                display: flex
+                @include print-corrected(margin, $left:-28px) // hack to align to the contact data above
 
-				.lang__B2
-					color: $color-grey-light
-					font-family: $font-headlines
-					@include print-corrected(font-size, $value:38px)
+                // Mobile header__content__data__languages
+                @media screen and ( max-width: $bp-mobile-to-a4 )
+                    display: grid
+                    grid-template-columns: repeat( 5, 1fr)
 
-				.bubble
-					@include print-corrected(min-width, $value:210px)
+                .lang__C2
+                    color: $color-grey-dark
+                    font-family: $font-headlines
+                    @include print-corrected(font-size, $value:38px)
 
-					&__caption
-						font-family: $font-headlines
-						color: $color-grey
+                .lang__C1
+                    color: $color-grey
+                    font-family: $font-headlines
+                    @include print-corrected(font-size, $value:38px)
 
-					// Mobile .header__content__data__languages .bubble
-					@media screen and ( max-width: $bp-mobile-to-a4 )
-						min-width: 70px
+                .lang__B2
+                    color: $color-grey-light
+                    font-family: $font-headlines
+                    @include print-corrected(font-size, $value:38px)
 
-						&__caption
-							font-family: $font-text
+                .bubble
+                    @include print-corrected(min-width, $value:210px)
+
+                    &__caption
+                        font-family: $font-headlines
+                        color: $color-grey
+
+                    // Mobile .header__content__data__languages .bubble
+                    @media screen and ( max-width: $bp-mobile-to-a4 )
+                        min-width: 70px
+
+                        &__caption
+                            font-family: $font-text
 
 // Header searchbar
 @import header_searchbar
+
+// Animation keyframes
+@keyframes header_contact_clickme
+    0%, 20%
+        transform: scaleX(0)
+        transform-origin: bottom left
+    49%
+        transform-origin: bottom left
+        transform: scaleX(1)
+    51%
+        transform: scaleX(1)
+        transform-origin: bottom right
+    80%,100%
+        transform: scaleX(0)
+        transform-origin: bottom right

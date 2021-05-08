@@ -1,57 +1,60 @@
 body
-	background-color: $color-bg-dark
+    background-color: $color-bg-dark
 
 // button
 // 	&:focus
 // 		outline: none !important
 
 *:focus, *:active, *:visited
-	outline: none !important
+    outline: none !important
 
 a, div
-	-webkit-tap-highlight-color: rgba(0,0,0,0)
+    -webkit-tap-highlight-color: rgba(0,0,0,0)
 
 
 // container for everything that is to be printed
 .A4
-	// own display
-	display: flex
-	flex-direction: column
-	flex: 1
-	justify-content: space-between
+    // own display
+    display: flex
+    flex-direction: column
+    flex: 1
+    justify-content: space-between
 
-	// own sizing and layout
-	width: $page-width
-	margin: 2rem auto
-	@include print-corrected(padding, $top:61px, $right:100px, $bottom:41px, $left:145px )
+    // own sizing and layout
+    width: $page-width
+    margin: 2rem auto
+    @include print-corrected(padding, $top:61px, $right:100px, $bottom:41px, $left:145px )
 
-	// colours, shadows, etc.
-	background-color: $color-bg-a4
-	box-shadow: -2.0132px -2.0132px 6px #F3F3F3, 2.0132px 2.0132px 6px #BCC1D6
+    // colours, shadows, etc.
+    background-color: $color-bg-a4
+    box-shadow: -2.0132px -2.0132px 6px #F3F3F3, 2.0132px 2.0132px 6px #BCC1D6
 
 // Mobile
 @media screen and ( max-width: $bp-mobile-to-a4 )
-	.A4
-		// own sizing and layout
-		width: 100vw
-		margin-top: 0
-		padding: 23px 16px
+    .A4
+        // own sizing and layout
+        width: 100vw
+        margin-top: 0
+        padding: 23px 16px
 
 // Print
 @page
-	size: A4
-	margin: 0
-	padding: 0
+    size: A4
+    margin: 0
+    padding: 0
 
 @media print
-	.A4
-		width: $page-width-print
-		height: $page-height-print
-		box-shadow: none
-		margin: 0
+    .A4
+        width: $page-width-print
+        height: $page-height-print
+        box-shadow: none
+        margin: 0
 
-	.print_not
-		display: none !important
+    .print_not
+        display: none !important
 
-	.print
-		display: block !important
+    .print
+        display: block !important
+
+    *, *:after
+        animation: none !important
