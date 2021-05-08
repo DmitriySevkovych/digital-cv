@@ -9,6 +9,14 @@
         "postinstall": "husky install"
     },
     "authors": "Vars&Numbers",
+    "browserslist": [
+        "defaults",
+        "> 1%",
+        "last 2 versions",
+        "last 3 iOS versions",
+        "iOS 7",
+        "IE 10"
+    ],
     "devDependencies": {
         "@babel/cli": "^7.11.6",
         "@babel/core": "^7.11.6",
