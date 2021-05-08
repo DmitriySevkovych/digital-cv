@@ -1,127 +1,125 @@
 .project__item
-	// own display
-	display: flex
-	flex-direction: column
-	justify-content: space-between
+    // own display
+    display: flex
+    flex-direction: column
+    // justify-content: space-between
 
-	// shadows
-	box-shadow: -3.09524px -3.09524px 6.19048px #FAFBFF, 3.09524px 3.09524px 6.19048px #A6ABBD // TODO values are probably temporary
-	@include print-corrected(border-radius, $value:34px)
+    // shadows
+    box-shadow: -3.09524px -3.09524px 6.19048px #FAFBFF, 3.09524px 3.09524px 6.19048px #A6ABBD // TODO values are probably temporary
+    @include print-corrected(border-radius, $value:34px)
 
-	// own layout
-	width: 49%
-	margin: 1%
-	@include print-corrected(padding, $top:40px, $bottom:40px, $left:50px, $right:50px)
+    // own layout
+    width: 49%
+    margin: 1%
+    @include print-corrected(padding, $top:40px, $bottom:40px, $left:50px, $right:50px)
 
-	&:nth-child(even)
-		margin-right: 0 !important
+    &:nth-child(even)
+        margin-right: 0 !important
 
-	&:nth-child(odd)
-		margin-left: 0 !important
+    &:nth-child(odd)
+        margin-left: 0 !important
 
-	&__head
-		// own display
-		display: grid
-		grid-template-columns: 20% auto 1rem
-		@include print-corrected(grid-gap, $value:36px)
+    &__head
+        // own display
+        display: grid
+        grid-template-columns: 20% auto 1rem
+        @include print-corrected(grid-gap, $value:36px)
 
-		&__date
-			// own display
-			display: flex
-			flex-direction: column
-			align-items: center
+        &__date
+            // own display
+            display: flex
+            flex-direction: column
+            align-items: center
 
-		&__icon
+        &__icon
 
-			display: flex
-			align-items: center
-			justify-content: center
+            display: flex
+            align-items: center
+            justify-content: center
 
-			cursor: pointer
-			transition: transform 300ms ease-in-out
+            cursor: pointer
+            transition: transform 300ms ease-in-out
 
-			svg
-				// size constraint
-				width: 1rem
-				// for hover effect
-				fill: $color-grey-light
-				transition: fill 300ms ease-in-out
+            svg
+                // size constraint
+                width: 1rem
+                // for hover effect
+                fill: $color-grey-light
+                transition: fill 300ms ease-in-out
 
-			// icon hover effect
-			&:hover
-				svg
-					fill: $color-accent
+            // icon hover effect
+            &:hover
+                svg
+                    fill: $color-accent
 
-	&__body
-		display: none // is overwritten to 'flex' by .is-open class (which is toggled on click)
-		flex-direction: column
-		justify-content: center
+    &__body
+        display: none // is overwritten to 'flex' by .is-open class (which is toggled on click)
+        flex: 1
+        flex-direction: column
+        justify-content: center
 
-		// to avoid masonry style, esp. important for printing
-		@include print-corrected(min-height, $value:600px)
-		@include print-corrected(padding, $top:28px)
+        @include print-corrected(padding, $top:28px)
 
-		&__blocks
-			// for parent display flex
-			flex: 1
+        &__blocks
+            // for parent display flex
+            flex: 1
 
-			// for own display
-			display: grid
-			grid-template-columns: 20% auto
-			@include print-corrected(grid-gap, $value:36px)
+            // for own display
+            display: grid
+            grid-template-columns: 20% auto
+            @include print-corrected(grid-gap, $value:36px)
 
-		// ATTENTION: this is the left part of __blocks
-		&__left
-			display: flex
-			align-items: center
-			justify-content: center
+        // ATTENTION: this is the left part of __blocks
+        &__left
+            display: flex
+            align-items: center
+            justify-content: center
 
-		// ATTENTION: this is the right part of __blocks
-		&__right
-			display: flex
-			flex-direction: column
-			justify-content: center
+        // ATTENTION: this is the right part of __blocks
+        &__right
+            display: flex
+            flex-direction: column
 
-		&__description
-			@include print-corrected(padding, $bottom:36px)
+        &__description
+            @include print-corrected(padding, $bottom:36px)
 
-		&__techs
-			// for parent diplay flex
-			justify-self: end
+        &__techs
+            // for parent diplay flex
+            justify-self: end
+            @include print-corrected(padding, $top:28px)
 
-			// for own display
-			display: grid
-			grid-template-columns: repeat( 6, 1fr )
+            // for own display
+            display: grid
+            grid-template-columns: repeat( 6, 1fr )
 
 
 // Styles for item open state
 .is_open.project__item
-	// Flip the icon when item is opened
-	.project__item__head__icon
-		transform: rotate(180deg)
-	// Show the body when item is opened
-	.project__item__body
-		display: flex
+    // Flip the icon when item is opened
+    .project__item__head__icon
+        transform: rotate(180deg)
+    // Show the body when item is opened
+    .project__item__body
+        display: flex
 
 
 // Mobile
 @media screen and ( max-width: $bp-mobile-to-a4 )
-	.project__item
-		width: 100%
-		margin: 8px 0
-		padding: 16px
+    .project__item
+        width: 100%
+        margin: 8px 0
+        padding: 16px
 
-		&__head
+        &__head
 
-			&__icon
-				height: 22px
-				align-self: flex-start
+            &__icon
+                height: 22px
+                align-self: flex-start
 
-		&__body
-			padding: 16px 0
+        &__body
+            padding: 16px 0
 
-			&__techs
-				padding-top: 16px
-				grid-template-columns: repeat( 3, 1fr )
-				row-gap: 16px
-
+            &__techs
+                padding-top: 16px
+                grid-template-columns: repeat( 3, 1fr )
+                row-gap: 16px
