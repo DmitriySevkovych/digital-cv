@@ -2,7 +2,7 @@
     "date_from": "06.2020",
     "title": "Website ivanna.sevkovych.com",
     "subtitle": "14 days, at home",
-    "classes": "print_not",
+    "classes": "print_not is_collapsed",
     "blocks": [
         {
             "image": "icon_threejs",
