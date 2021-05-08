@@ -99,9 +99,7 @@
                         top: 0
                         border-bottom: 1px solid
                         color: inherit
-                        transform: scaleX(0)
-                        transform-origin: bottom right
-                        animation: header_contact_clickme 3s ease-in-out infinite
+                        animation: header_contact_clickme 5s ease-in-out 12s infinite
                         transition: transform 300ms ease-in-out
 
                     &:hover
@@ -163,7 +161,7 @@
 
 // Animation keyframes
 @keyframes header_contact_clickme
-    0%, 20%
+    0%, 40%
         transform: scaleX(0)
         transform-origin: bottom right
     49%
@@ -172,6 +170,6 @@
     51%
         transform: scaleX(1)
         transform-origin: bottom left
-    80%,100%
+    60%,100%
         transform: scaleX(0)
         transform-origin: bottom left

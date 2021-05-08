@@ -111,21 +111,33 @@ const searchBarAnimation = () => {
     const text = document.querySelector('.header__searchbar__text');
     const slider = document.querySelector('.header__searchbar__slider');
 
-    gsap.set('.header__searchbar__text',{
-        overflowX: 'visible'
-    });
-    gsap.fromTo('.header__searchbar__text',
-    {
-        x: slider.offsetWidth
-    },
-    {
-        duration: 13,
-        ease: 'linear',
-        repeat: -1,
-        x: -1 * text.offsetWidth
-    })
+    const isTextTooLong = slider.offsetWidth < text.offsetWidth;
+
+    if (isTextTooLong) {
+        const tl = gsap.timeline({ defaults: { ease: 'linear' } });
+
+        tl.to('.header__searchbar__text',
+            {
+                duration: 10,
+                x: -1 * text.offsetWidth,
+                onComplete: () => {
+                    tl.fromTo('.header__searchbar__text',
+                        {
+                            x: slider.offsetWidth
+                        },
+                        {
+                            duration: 15,
+                            delay: 1,
+                            repeat: -1,
+                            repeatDelay: 1,
+                            x: -1 * text.offsetWidth
+                        }
+                    );
+                }
+            }
+        )
+    }
 }
-searchBarAnimation()
 
 const animate = () => {
     //create a timeline instance
@@ -154,7 +166,8 @@ const animate = () => {
             opacity: 0,
             stagger: {
                 amount: 3
-            }
+            },
+            onComplete: searchBarAnimation
         }
     );
 
