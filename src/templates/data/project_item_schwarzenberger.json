@@ -2,7 +2,7 @@
     "date_from": "09.2020",
     "title": "Website schwarzenberger-immobilien.de",
     "subtitle": "1 day, remote",
-    "classes": "print_not",
+    "classes": "print_not is_collapsed",
     "blocks": [
         {
             "image": "icon_sass",
