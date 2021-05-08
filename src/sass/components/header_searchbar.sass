@@ -1,69 +1,76 @@
 .header__searchbar
-	position: relative
+    position: relative
+    overflow: hidden
 
-	display: flex
-	flex: 1
-	justify-content: space-between
-	align-items: center
+    display: flex
+    flex: 1
+    justify-content: space-between
+    align-items: center
 
-	@include print-corrected(height, $value:98px) // vertical padding + h2 font-size
-	@include print-corrected(padding, $top:25px, $bottom:25px, $left:54px, $right:54px)
-	@include print-corrected(margin, $bottom:33px)
+    @include print-corrected(height, $value:98px) // vertical padding + h2 font-size
+    @include print-corrected(padding, $top:25px, $bottom:25px, $left:54px, $right:54px)
+    @include print-corrected(margin, $bottom:33px)
 
-	background-color: $color-bg-highlight
-	box-shadow: inset -0.479839px -0.479839px 0.959677px rgba(255, 255, 255, 0.5), inset 0.479839px 0.479839px 0.959677px rgba(170, 170, 204, 0.25), inset 1.1996px 1.1996px 2.39919px rgba(170, 170, 204, 0.5), inset -1.1996px -1.1996px 2.39919px #FFFFFF
-	@include print-corrected(border-radius, $value:42px)
+    background-color: $color-bg-highlight
+    box-shadow: inset -0.479839px -0.479839px 0.959677px rgba(255, 255, 255, 0.5), inset 0.479839px 0.479839px 0.959677px rgba(170, 170, 204, 0.25), inset 1.1996px 1.1996px 2.39919px rgba(170, 170, 204, 0.5), inset -1.1996px -1.1996px 2.39919px #FFFFFF
+    @include print-corrected(border-radius, $value:42px)
 
-	&__text
-		color: $color-font-description !important
+    &__text
+        color: $color-font-description !important
+        white-space: nowrap
 
-	&__button
-		position: absolute
-		@include print-corrected(width, $value:72px)
-		@include print-corrected(height, $value:72px)
-		@include print-corrected(right, $value:29px)
-		top: 50%
-		transform: translateY(-50%)
-		border-radius: 50%
-		box-shadow: 1.1996px 1.1996px 2.39919px rgba(170, 170, 204, 0.5), -1.1996px -1.1996px 2.39919px #FFFFFF
+    &__button
+        position: absolute
+        @include print-corrected(width, $value:72px)
+        @include print-corrected(height, $value:72px)
+        @include print-corrected(right, $value:29px)
+        top: 50%
+        transform: translateY(-50%)
+        border-radius: 50%
+        box-shadow: 1.1996px 1.1996px 2.39919px rgba(170, 170, 204, 0.5), -1.1996px -1.1996px 2.39919px #FFFFFF
 
-		img
-			position: absolute
-			@include print-corrected(top, $value:12px)
-			@include print-corrected(left, $value:12px)
-			@include print-corrected(width, $value:48px)
-			@include print-corrected(height, $value:48px)
+        img
+            position: absolute
+            @include print-corrected(top, $value:12px)
+            @include print-corrected(left, $value:12px)
+            @include print-corrected(width, $value:48px)
+            @include print-corrected(height, $value:48px)
 
 // Mobile
 @media screen and ( max-width: $bp-mobile-to-a4 )
-	.header__searchbar
-		border-radius: 40px
+    .header__searchbar
+        border-radius: 40px
+        padding-left: 0
+        padding-right: 0
 
-		&__text
-			// 'print' text in on line
-			display: flex
-			justify-content: flex-start
+        // Text that does not fit into the searchbar, should be hidden
+        &__slider
+            position: relative
+            overflow: hidden
+            width: calc(100% - 60px) //account for search button
+            height: 100%
 
-			// Text that does not fit into the searchbar, should be hidden
-			max-width: calc(100% - 72px)
-			overflow-x: hidden
+        &__text
+            // 'print' text in on line
+            display: flex
+            justify-content: flex-start
 
-			// Center the text inside the searchbar
-			position: absolute
-			left: 16px
-			top: 50%
-			transform: translateY(-50%)
+            // Center the text inside the searchbar
+            position: absolute
+            left: 16px
+            top: 50%
+            transform: translateY(-50%)
 
-			// NOTE: necessary because display:flex would collapse empty letter spans!
-			.letter
-				min-width: 9.6px
+            // NOTE: necessary because display:flex would collapse empty letter spans!
+            .letter
+                min-width: 9.6px
 
-		&__button
-			right: 16px
+        &__button
+            right: 16px
 
 // Print
 @media print
-	.header__searchbar
-		height: dpi-corrected(98px, 88) // vertical padding + h2 font-size
-		padding: dpi-corrected(25px, 132) dpi-corrected(54px, 88)
-		margin-bottom: dpi-corrected(33px, 88)
+    .header__searchbar
+        height: dpi-corrected(98px, 88) // vertical padding + h2 font-size
+        padding: dpi-corrected(25px, 132) dpi-corrected(54px, 88)
+        margin-bottom: dpi-corrected(33px, 88)

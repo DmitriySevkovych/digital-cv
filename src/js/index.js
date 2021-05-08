@@ -107,6 +107,26 @@ const setupCodingButtonAnimation = () => {
     codingLanguagesContainer.addEventListener('click', toggle);
 }
 
+const searchBarAnimation = () => {
+    const text = document.querySelector('.header__searchbar__text');
+    const slider = document.querySelector('.header__searchbar__slider');
+
+    gsap.set('.header__searchbar__text',{
+        overflowX: 'visible'
+    });
+    gsap.fromTo('.header__searchbar__text',
+    {
+        x: slider.offsetWidth
+    },
+    {
+        duration: 13,
+        ease: 'linear',
+        repeat: -1,
+        x: -1 * text.offsetWidth
+    })
+}
+searchBarAnimation()
+
 const animate = () => {
     //create a timeline instance
     const tl = gsap.timeline({ defaults: { ease: 'power.inOut' } });
