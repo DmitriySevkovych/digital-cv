@@ -69,7 +69,8 @@ new Swiper('.swiper-container', {
 
 const ANIMATION_OPTIONS = {
     breakpointMobile: 782,
-    textMoving: false
+    textMoving: false,
+    introDuration: 0.5
 }
 
 // TODO add wrapper function to get rid of blank space (format issue)
@@ -144,7 +145,7 @@ const searchBarAnimation = () => {
 
 const animate = () => {
     //create a timeline instance
-    const tl = gsap.timeline({ defaults: { ease: 'power.inOut' } });
+    const tl = gsap.timeline({ defaults: { ease: 'power.in' } });
 
     // Searchbar
     tl.from('.header__searchbar',
@@ -182,45 +183,44 @@ const animate = () => {
     );
 
     // Intro
-    tl.from('.header__intro__subtitle',
-        {
-            opacity: 0,
-            duration: 2,
-        }
-    );
     tl.from('.header__intro__headline',
         {
             opacity: 0,
-            duration: 1.5,
-        });
+            duration: ANIMATION_OPTIONS.introDuration,
+            ease: 'power.inOut'
+        }
+    );
+    tl.from('.header__intro__subtitle',
+        {
+            opacity: 0,
+            duration: ANIMATION_OPTIONS.introDuration,
+            ease: 'power.inOut'
+        }
+    );
     tl.from('.header__content__picture',
         {
             opacity: 0,
-            duration: 1.5,
-            x: 20,
-            ease: 'power.in'
-        },
-        '-=1'
+            duration: ANIMATION_OPTIONS.introDuration -0.25,
+            x: 20
+        }
     );
     tl.from('.header__content__data',
         {
-            duration: 1.5,
+            duration: ANIMATION_OPTIONS.introDuration -0.25,
             opacity: 0,
-            x: -20,
-            ease: 'power.in'
-        },
-        '-=1.5'
+            x: -20
+        }
     );
 
     // Projects
-    tl.from('.career__subtitle.projects__subtitle', { opacity: 0, duration: 0.5 });
+    tl.from('.career__subtitle.projects__subtitle', { opacity: 0, duration: ANIMATION_OPTIONS.introDuration -0.25 });
 
     tl.from('.project__item',
         {
             opacity: 0,
             y: 10,
             stagger: {
-                each: 0.1
+                each: 0.2
             }
         }
     );
