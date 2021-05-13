@@ -287,4 +287,4 @@ const animate = () => {
     );
 }
 
-animate()
+// animate()

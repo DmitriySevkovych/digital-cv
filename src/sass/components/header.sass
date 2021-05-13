@@ -90,23 +90,12 @@
                     position: relative
 
                 a.clickme
-                    &:after
-                        content: ''
-                        width: 100%
-                        height: 100%
-                        position: absolute
-                        left: 0
-                        top: 0
-                        border-bottom: 1px solid
-                        color: inherit
-                        animation: header_contact_clickme 5s ease-in-out 12s infinite
-                        transition: transform 300ms ease-in-out
+                    text-decoration: underline
+                    text-decoration-color: $color-grey-light
+                    transition: text-decoration-color 300ms ease-in-out, color 300ms ease-in-out
 
                     &:hover
-                        &:after
-                            animation-play-state: initial
-                            animation-iteration-count: 1
-                            transform: scaleX(0)
+                        text-decoration-color: inherit
 
                 // Mobile header__content__data__contact
                 @media screen and ( max-width: $bp-mobile-to-a4 )
