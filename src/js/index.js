@@ -78,6 +78,7 @@ lettersElements.forEach(element => {
 });
 
 const setupCodingButtonAnimation = () => {
+    const codingButton = document.querySelector('.coding .clickme');
     const tlCodingButton = gsap.timeline({ paused: true });
 
     tlCodingButton.from('.gauge', {
@@ -91,15 +92,16 @@ const setupCodingButtonAnimation = () => {
 
     const toggle = () => {
         isOpen ? close() : open();
+        codingButton.classList.toggle('clickme');
     }
 
     const open = () => {
-        tlCodingButton.play()
+        tlCodingButton.play();
         isOpen = true;
     }
 
     const close = () => {
-        tlCodingButton.reverse()
+        tlCodingButton.reverse();
         isOpen = false;
     }
 
@@ -287,4 +289,4 @@ const animate = () => {
     );
 }
 
-// animate()
+animate()

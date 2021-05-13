@@ -1,79 +1,112 @@
 .coding
-	display: flex
-	justify-content: space-between
-	align-items: center
+    display: flex
+    justify-content: space-between
+    align-items: center
 
-	&__overview
-		display: flex
-		justify-content: space-evenly
-		flex: 1
+    &__overview
+        display: flex
+        justify-content: space-evenly
+        flex: 1
 
-	&__message
-		&__text
-			text-align: center
+    &__message
+        &__text
+            text-align: center
 
 @media screen and ( max-width: $bp-mobile-to-a4 )
-	.coding
-		flex-direction: column
-		min-height: 400px
-		position: relative
+    .coding
+        flex-direction: column
+        min-height: 400px
+        position: relative
 
-		&__subtitle
+        &__subtitle
+            // parameters
+            $button-outer-size: 38vw
+            $button-inner-size: $button-outer-size * 116/168
 
-			// parameters
-			$button-outer-size: 38vw
-			$button-inner-size: $button-outer-size * 116/168
+            // position the subtitle in the center of the icons circle
+            position: absolute
+            z-index: 20
+            top: 50%
+            left: 50%
+            margin-top: Max(-$button-outer-size / 2, -84px) // 84px = 1/2 * max-width
+            margin-left: Max(-$button-outer-size / 2, -84px) // 84px = 1/2 * max-width
 
-			// position the subtitle in the center of the icons circle
-			position: absolute
-			z-index: 20
-			top: 50%
-			left: 50%
-			margin-top: Max(-$button-outer-size / 2, -84px) // 84px = 1/2 * max-width
-			margin-left: Max(-$button-outer-size / 2, -84px) // 84px = 1/2 * max-width
+            width: $button-outer-size
+            height: $button-outer-size
+            max-width: 168px
+            max-height: 168px
+            border-radius: 50%
 
-			width: $button-outer-size
-			height: $button-outer-size
-			max-width: 168px
-			max-height: 168px
-			border-radius: 50%
+            display: flex
+            align-items: center
+            justify-content: center
 
-			display: flex
-			align-items: center
-			justify-content: center
+            // it is actually a div for a h3 element, but on mobile it should be clickable
+            cursor: pointer
 
-			// it is actually a div for a h3 element, but on mobile it should be clickable
-			cursor: pointer
+            // values from Figma mobile
+            box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3), -1px -1px 2px rgba(209, 217, 230, 0.5), inset -5px 5px 10px rgba(209, 217, 230, 0.2), inset 5px -5px 10px rgba(209, 217, 230, 0.2), inset -5px -5px 10px rgba(255, 255, 255, 0.9), inset 5px 5px 13px rgba(209, 217, 230, 0.9)
 
-			// values from Figma mobile
-			box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3), -1px -1px 2px rgba(209, 217, 230, 0.5), inset -5px 5px 10px rgba(209, 217, 230, 0.2), inset 5px -5px 10px rgba(209, 217, 230, 0.2), inset -5px -5px 10px rgba(255, 255, 255, 0.9), inset 5px 5px 13px rgba(209, 217, 230, 0.9)
+            &__inner
+                // for positioning the after-pseudoelement
+                position: relative
 
-			&__inner
+                width: $button-inner-size
+                height: $button-inner-size
+                max-width: 116px
+                max-height: 116px
+                border-radius: 50%
 
-				width: $button-inner-size
-				height: $button-inner-size
-				max-width: 116px
-				max-height: 116px
-				border-radius: 50%
+                display: flex
+                align-items: center
+                justify-content: center
 
-				display: flex
-				align-items: center
-				justify-content: center
+                box-shadow: 18px 18px 30px rgba(209, 217, 230, 0.2), 18px -18px 30px rgba(209, 217, 230, 0.2), -18px -18px 30px rgba(255, 255, 255, 0.9), 18px 18px 30px rgba(209, 217, 230, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(209, 217, 230, 0.5)
+                background-color: $color-bg-a4
 
-				box-shadow: 18px 18px 30px rgba(209, 217, 230, 0.2), 18px -18px 30px rgba(209, 217, 230, 0.2), -18px -18px 30px rgba(255, 255, 255, 0.9), 18px 18px 30px rgba(209, 217, 230, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(209, 217, 230, 0.5)
-				background-color: $color-bg-a4
+            // force the subtitle text to wrap to a second line
+            &__text
+                max-width: 100px
+                text-align: center
+                line-height: normal
+                transition: color 300ms ease
 
-			// force the subtitle text to wrap to a second line
-			&__text
-				max-width: 100px
-				text-align: center
-				line-height: normal
-				transition: color 300ms ease
+            &:hover
+                .coding__subtitle__text
+                    color: $color-accent
 
-			&:hover
-				.coding__subtitle__text
-					color: $color-accent
+        &__overview
+            // see _helpers.sass
+            @include gauges-on-circle
 
-		&__overview
-			// see _helpers.sass
-			@include gauges-on-circle
+    // Animation
+    .coding .clickme
+        &:after
+            content: ''
+
+            position: absolute
+            width: 100%
+            height: 100%
+            top: 0
+            left: 0
+
+            border-radius: 50%
+
+            // initial animation state
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 1)
+            transform: scale(1)
+
+            animation: pulse 2s infinite
+
+            @keyframes pulse
+                0%
+                    transform: scale(0.95)
+                    box-shadow: 0 0 0 0 $color-fill-piechart
+
+                70%
+                    transform: scale(1)
+                    box-shadow: 0 0 0 30px rgba(0, 0, 0, 0)
+
+                100%
+                    transform: scale(0.95)
+                    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0)
