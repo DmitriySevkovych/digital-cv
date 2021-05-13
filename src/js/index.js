@@ -68,7 +68,8 @@ new Swiper('.swiper-container', {
 // Animations
 
 const ANIMATION_OPTIONS = {
-    breakpointMobile: 782
+    breakpointMobile: 782,
+    textMoving: false
 }
 
 // TODO add wrapper function to get rid of blank space (format issue)
@@ -169,7 +170,14 @@ const animate = () => {
             stagger: {
                 amount: 3
             },
-            onComplete: searchBarAnimation
+            onUpdate: () => {
+                let progress = tl.progress();
+
+                if (progress >= 0.2 && !ANIMATION_OPTIONS.textMoving) {
+                    ANIMATION_OPTIONS.textMoving = true;
+                    searchBarAnimation();
+                }
+            }
         }
     );
 
