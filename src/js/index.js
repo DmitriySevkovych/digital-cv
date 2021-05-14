@@ -1,34 +1,16 @@
 import '../sass/index.sass';
 
-import {initEducationSwiper} from './lib/swipers';
+import { initProjectItemAccordions } from './lib/accordions';
+import { initEducationSwiper } from './lib/swipers';
 
 import { gsap } from 'gsap';
 import Splitter from 'split-html-to-chars';
 
-// POC open and close cards aka items
+// Projects
+initProjectItemAccordions();
 
-document.querySelectorAll('.project__item').forEach(item => {
-
-    const itemToggler = item.querySelector('.project__item__head__icon');
-
-    itemToggler.addEventListener('click', () => {
-
-        // Open or close the item if toggler is clicked
-        item.classList.toggle('is_open');
-
-        // The item should only be printed if it is open. Otherwise just hide it.
-        if (item.classList.contains('is_open')) {
-            item.classList.remove('print_not', 'is_collapsed');
-        } else {
-            item.classList.add('print_not', 'is_collapsed');
-        }
-
-    });
-
-});
-
-// Swiper
-initEducationSwiper()
+// Education
+initEducationSwiper();
 
 
 // Animations
@@ -165,20 +147,20 @@ const animate = () => {
     tl.from('.header__content__picture',
         {
             opacity: 0,
-            duration: ANIMATION_OPTIONS.introDuration -0.25,
+            duration: ANIMATION_OPTIONS.introDuration - 0.25,
             x: 20
         }
     );
     tl.from('.header__content__data',
         {
-            duration: ANIMATION_OPTIONS.introDuration -0.25,
+            duration: ANIMATION_OPTIONS.introDuration - 0.25,
             opacity: 0,
             x: -20
         }
     );
 
     // Projects
-    tl.from('.career__subtitle.projects__subtitle', { opacity: 0, duration: ANIMATION_OPTIONS.introDuration -0.25 });
+    tl.from('.career__subtitle.projects__subtitle', { opacity: 0, duration: ANIMATION_OPTIONS.introDuration - 0.25 });
 
     tl.from('.project__item',
         {
