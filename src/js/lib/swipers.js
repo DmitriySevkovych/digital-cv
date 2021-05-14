@@ -1,7 +1,7 @@
-// Imports
 import 'swiper/swiper-bundle.min.css';
 import Swiper, { Navigation } from 'swiper';
 
+// Configs
 Swiper.use([Navigation]);
 
 // Functions
