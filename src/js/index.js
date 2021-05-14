@@ -1,7 +1,6 @@
-import 'swiper/swiper-bundle.min.css';
 import '../sass/index.sass';
 
-import Swiper, { Navigation, Autoplay } from 'swiper';
+import {initEducationSwiper} from './lib/swipers';
 
 import { gsap } from 'gsap';
 import Splitter from 'split-html-to-chars';
@@ -29,44 +28,10 @@ document.querySelectorAll('.project__item').forEach(item => {
 });
 
 // Swiper
+initEducationSwiper()
 
-// configure Swiper to use modules
-Swiper.use([Navigation, Autoplay]);
-
-// init Swiper:
-new Swiper('.swiper-container', {
-
-    spaceBetween: 62,
-    slidesPerView: 1,
-
-    // autoplay: {
-    //     delay: 10000,
-    // },
-    speed: 1000,
-
-    breakpoints: {
-        792: {
-            // centeredSlides: true,
-            slidesPerView: 3,
-            spaceBetween: 20
-        },
-        480: {
-            // centeredSlides: true,
-            slidesPerView: 2,
-        },
-
-    },
-
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-
-});
 
 // Animations
-
 const ANIMATION_OPTIONS = {
     breakpointMobile: 782,
     textMoving: false,
