@@ -40,8 +40,8 @@
             "caption": "Bash"
         },
         {
-            "image": "icon_gradle",
-            "caption": "Gradle"
+            "image": "icon_python",
+            "caption": "Python"
         }
     ]
 }
