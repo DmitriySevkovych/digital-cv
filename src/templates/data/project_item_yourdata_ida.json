@@ -14,7 +14,8 @@
                 "Fine-tuning Kafka cluster.",
                 "Task automation through shell scripting.",
                 "Introducing testing best-practices.",
-                "Code refactoring."
+                "Setting up continuous integration.",
+                "Mentoring junior devs."
             ]
         }
     ],

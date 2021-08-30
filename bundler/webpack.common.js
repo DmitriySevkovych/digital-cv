@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ResourceHintWebpackPlugin = require('resource-hints-webpack-plugin');
 // This plugin is an alternative to the style-loader, which seems to be better suited for static webpages
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -90,6 +91,7 @@ module.exports = {
             filename: 'legal.html',
             favicon: './src/assets/icons/favicon.ico',
             chunks:['legal']
-        })
+        }),
+        new ResourceHintWebpackPlugin()
     ]
 }
