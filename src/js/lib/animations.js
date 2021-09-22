@@ -56,8 +56,6 @@ const searchBarAnimation = () => {
 
     const isTextTooLong = slider.offsetWidth * 1.05 < text.offsetWidth;
 
-    console.log(slider.offsetWidth, text.offsetWidth);
-
     if (isTextTooLong) {
         const tl = gsap.timeline({ defaults: { ease: 'linear' } });
 
