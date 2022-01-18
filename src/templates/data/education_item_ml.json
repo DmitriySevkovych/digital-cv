@@ -1,7 +1,7 @@
 {
     "date": "ongoing",
     "title": "Self-Education: Machine Learning",
-    "classes": "print_not use_bullets",
+    "classes": "print_not",
     "blocks": [
         {
             "caption": "Done",
@@ -14,9 +14,8 @@
         {
             "caption": "In Process",
             "points": [
-                "'Machine Learning with Scikit-Learn, TensorFlow and Keras' by Aurélien Geron",
-                "'Machine Learning, a Probabilistic Perspective' by Kevin Murphy",
-                "'Machine Leaning Yearning' by Andrew Ng"
+                "'Building Machine Learning Powered Applications' by Emmanuel Ameisen",
+                "'Machine Learning with Scikit-Learn, TensorFlow and Keras' by Aurélien Geron"
             ]
         }
     ]

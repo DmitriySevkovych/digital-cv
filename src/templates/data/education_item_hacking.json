@@ -1,12 +1,12 @@
 {
     "date": "ongoing",
     "title": "Self-Education: IT Security",
-    "classes": "print_not use_bullets",
+    "classes": "print_not",
     "blocks": [
         {
             "caption": "Done",
             "points": [
-                "-"
+                "'Web Security for Developers' by Malcolm McDonald"
             ]
         },
         {

@@ -1,21 +1,20 @@
 {
-    "date_from": "12.2020",
-    "date_to": "01.2022",
+    "date_from": "01.2022",
+    "date_to": "04.2022",
     "title": "Backend- & DevOps-Engineer",
-    "subtitle": "40h/Week, fully remote",
-    "classes": "is_open",
+    "subtitle": "<20h/Week, fully remote",
+    "classes": "print_not is_open",
     "blocks": [
         {
             "image": "icon_kafka",
             "caption": "Kafka",
-            "description": "Building real-time ETL pipelines for heterogenous data with Kafka and Kafka Streams. Responsibilities:",
+            "description": "Second-level operations support and developer mentoring. Responsibilities:",
             "points": [
-                "Improving memory and I/O footprint of the software.",
-                "Fine-tuning Kafka cluster.",
-                "Task automation through shell scripting.",
-                "Introducing testing best-practices.",
-                "Setting up continuous integration.",
-                "Mentoring junior devs."
+                "Fine-tuning software deployments.",
+                "Software design propositions for new features.",
+                "Implementation reviews.",
+                "Kafka cluster administration.",
+                "Troubleshooting."
             ]
         }
     ],
