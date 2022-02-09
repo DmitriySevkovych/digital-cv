@@ -10,11 +10,11 @@
             "caption": "Kafka",
             "description": "Second-level operations support and developer mentoring. Responsibilities:",
             "points": [
-                "Fine-tuning software deployments.",
-                "Software design propositions for new features.",
-                "Implementation reviews.",
+                "Software design for new features.",
+                "Code reviews.",
                 "Kafka cluster administration.",
-                "Troubleshooting."
+                "Support with container orchestration.",
+                "Infrastructure support (on premises and AWS EC2)."
             ]
         }
     ],
@@ -24,12 +24,12 @@
             "caption": "Java 8"
         },
         {
-            "image": "icon_docker",
-            "caption": "Docker"
-        },
-        {
             "image": "icon_postgresql",
             "caption": "PostgreSQL"
+        },
+        {
+            "image": "icon_docker",
+            "caption": "Docker"
         },
         {
             "image": "icon_linux-tux",

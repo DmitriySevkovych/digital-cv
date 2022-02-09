@@ -13,8 +13,8 @@
                 "Improving memory and I/O footprint of the software.",
                 "Fine-tuning Kafka cluster.",
                 "Task automation through shell scripting.",
-                "Introducing testing best-practices.",
-                "Setting up continuous integration.",
+                "Support with container orchestration.",
+                "Infrastructure support (on premises and AWS EC2).",
                 "Mentoring junior devs."
             ]
         }
@@ -25,12 +25,12 @@
             "caption": "Java 8"
         },
         {
-            "image": "icon_docker",
-            "caption": "Docker"
-        },
-        {
             "image": "icon_postgresql",
             "caption": "PostgreSQL"
+        },
+        {
+            "image": "icon_docker",
+            "caption": "Docker"
         },
         {
             "image": "icon_linux-tux",
