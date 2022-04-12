@@ -1,0 +1,43 @@
+{
+    "date_from": "01.2022",
+    "date_to": "ongoing",
+    "title": "Co-Founder XXX, Developer",
+    "subtitle": "<24h/Week, Stuttgart",
+    "classes": "is_open",
+    "blocks": [
+        {
+            "image": "icon_python",
+            "caption": "Labelcheck",
+            "description": "Building a startup that provides assistance with German consumer laws and regulations.",
+            "points": [
+                "Mapping regulations to software models using the domain-driven design approach.",
+                "Building a backend to bring value to customers in an automated and efficient manner.",
+                "Building an online platform for customers.",
+                "Playing around with image-to-text ML approaches.",
+                "Visit us on XXX."
+            ]
+        }
+    ],
+    "techs": [
+        {
+            "image": "icon_python",
+            "caption": "Python"
+        },
+        {
+            "image": "icon_typescript_bg",
+            "caption": "TypeScript"
+        },
+        {
+            "image": "icon_nextjs",
+            "caption": "Next.js"
+        },
+        {
+            "image": "icon_bash",
+            "caption": "Bash"
+        },
+        {
+            "image": "icon_sqlite-square",
+            "caption": "SQLite"
+        }
+    ]
+}

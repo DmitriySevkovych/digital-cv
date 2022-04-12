@@ -7,8 +7,11 @@
     "blocks": [
         {
             "image": "icon_ukraine",
-            "caption": "#NoWar",
-            "description": "Visit XXX."
+            "caption": "-",
+            "description": "No to war.",
+            "points": [
+                "Visit XXX."
+            ]
         }
     ],
     "techs": [
