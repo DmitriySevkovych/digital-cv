@@ -1,20 +1,18 @@
 {
     "date_from": "01.2022",
     "date_to": "ongoing",
-    "title": "Co-Founder XXX, Developer",
-    "subtitle": "<24h/Week, Stuttgart",
+    "title": "Co-Founder Deklarando, Developer",
+    "subtitle": "Stuttgart",
     "classes": "is_open",
     "blocks": [
         {
-            "image": "icon_python",
-            "caption": "Labelcheck",
+            "image": "icon_compliance",
+            "caption": "Compliance",
             "description": "Building a startup that provides assistance with German consumer laws and regulations.",
             "points": [
-                "Mapping regulations to software models using the domain-driven design approach.",
-                "Building a backend to bring value to customers in an automated and efficient manner.",
-                "Building an online platform for customers.",
-                "Playing around with image-to-text ML approaches.",
-                "Visit us on XXX."
+                "Mapping legal regulations to software models.",
+                "Automating business tasks in compliance with the German law.",
+                "Building an online platform for customers."
             ]
         }
     ],

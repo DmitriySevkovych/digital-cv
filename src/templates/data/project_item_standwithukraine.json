@@ -10,7 +10,7 @@
             "caption": "No to war.",
             "description": "This one is not about me.",
             "points": [
-                "Visit XXX."
+                "Visit <a href=\"https://ua-support-thankyou.vercel.app/\">this little page</a>."
             ]
         }
     ],

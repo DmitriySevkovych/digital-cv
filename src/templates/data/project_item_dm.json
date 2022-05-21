@@ -1,0 +1,46 @@
+{
+    "date_from": "05.2022",
+    "date_to": "ongoing",
+    "title": "Full-Stack Developer",
+    "subtitle": "32h/Week, fully remote",
+    "classes": "is_open",
+    "blocks": [
+        {
+            "image": "icon_java",
+            "caption": "Java",
+            "description": "Improving point-of-sale applications for an international retailer company.",
+            "points": [
+                "Architectural restructuring of existing backend services",
+                "Implementation of mobile and web apps",
+                "Compliance with high availability requirements",
+                "Compliance with fiscal regulations"
+            ]
+        }
+    ],
+    "techs": [
+        {
+            "image": "icon_gradle",
+            "caption": "Gradle"
+        },
+        {
+            "image": "icon_gitlab",
+            "caption": "Gitlab CI"
+        },
+        {
+            "image": "icon_question",
+            "caption": "TBA"
+        },
+        {
+            "image": "icon_question",
+            "caption": "TBA"
+        },
+        {
+            "image": "icon_question",
+            "caption": "TBA"
+        },
+        {
+            "image": "icon_question",
+            "caption": "TBA"
+        }
+    ]
+}

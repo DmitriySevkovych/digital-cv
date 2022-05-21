@@ -5,10 +5,15 @@
 
     <!-- BEGIN career__projects -->
     <div class="career__projects">
+        {{#getJsonContext 'src/templates/data/project_item_dm.json'}}
+        {{> career_project_item this }}
+        {{/getJsonContext}}
+        {{!--
         {{#getJsonContext 'src/templates/data/project_item_standwithukraine.json'}}
         {{> career_project_item this }}
         {{/getJsonContext}}
-        {{#getJsonContext 'src/templates/data/project_item_labelcheck.json'}}
+        --}}
+        {{#getJsonContext 'src/templates/data/project_item_deklarando.json'}}
         {{> career_project_item this }}
         {{/getJsonContext}}
         {{#getJsonContext 'src/templates/data/project_item_yourdata_ida.json'}}
