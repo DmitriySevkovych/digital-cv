@@ -8,13 +8,14 @@
             "points": [
                 "'Clean Architecture' by Robert Martin",
                 "'Clean Code' by Robert Martin",
-                "'Building Microservices Architecture' by Sam Newman",
+                "'Game Programming Patterns' by Robert Nystrom",
                 "'Java Design Patterns' by Elisabeth and Eric Freeman"
             ]
         },
         {
             "caption": "In Process",
             "points": [
+                "'Release it!' by Michael Nygard",
                 "'Patterns of Enterprise Application Architecure' by Martin Fowler"
             ]
         }
