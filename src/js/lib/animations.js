@@ -92,7 +92,7 @@ const animate = () => {
     // Searchbar
     tl.from('.header__searchbar',
         {
-            duration: 0.5,
+            duration: 0.3,
             opacity: 0,
             y: -10
         }
@@ -111,7 +111,7 @@ const animate = () => {
         {
             opacity: 0,
             stagger: {
-                amount: 3
+                amount: 1.5
             },
             onUpdate: () => {
                 let progress = tl.progress();
