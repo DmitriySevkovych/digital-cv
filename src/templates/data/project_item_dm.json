@@ -11,6 +11,7 @@
             "description": "Improving point-of-sale applications for an international retailer company.",
             "points": [
                 "Architectural restructuring of existing backend services",
+                "Implementation of new backend microservices",
                 "Implementation of mobile and web apps",
                 "Compliance with high availability requirements",
                 "Compliance with fiscal regulations"
@@ -19,28 +20,28 @@
     ],
     "techs": [
         {
+            "image": "icon_kotlin",
+            "caption": "Kotlin"
+        },
+        {
+            "image": "icon_spring",
+            "caption": "Spring Boot"
+        },
+        {
             "image": "icon_gradle",
             "caption": "Gradle"
         },
         {
+            "image": "icon_typescript_bg",
+            "caption": "TypeScript"
+        },
+        {
+            "image": "icon_react",
+            "caption": "React"
+        },
+        {
             "image": "icon_gitlab",
             "caption": "Gitlab CI"
-        },
-        {
-            "image": "icon_question",
-            "caption": "TBA"
-        },
-        {
-            "image": "icon_question",
-            "caption": "TBA"
-        },
-        {
-            "image": "icon_question",
-            "caption": "TBA"
-        },
-        {
-            "image": "icon_question",
-            "caption": "TBA"
         }
     ]
 }
