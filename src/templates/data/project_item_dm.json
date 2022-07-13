@@ -24,10 +24,6 @@
             "caption": "Kotlin"
         },
         {
-            "image": "icon_spring",
-            "caption": "Spring Boot"
-        },
-        {
             "image": "icon_gradle",
             "caption": "Gradle"
         },
@@ -42,6 +38,10 @@
         {
             "image": "icon_gitlab",
             "caption": "Gitlab CI"
+        },
+        {
+            "image": "icon_ansible",
+            "caption": "Ansible"
         }
     ]
 }
