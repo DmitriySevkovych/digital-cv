@@ -1,6 +1,6 @@
 {
     "date_from": "01.2022",
-    "date_to": "ongoing",
+    "date_to": "03.2023",
     "title": "Co-Founder, Developer",
     "subtitle": "part-time, Stuttgart",
     "classes": "is_open",
@@ -11,7 +11,8 @@
             "description": "Building a startup that provides assistance with German consumer laws and regulations.",
             "points": [
                 "Mapping legal regulations to software models.",
-                "Automating business tasks in compliance with the German law.",
+                "Generation of product declarations.",
+                "Compliance with German law and regulations.",
                 "Building an online platform for customers."
             ]
         }
