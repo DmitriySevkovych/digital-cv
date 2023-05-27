@@ -9,10 +9,14 @@
 	// career__education block
 	&__education
 		display: flex
-		align-items: center
-		@include print-corrected(margin, $bottom:25px)
+		flex-direction: column
+		align-items: flex-start
+		@include print-corrected(margin, $bottom:32px)
 
-		&__wrapper
+		&__subtitle
+			@include print-corrected(margin, $bottom:24px)
+
+		&__items
 			display: flex
 			align-items: baseline
 			justify-content: space-between
@@ -28,4 +32,3 @@
 
 	@import career_project_item
 	@import career_education_item
-	@import career_education_swiper

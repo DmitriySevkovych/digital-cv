@@ -34,10 +34,6 @@
         {
             "image": "icon_git",
             "caption": "Git"
-        },
-        {
-            "image": "icon_apache",
-            "caption": "httpd"
         }
     ]
 }

@@ -1,14 +1,11 @@
 {
     "date": "10.2010 – 07.2014",
-    "title": "B.Sc. Mathematics",
-    "subtitle": "University of Stuttgart",
+    "title": "B.Sc. Mathematics, University of Stuttgart",
     "blocks": [
         {
             "caption": "Focus",
             "points": [
-                "Probability theory",
-                "Statistics",
-                "Stochastic processes",
+                "Probability theory & statistics",
                 "Numerical analysis"
             ]
         },

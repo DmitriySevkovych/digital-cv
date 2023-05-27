@@ -30,10 +30,6 @@
             "caption": "MongoDB"
         },
         {
-            "image": "icon_openapi",
-            "caption": "REST"
-        },
-        {
             "image": "icon_firebase",
             "caption": "Firebase"
         },

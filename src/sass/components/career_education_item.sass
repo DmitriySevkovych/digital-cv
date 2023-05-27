@@ -3,31 +3,39 @@ $education__item-shadow-left: 6.19048px
 $education__item-shadow-right: 6.19048px
 
 .education__item
-    display: flex
-    flex-direction: column
-    height: 100%
-    width: 100%
+	display: flex
+	flex-direction: column
+	flex-grow: 1
+	height: 100%
+	width: 100%
 
-    @include print-corrected(padding, $top:40px, $bottom:40px, $left:30px, $right:30px)
+	// own layout
+	width: 49%
+	margin: 1%
+	@include print-corrected(padding, $top:40px, $bottom:40px, $left:50px, $right:50px)
 
-    box-shadow: -3.09524px -3.09524px $education__item-shadow-left #FAFBFF, 3.09524px 3.09524px $education__item-shadow-right #A6ABBD
-    @include print-corrected(border-radius, $value:34px)
+	&:nth-child(even)
+		margin-right: 0 !important
 
-    &__body
-        display: flex
-        flex-direction: column
+	&:nth-child(odd)
+		margin-left: 0 !important
 
-        &__block
-            display: grid
-            grid-template-columns: 1fr 4fr
-            @include print-corrected(grid-gap, $value:32px)
-            align-items: baseline
+	box-shadow: -3.09524px -3.09524px $education__item-shadow-left #FAFBFF, 3.09524px 3.09524px $education__item-shadow-right #A6ABBD
+	@include print-corrected(border-radius, $value:34px)
 
-        &__left
-            font-family: $font-headlines !important
-            color: $color-font-caption !important
-            @include print-corrected(width, $value:120px)
-            @include print-corrected(padding, $top:36px, $bottom:0, $left:0, $right:36px)
+	&__body
+		display: flex
+		flex-direction: column
 
-        &__right
-            @include print-corrected(padding, $right:36px)
+		&__block
+			display: grid
+			grid-template-columns: 1fr 2fr
+			@include print-corrected(grid-gap, $value:32px)
+			align-items: baseline
+
+		&__left
+			font-family: $font-headlines !important
+			color: $color-font-caption !important
+
+		&__right
+			@include print-corrected(padding, $right:36px)

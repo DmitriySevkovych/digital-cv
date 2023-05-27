@@ -1,7 +1,7 @@
 {
     "date_from": "06.2019",
     "title": "Website icebaby.de",
-    "subtitle": "3 days, remote",
+    "subtitle": "2 days, remote",
     "classes": "print_not is_collapsed",
     "blocks": [
         {
@@ -31,10 +31,6 @@
         {
             "image": "icon_git",
             "caption": "Git"
-        },
-        {
-            "image": "icon_apache",
-            "caption": "httpd"
         }
     ]
 }
