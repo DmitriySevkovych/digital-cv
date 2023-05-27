@@ -1,5 +1,5 @@
 {
-    "name": "varsandnumbers.com",
+    "name": "dmitriy.sevkovych.com",
     "private": true,
     "version": "0.0.1",
     "scripts": {
@@ -8,7 +8,7 @@
         "build": "webpack --config ./bundler/webpack.prod.js",
         "postinstall": "husky install"
     },
-    "authors": "Vars&Numbers",
+    "authors": "Dmitriy Sevkovych",
     "browserslist": [
         "defaults",
         "> 1%",
