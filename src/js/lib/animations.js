@@ -185,16 +185,6 @@ const animate = () => {
             }
         }
     );
-    tl.from('.swiper-button > div',
-        {
-            opacity: 0,
-            y: 10,
-            ease: 'power.in',
-            stagger: {
-                each: 0.25
-            }
-        }
-    );
 
     // Coding
     tl.from('.coding__subtitle',
@@ -220,13 +210,6 @@ const animate = () => {
         );
 
     }
-    tl.from('.coding__message',
-        {
-            opacity: 0,
-            y: 10,
-            duration: 0.5
-        }
-    );
 
     // 'Outer' elements
     tl.from('footer',
