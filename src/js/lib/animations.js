@@ -69,7 +69,7 @@ const searchBarAnimation = () => {
                             x: slider.offsetWidth
                         },
                         {
-                            duration: 15,
+                            duration: 12,
                             delay: 1,
                             repeat: -1,
                             repeatDelay: 1,
