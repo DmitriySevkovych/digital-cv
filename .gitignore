@@ -23,6 +23,3 @@ dist/
 # Files to ignore
 **/private_*
 .env
-
-# Custom files
-*-lock.json
