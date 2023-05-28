@@ -35,3 +35,14 @@
 
 		&__right
 			@include print-corrected(padding, $right:36px)
+
+
+// Mobile
+@media screen and ( max-width: $bp-mobile-to-a4 )
+	.education__item
+		width: 100%
+		margin: 8px 0
+		padding: 16px
+
+		&__body
+			padding: 16px 0
