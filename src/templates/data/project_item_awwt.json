@@ -1,0 +1,47 @@
+{
+    "date_from": "11.2023",
+    "date_to": "ongoing",
+    "title": "Machine Learning Engineer",
+    "subtitle": "part-time, fully remote",
+    "classes": "is_open",
+    "blocks": [
+        {
+            "image": "icon_openai",
+            "caption": "OpenAI CLIP",
+            "description": "Bringing state-of-the-art artificial intelligence to an art shopping platform.",
+            "points": [
+                "Multi-modal semantic search.",
+                "Improving an existing recommender system.",
+                "Prompt engineering.",
+                "Designing ML infrastructure.",
+                "Deployment and integration with existing REST services."
+            ]
+        }
+    ],
+    "techs": [
+        {
+            "image": "icon_python",
+            "caption": "Python"
+        },
+        {
+            "image": "icon_pytorch",
+            "caption": "PyTorch"
+        },
+        {
+            "image": "icon_huggingface",
+            "caption": "HuggingFace"
+        },
+        {
+            "image": "icon_elasticsearch",
+            "caption": "Elastic"
+        },
+        {
+            "image": "icon_typescript_bg",
+            "caption": "TypeScript"
+        },
+        {
+            "image": "icon_react",
+            "caption": "React.js"
+        }
+    ]
+}

@@ -5,6 +5,9 @@
 
     <!-- BEGIN career__projects -->
     <div class="career__projects">
+        {{#getJsonContext 'src/templates/data/project_item_awwt.json'}}
+        {{> career_project_item this }}
+        {{/getJsonContext}}
         {{#getJsonContext 'src/templates/data/project_item_dm.json'}}
         {{> career_project_item this }}
         {{/getJsonContext}}
