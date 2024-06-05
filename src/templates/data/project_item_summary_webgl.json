@@ -1,0 +1,45 @@
+{
+    "date_from": "05.2019",
+    "date_to": "ongoing",
+    "title": "Working with WebGL and 3D",
+    "subtitle": "part-time, several projects",
+    "classes": "is_open",
+    "blocks": [
+        {
+            "description": "Summary of my experiences with 3D and WebGL",
+            "image": "icon_webgl",
+            "caption": "WebGL",
+            "points": [
+                "3D effects for applications.",
+                "3D configurator.",
+                "Prototype of an AR app.",
+                "First little website: https://ivanna.sevkovych.com/",
+                "Three.js Journey course.",
+                "Doodles with 3D, shaders and SDFs.",
+                "Community work."
+            ]
+        }
+    ],
+    "techs": [
+        {
+            "image": "icon_noicon",
+            "caption": "Shaders"
+        },
+        {
+            "image": "icon_threejs",
+            "caption": "Three.js"
+        },
+        {
+            "image": "icon_react",
+            "caption": "R3F"
+        },
+        {
+            "image": "icon_pixijs",
+            "caption": "Pixi.js"
+        },
+        {
+            "image": "icon_aframe",
+            "caption": "A-Frame"
+        }
+    ]
+}
