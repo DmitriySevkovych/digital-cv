@@ -7,14 +7,15 @@
     "blocks": [
         {
             "image": "icon_openai",
-            "caption": "OpenAI CLIP",
-            "description": "Bringing state-of-the-art artificial intelligence to an art shopping platform.",
+            "caption": "OpenAI",
+            "description": "Responsible for all backend and AI components of an artwork shopping platform.",
             "points": [
-                "Multi-modal semantic search.",
-                "Improving an existing recommender system.",
-                "Prompt engineering.",
-                "Designing ML infrastructure.",
-                "Deployment and integration with existing REST services."
+                "Multi-modal semantic search",
+                "Recommender system",
+                "REST services",
+                "Data migration",
+                "Containerization and deployment",
+                "Monitoring"
             ]
         }
     ],
@@ -28,20 +29,20 @@
             "caption": "PyTorch"
         },
         {
-            "image": "icon_huggingface",
-            "caption": "HuggingFace"
-        },
-        {
-            "image": "icon_elasticsearch",
-            "caption": "Elastic"
-        },
-        {
             "image": "icon_typescript_bg",
             "caption": "TypeScript"
         },
         {
             "image": "icon_react",
             "caption": "React.js"
+        },
+        {
+            "image": "icon_kubernetes",
+            "caption": "Kubernetes"
+        },
+        {
+            "image": "icon_aws",
+            "caption": "AWS"
         }
     ]
 }
